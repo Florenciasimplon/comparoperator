@@ -1,5 +1,5 @@
 <?php
-$bdd = 'mysql:host=127.0.0.1;dbname= ComparOperator';
+$bdd = 'mysql:host=127.0.0.1;dbname=ComparOperator';
 $user = 'root';
 $password = '';
 

@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+
 
 class Manager
 {
@@ -131,7 +131,7 @@ public function createReview(Review $review)
     
     while ($donneesDestination = $allDestinations->fetch(PDO::FETCH_ASSOC))
     {
-      $destinations = new Destination ($donneesDestination); 
+      array_push($destinations, new Destination ($donneesDestination)); 
   
     }
     
@@ -147,10 +147,8 @@ public function createReview(Review $review)
      
      while ($donneesTourOperator = $allTourOperator->fetch(PDO::FETCH_ASSOC))
      {
-       $operators = new TourOperator ($donneesTourOperator); 
-   
+       array_push ($operators, new TourOperator ($donneesTourOperator)); 
      }
-     
      return $operators;
    }
 
@@ -159,37 +157,38 @@ public function createReview(Review $review)
   {
     $operatorsByDestination = [];
     
-    $allOperatorByDestination = $this->pdo->prepare('SELECT * FROM  tour_operators 
-    JOIN destinations ON tour_operators.id = destinations.id_tour_operator WHERE location.destinations = :location');
+    $allOperatorByDestination = $this->pdo->prepare('SELECT tour_operators.* FROM  tour_operators 
+    JOIN destinations ON tour_operators.id = destinations.id_tour_operator WHERE location = :location');
     $allOperatorByDestination->bindValue(':location', $location ,PDO::PARAM_STR);
     $allOperatorByDestination->execute();
     
     while ($donneesOperatorByDestination = $allOperatorByDestination->fetch(PDO::FETCH_ASSOC))
     {
-      $operatorsByDestination = new TourOperator ($donneesOperatorByDestination); 
+      array_push($operatorsByDestination, new TourOperator ($donneesOperatorByDestination)); 
   
     }
-    
+
     return $operatorsByDestination;
   }
   
  // List review by operator // 
- public function getReviewByOperator($nameTourOperator)
+ public function getReviewByOperator($idTourOperator)
  {
    $reviewByOperator = [];
    
    $allReviewByOperator = $this->pdo->prepare('SELECT * FROM  reviews 
-   JOIN tour_operators ON reviews.id_tour_operator = tour_operators.id WHERE tour_operators.name = :nameTourOperator');
-   $allReviewByOperator->bindValue(':nameTourOperator', $nameTourOperator ,PDO::PARAM_STR);
+   JOIN tour_operators ON reviews.id_tour_operator = tour_operators.id WHERE reviews.id_tour_operator= :idTourOperator');
+   $allReviewByOperator->bindValue(':idTourOperator', $idTourOperator ,PDO::PARAM_INT);
    $allReviewByOperator->execute();
    
    while ($donneesReviewByOperator = $allReviewByOperator->fetch(PDO::FETCH_ASSOC))
    {
-     $reviewByOperator = new Review ($donneesReviewByOperator); 
+     
+     array_push($reviewByOperator, new Review ($donneesReviewByOperator)); 
  
    }
    
-   return $reviewByOperator;
+    return $reviewByOperator;
  }
  
 }
