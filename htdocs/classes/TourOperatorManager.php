@@ -1,7 +1,7 @@
 <?php
 
 
-class Manager
+class TourOperatorManager
 {
  private $pdo;
 
@@ -16,18 +16,7 @@ public function setPdo($pdo){
     $this->pdo = $pdo; 
 }
 /*******************************CREATE*********************************************************/
-//creation destination 
- public function createDestination(Destination $destination)
- { 
-   $insertDestination = $this->pdo->prepare('INSERT INTO destinations(location, price, id_tour_operator) 
-  VALUES(:location, :price, :id_tour_operator)');
-   $insertDestination->bindValue(':location', $destination->getLocation(),PDO::PARAM_STR);
-   $insertDestination->bindValue(':price', $destination->getPrice(), PDO::PARAM_INT);
-   $insertDestination->bindValue(':id_tour_operator', $destination->getId_tour_operator(), PDO::PARAM_INT);
-   $insertDestination->execute();
-   
-   
- }
+
 //creation Tour Operator 
 public function createTourOperator(TourOperator $tourOperator)
 { 
@@ -41,16 +30,7 @@ public function createTourOperator(TourOperator $tourOperator)
   
   
 }
-public function createReview(Review $review)
-{ 
-  $insertReview = $this->pdo->prepare('INSERT INTO reviews(message, author, id_tour_operator) 
- VALUES(:message, :author, :id_tour_operator)');
-  $insertReview->bindValue(':message', $review->getMessage(), PDO::PARAM_STR);
-  $insertReview->bindValue(':author', $review->getAuthor(), PDO::PARAM_STR);
-  $insertReview->bindValue(':id_tour_operator', $review->getId_tour_operator(), PDO::PARAM_INT);
-  $insertReview->execute();
-  
-}
+
 
 /*****************************UPDATE************************************************************/
 //modifier les tourOperatorPremium 
@@ -63,25 +43,7 @@ public function createReview(Review $review)
     $updateOperatorToPremium->execute();
   }
 
-//modifier prix destination
-  public function updatePriceDestination(Destination $destination, $price)
-  {
-    $updatePriceDestination = $this->pdo->prepare('UPDATE destinations SET  price = :price WHERE id = :id');
-    $updatePriceDestination->bindValue(':id', $destination->getId(), PDO::PARAM_INT);
-    $updatePriceDestination->bindValue(':price', $price);
-    
-    $updatePriceDestination->execute();
-  }
 
-  //modifier review message
-  public function updateReviewMessage(Review $review, $message)
-  {
-    $updatePriceDestination = $this->pdo->prepare('UPDATE reviews SET  message = :message WHERE id = :id');
-    $updatePriceDestination->bindValue(':id', $review->getId(), PDO::PARAM_INT);
-    $updatePriceDestination->bindValue(':message', $message);
-    
-    $updatePriceDestination->execute();
-  }
   public function updateOperatorGrade(TourOperator $operator, $grade)
   {
     var_dump($grade);
@@ -112,40 +74,10 @@ public function createReview(Review $review)
     $deleteTourOperator->execute();
   }
 
-  //delete Destination
-  public function deleteDestination(Destination $destination)
-  {
-    $deleteDestination = $this->pdo->prepare('DELETE FROM destinations WHERE id = :id');
-    $deleteDestination->bindValue(':id', $destination->getId(), PDO::PARAM_INT);
-    $deleteDestination->execute();
-  }
   
-  //delete Review
-  public function deleteReview(Review $review)
-  {
-    $deleteReview = $this->pdo->prepare('DELETE FROM reviews WHERE id = :id');
-    $deleteReview->bindValue(':id', $review->getId(), PDO::PARAM_INT);
-    $deleteReview->execute();
-  }
   
   /*************************************** GET INFORMATIONS ************************************/ 
   
-  // List all Destination // 
-  public function getAllDestination()
-  {
-    $destinations = [];
-    
-    $allDestinations = $this->pdo->prepare('SELECT * FROM  destinations');
-    $allDestinations->execute();
-    
-    while ($donneesDestination = $allDestinations->fetch(PDO::FETCH_ASSOC))
-    {
-      array_push($destinations, new Destination ($donneesDestination)); 
-  
-    }
-    
-    return $destinations;
-  }
    // List all Operator // 
    public function getAllOperator()
    {
@@ -191,24 +123,5 @@ public function createReview(Review $review)
     return $operatorsByDestination;
   }
   
- // List review by operator // 
- public function getReviewByOperator($idTourOperator)
- {
-   $reviewByOperator = [];
-   
-   $allReviewByOperator = $this->pdo->prepare('SELECT * FROM  reviews 
-   JOIN tour_operators ON reviews.id_tour_operator = tour_operators.id WHERE reviews.id_tour_operator= :idTourOperator');
-   $allReviewByOperator->bindValue(':idTourOperator', $idTourOperator ,PDO::PARAM_INT);
-   $allReviewByOperator->execute();
-   
-   while ($donneesReviewByOperator = $allReviewByOperator->fetch(PDO::FETCH_ASSOC))
-   {
-     
-     array_push($reviewByOperator, new Review ($donneesReviewByOperator)); 
- 
-   }
-   
-    return $reviewByOperator;
- }
  
 }

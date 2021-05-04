@@ -7,12 +7,11 @@ include 'partiels/header.php'; ?>
 <?php 
 include 'partiels/navBar.php'; 
 
- 
+$DestinationManager = new DestinationManager($pdo); 
 $manager=new Manager($pdo);
 include 'data-recovery/destinations.php';
 
 $allOperator = $manager->getAllOperator();
-var_dump($allOperator);
 
 foreach($allOperator as $operator){
     echo '</br>'.$operator->getName();

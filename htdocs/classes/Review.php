@@ -6,6 +6,7 @@ class Review {
     private string $message; 
     private string $author;
     private int $id_tour_operator;
+    private $grade_review; 
      
 
 
@@ -41,7 +42,9 @@ class Review {
     public function getId_tour_operator(){
         return $this->id_tour_operator;
     }
-   
+    public function getGrade_review(){
+        return $this->grade_review;
+    }
 /* SET*/
 
     public function setId($id){
@@ -55,6 +58,9 @@ class Review {
     }
     public function setId_tour_operator($id_tour_operator){
         $this->id_tour_operator=$id_tour_operator; 
+    }
+    public function setGrade_review($grade_review){
+        $this->grade_review=$grade_review; 
     }
     
 

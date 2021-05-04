@@ -8,11 +8,11 @@ include 'partiels/header.php'; ?>
 include 'partiels/navBar.php'; 
 
  
-$manager=new Manager($pdo);
+$OperatorManager=new TourOperatorManager($pdo);
+$ReviewManager = new ReviewManager($pdo);
 
-var_dump($_POST['destination']);
 if(isset($_POST['destination'])){
-    $allOperatorByDestination = $manager->getOperatorByDestination($_POST['destination']);
+    $allOperatorByDestination = $OperatorManager->getOperatorByDestination($_POST['destination']);
     foreach($allOperatorByDestination as $operatorByDestination){
         
         echo '</br>'.$operatorByDestination->getName();
@@ -23,15 +23,16 @@ if(isset($_POST['destination'])){
         }else{
             echo '</br>This Operator is Premium ';
         }
-        var_dump($operatorByDestination);
-        $allReviews = $manager->getReviewByOperator($operatorByDestination->getId());
-        var_dump($allReviews);
+        
+        $allReviews = $ReviewManager->getReviewByOperator($operatorByDestination->getId());
+        
         foreach($allReviews as $reviews){
             
             echo '</br>'.$reviews->getMessage(); 
             echo '</br>'.$reviews->getAuthor(); 
+            
 
-        }
+        }include 'forms/form-review.php';
     }
 }
 

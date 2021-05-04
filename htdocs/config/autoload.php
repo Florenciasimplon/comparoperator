@@ -1,8 +1,8 @@
 <?php
 function loadClass($classe)
 {
-  require_once 'classes/'.
-		$classe . '.php'; 
+  require_once __DIR__.'/../classes/'.
+        $classe . '.php'; 
 }
 
-spl_autoload_register('loadClass'); 
+spl_autoload_register('loadClass');
