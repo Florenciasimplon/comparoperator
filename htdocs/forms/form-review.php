@@ -1,6 +1,6 @@
 <form class="form" action="../treatment/create.php" method="post">
 <div class="mb-3">
-<input type='hidden' name='id_tour_operator' value='3'>
+<input type='hidden' name='id_tour_operator' value='1'>
   <label for="pseudo" class="form-label"></label>
   <input type="text" class="form-control" id="author" placeholder="Pseudo" name="author">
 </div>

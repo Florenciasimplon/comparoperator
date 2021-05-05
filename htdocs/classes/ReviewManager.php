@@ -52,11 +52,13 @@ public function createReview(Review $review)
 
   /*****************************DELETE************************************************************/  
   //delete Review
-  public function deleteReview(Review $review)
+  public function deleteReview($id)
   {
     $deleteReview = $this->pdo->prepare('DELETE FROM reviews WHERE id = :id');
-    $deleteReview->bindValue(':id', $review->getId(), PDO::PARAM_INT);
+    $deleteReview->bindValue(':id', $id, PDO::PARAM_INT);
     $deleteReview->execute();
+
+    
   }
   
   /*************************************** GET INFORMATIONS ************************************/ 
@@ -118,5 +120,19 @@ public function createReview(Review $review)
     return $moyenne;
  }
 
+ public function getAllReview()
+ {
+   $reviews = [];
+   
+   $allReviews = $this->pdo->prepare('SELECT * FROM  reviews');
+   $allReviews->execute();
+   
+   while ($donneesReviews = $allReviews->fetch(PDO::FETCH_ASSOC))
+   {
+     array_push($reviews, new Review ($donneesReviews)); 
  
+   }
+   
+   return $reviews;
+ } 
 }

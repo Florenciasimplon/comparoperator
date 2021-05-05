@@ -25,22 +25,23 @@ class ImageManager
    $insertPhotoLink->execute();
    }
      /*****************************DELETE************************************************************/
-  public function deleteImage(Image $photo_link)
+  public function deleteImage($id)
   { 
-     /******Delete Destination*******/
-       $deletePhotoLInk = $this->pdo->prepare('DELETE FROM photos WHERE id_destination = :id_destination');
-       $deletePhotoLInk->bindValue(':id_destination', $photo_link->getId(), PDO::PARAM_INT);
-       $deletePhotoLInk->execute();
+     
+    $deletePhoto = $this->pdo->prepare('DELETE FROM photos WHERE id = :id');
+    $deletePhoto->bindValue(':id', $id, PDO::PARAM_INT);
+    $deletePhoto->execute();
 
 
   }
      /*****************************UPDATE************************************************************/
-     public function updatePhotoLink(Image $photo_link)
-     {
-       $updatePhotoLink = $this->pdo->prepare('UPDATE photos SET photo_link WHERE id = :id');
-       $updatePhotoLink->bindValue(':id', $photo_link->getId(), PDO::PARAM_INT);       
-       $updatePhotoLink->execute();
-     }
+  public function updatePhotoLink($idImage, $photo_link)
+  {
+    $updatePhotoLink = $this->pdo->prepare('UPDATE photos SET photo_link = :photo_link WHERE id = :id');
+    $updatePhotoLink->bindValue(':id', $idImage, PDO::PARAM_INT); 
+    $updatePhotoLink->bindValue(':photo_link', $photo_link, PDO::PARAM_STR);       
+    $updatePhotoLink->execute();
+  }
 
 
      /*************************************** GET INFORMATIONS ************************************/ 
@@ -49,9 +50,9 @@ class ImageManager
   {
     $ImageByDestination = [];
     
-    $allgetImageByDestination = $this->pdo->prepare('SELECT photos* FROM  photos
-    JOIN destinations ON photos.id_destination = destinations.id WHERE id = :id');
-    $allgetImageByDestination->bindValue(':id', $idDestination ,PDO::PARAM_INT);
+    $allgetImageByDestination = $this->pdo->prepare('SELECT * FROM  photos
+    WHERE id_destination = :id_destination ');
+    $allgetImageByDestination->bindValue(':id_destination', $idDestination ,PDO::PARAM_INT);
     $allgetImageByDestination->execute();
     
     while ($donneesImageByDestination = $allgetImageByDestination->fetch(PDO::FETCH_ASSOC))

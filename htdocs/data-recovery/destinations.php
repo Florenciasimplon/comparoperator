@@ -1,7 +1,7 @@
 <?php
 
 
-$destinations = $DestinationManager->getAllNameDestination();
+$destinations= $DestinationManager->getOneDestination();
 foreach ($destinations as $destination) :?>
     <?php echo $destination->getLocation();?> 
 <form action='../operatorByDestination.php' method="post">

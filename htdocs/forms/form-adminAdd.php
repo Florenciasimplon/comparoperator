@@ -1,3 +1,4 @@
+<div class='bg-light border border-secondary m-5 rounded p-3'>
 <form class="form" action="../treatment/admin.php" method="post">
     <h4>Administrator registration</h4>
   <div class="mb-3">
@@ -18,3 +19,4 @@
   </div>
   <button type="submit" class="btn btn-primary" name="admin">Submit</button>
 </form>
+</div>

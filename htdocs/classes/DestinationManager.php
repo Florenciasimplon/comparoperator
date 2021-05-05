@@ -34,10 +34,10 @@ public function createDestination(Destination $destination)
 /*****************************UPDATE************************************************************/
 
 //modifier prix destination
-  public function updatePriceDestination(Destination $destination, $price)
+  public function updatePriceDestination($idDestination, $price)
   {
     $updatePriceDestination = $this->pdo->prepare('UPDATE destinations SET  price = :price WHERE id = :id');
-    $updatePriceDestination->bindValue(':id', $destination->getId(), PDO::PARAM_INT);
+    $updatePriceDestination->bindValue(':id', $idDestination, PDO::PARAM_INT);
     $updatePriceDestination->bindValue(':price', $price);
     
     $updatePriceDestination->execute();
@@ -47,10 +47,14 @@ public function createDestination(Destination $destination)
   /*****************************DELETE************************************************************/
 
   //delete Destination
-  public function deleteDestination(Destination $destination)
-  {
+  public function deleteDestination($destination)
+  { 
+    $deletePhoto = $this->pdo->prepare('DELETE FROM photos WHERE id_destination = :id_destination');
+    $deletePhoto->bindValue(':id_destination', $destination, PDO::PARAM_INT);
+    $deletePhoto->execute();
+
     $deleteDestination = $this->pdo->prepare('DELETE FROM destinations WHERE id = :id');
-    $deleteDestination->bindValue(':id', $destination->getId(), PDO::PARAM_INT);
+    $deleteDestination->bindValue(':id', $destination, PDO::PARAM_INT);
     $deleteDestination->execute();
   }
   
@@ -73,20 +77,20 @@ public function createDestination(Destination $destination)
     
     return $destinations;
   }
- 
-  public function getAllNameDestination()
+  public function getOneDestination()
   {
-    $destinationsName = [];
+    $destinations = [];
     
-    $allNameDestinations = $this->pdo->prepare('SELECT DISTINCT location FROM  destinations');
-    $allNameDestinations->execute();
+    $allDestinations = $this->pdo->prepare('SELECT DISTINCT location FROM  destinations');
+    $allDestinations->execute();
     
-    while ($donneesDestinationName = $allNameDestinations->fetch(PDO::FETCH_ASSOC))
+    while ($donneesDestination = $allDestinations->fetch(PDO::FETCH_ASSOC))
     {
-      array_push($destinationsName, new Destination ($donneesDestinationName)); 
+      array_push($destinations, new Destination ($donneesDestination)); 
   
     }
     
-    return $destinationsName;
+    return $destinations;
   }
+  
 }

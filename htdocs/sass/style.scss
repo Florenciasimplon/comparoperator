@@ -1,1 +1,8 @@
-@import "bootstrap/scss/bootstrap"; 
+@import "../bootstrap/scss/bootstrap"; 
+@import "margin.scss"; 
+.imageModification{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}

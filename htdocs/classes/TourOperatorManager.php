@@ -34,10 +34,10 @@ public function createTourOperator(TourOperator $tourOperator)
 
 /*****************************UPDATE************************************************************/
 //modifier les tourOperatorPremium 
-  public function updateOperatorToPremium(TourOperator $tourOperator, $is_premium)
+  public function updateOperatorToPremium($idTourOperator, $is_premium)
   {
     $updateOperatorToPremium = $this->pdo->prepare('UPDATE tour_operators SET  is_premium = :is_premium WHERE id = :id');
-    $updateOperatorToPremium->bindValue(':id', $tourOperator->getId(), PDO::PARAM_INT);
+    $updateOperatorToPremium->bindValue(':id', $idTourOperator, PDO::PARAM_INT);
     $updateOperatorToPremium->bindValue(':is_premium', $is_premium);
     
     $updateOperatorToPremium->execute();
@@ -46,31 +46,38 @@ public function createTourOperator(TourOperator $tourOperator)
 
   public function updateOperatorGrade(TourOperator $operator, $grade)
   {
-    var_dump($grade);
     $updateOperatorGrade = $this->pdo->prepare('UPDATE  tour_operators SET  grade = :grade WHERE id = :id');
     $updateOperatorGrade->bindValue(':id', $operator->getId(), PDO::PARAM_INT);
     $updateOperatorGrade->bindValue(':grade', $grade);
     
     $updateOperatorGrade->execute();
   }
+  public function updateOperatorLink($id, $link)
+  {
 
+    $updateOperatorLink = $this->pdo->prepare('UPDATE  tour_operators SET  link = :link WHERE id = :id');
+    $updateOperatorLink->bindValue(':id', $id, PDO::PARAM_INT);
+    $updateOperatorLink->bindValue(':link', $link);
+    
+    $updateOperatorLink->execute();
+  }
   /*****************************DELETE************************************************************/
   // Delete tour operator, ces destinations et ces review
-  public function deleteTourOperator(TourOperator $tourOperator)
+  public function deleteTourOperator($tourOperator)
   { 
     /******Delete Destination*******/
     $deleteDestination = $this->pdo->prepare('DELETE FROM destinations WHERE id_tour_operator = :id_tour_operator');
-    $deleteDestination->bindValue(':id_tour_operator', $tourOperator->getId(), PDO::PARAM_INT);
+    $deleteDestination->bindValue(':id_tour_operator', $tourOperator, PDO::PARAM_INT);
     $deleteDestination->execute();
 
    /******Delete Review*******/   
     $deleteReview = $this->pdo->prepare('DELETE FROM reviews WHERE id_tour_operator = :id_tour_operator');
-    $deleteReview->bindValue(':id_tour_operator', $tourOperator->getId(), PDO::PARAM_INT);
+    $deleteReview->bindValue(':id_tour_operator', $tourOperator, PDO::PARAM_INT);
     $deleteReview->execute(); 
 
     /******Delete Tour Operator*******/ 
     $deleteTourOperator = $this->pdo->prepare('DELETE FROM tour_operators WHERE id = :id');
-    $deleteTourOperator->bindValue(':id', $tourOperator->getId(), PDO::PARAM_INT);
+    $deleteTourOperator->bindValue(':id', $tourOperator, PDO::PARAM_INT);
     $deleteTourOperator->execute();
   }
 
@@ -121,6 +128,23 @@ public function createTourOperator(TourOperator $tourOperator)
     }
 
     return $operatorsByDestination;
+  }
+  public function getOperatorById($id)
+  {
+    $operatorsById = [];
+    
+    $allOperatorById = $this->pdo->prepare('SELECT * FROM  tour_operators 
+    WHERE id = :id');
+    $allOperatorById->bindValue(':id', $id ,PDO::PARAM_INT);
+    $allOperatorById->execute();
+    
+    while ($donneesOperatorByDestination = $allOperatorById->fetch(PDO::FETCH_ASSOC))
+    {
+      array_push($operatorsById, new TourOperator ($donneesOperatorByDestination)); 
+  
+    }
+
+    return $operatorsById;
   }
   
  

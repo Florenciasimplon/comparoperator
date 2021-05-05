@@ -8,10 +8,11 @@ include 'partiels/header.php'; ?>
 include 'partiels/navBar.php'; 
 
 $DestinationManager = new DestinationManager($pdo); 
-$manager=new Manager($pdo);
+$OperatorManager = new TourOperatorManager($pdo);
+$ReviewManager = new ReviewManager($pdo);
 include 'data-recovery/destinations.php';
 
-$allOperator = $manager->getAllOperator();
+$allOperator = $OperatorManager->getAllOperator();
 
 foreach($allOperator as $operator){
     echo '</br>'.$operator->getName();
@@ -23,7 +24,6 @@ foreach($allOperator as $operator){
         echo '</br>This Operator is Premium ';
     }
 }
-
 
 ?>
 <h1>test</h1>
