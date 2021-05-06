@@ -131,20 +131,14 @@ public function createTourOperator(TourOperator $tourOperator)
   }
   public function getOperatorById($id)
   {
-    $operatorsById = [];
     
     $allOperatorById = $this->pdo->prepare('SELECT * FROM  tour_operators 
     WHERE id = :id');
     $allOperatorById->bindValue(':id', $id ,PDO::PARAM_INT);
     $allOperatorById->execute();
     
-    while ($donneesOperatorByDestination = $allOperatorById->fetch(PDO::FETCH_ASSOC))
-    {
-      array_push($operatorsById, new TourOperator ($donneesOperatorByDestination)); 
-  
-    }
+    return  $allOperatorById->fetch(PDO::FETCH_ASSOC); 
 
-    return $operatorsById;
   }
   
  

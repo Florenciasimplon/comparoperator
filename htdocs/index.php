@@ -10,22 +10,14 @@ include 'partiels/navBar.php';
 $DestinationManager = new DestinationManager($pdo); 
 $OperatorManager = new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
+include 'data-recovery/poc-promo.php';
+include 'forms/search.php';
 include 'data-recovery/destinations.php';
-
-$allOperator = $OperatorManager->getAllOperator();
-
-foreach($allOperator as $operator){
-    echo '</br>'.$operator->getName();
-    echo '</br>'.$operator->getGrade();
-    echo '</br>'.$operator->getLink();
-    if($operator->getIs_premium()=== false){
-        echo '</br>This Operator is not Premium ';
-    }else{
-        echo '</br>This Operator is Premium ';
-    }
-}
 
 ?>
 <h1>test</h1>
+<i class='fa fa-star' style='color:yellow; border:black;'></i>
+<i class='far fa-star'></i>
+<i class="fas fa-camera"></i> 
 </body>
 <?php include 'partiels/footer.php'; ?>

@@ -46,3 +46,17 @@ $( ".buttonAccesUpdateOperator" ).click(function() {
 
   });
 
+$(".btn-delete-item").click((e)=>{
+  console.log(e);
+})
+
+let deleteBtns = document.querySelectorAll('.btn-delete-item')
+
+deleteBtns.forEach((btn)=>{
+  btn.addEventListener('click',(e)=>{
+    result = window.confirm('message ??');
+    if(!result){
+      e.preventDefault()
+    }
+  })
+})

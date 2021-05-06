@@ -70,7 +70,7 @@ public function createReview(Review $review)
    
    $allReviewByOperator = $this->pdo->prepare('SELECT * FROM  reviews 
    JOIN tour_operators ON reviews.id_tour_operator = tour_operators.id WHERE reviews.id_tour_operator= :idTourOperator');
-   $allReviewByOperator->bindValue(':idTourOperator', $idTourOperator ,PDO::PARAM_INT);
+   $allReviewByOperator->bindValue(':idTourOperator', $idTourOperator );
    $allReviewByOperator->execute();
    
    while ($donneesReviewByOperator = $allReviewByOperator->fetch(PDO::FETCH_ASSOC))

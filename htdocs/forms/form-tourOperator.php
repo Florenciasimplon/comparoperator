@@ -1,7 +1,7 @@
 <div class='bg-light border border-secondary m-5 p-5 rounded text-center'>
   <h5>Create New Destination</h5>
   <form class="form" action="../treatment/create.php" method="post">
-    <div class='row'>
+    <div class='row '>
       <div class="col-lg-3">
         <label for="pseudo" class="form-label"></label>
         <input type="text" class="form-control" id="name" placeholder="Name" name="name">

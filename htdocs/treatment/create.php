@@ -29,12 +29,10 @@ else if(isset($_POST['name']) && isset($_POST['link'])&& isset($_POST['is_premiu
 }
 //create Review
 else if(isset($_POST['message']) && isset($_POST['author'])){
-
     $review= new Review(['message'=> $_POST['message'], 'author'=>$_POST['author'], 'id_tour_operator'=>$_POST['id_tour_operator'], 'grade_review'=>$_POST['grade_review']=='null'? null:$_POST['grade_review']]);
     $ReviewManager->createReview($review);
     $tourOperator= $OperatorManager->getOneOperator($_POST['id_tour_operator']);
     $moyengrade= $ReviewManager->getGradeByOperator($_POST['id_tour_operator']);
-    var_dump($moyengrade);
     $OperatorManager->updateOperatorGrade($tourOperator, $moyengrade['grade_moyenne']);
 }
 //image

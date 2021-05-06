@@ -1,4 +1,11 @@
-@import "../bootstrap/scss/bootstrap"; 
+@import "variables";
+@import "../bootstrap/scss/bootstrap";
+@import "../sass/background";
+@import "../sass/flexDirection";
+@import "../sass/destination";
+@import "card";
+@import "../sass/footer";
+
 @import "margin.scss"; 
 .imageModification{
     width: 200px;
@@ -6,3 +13,90 @@
     border-radius: 10px;
     margin-bottom: 1%;
 }
+body{
+    font-family: 'Lobster', 'cursive';
+}
+.title{
+    font-size: x-large;
+}
+/*************NAVBAR********************/
+.plane{
+    
+    animation: 6s linear 1s infinite running slidein;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+@keyframes slidein {
+    0% { 
+        left: 0;
+        top: 0;
+    }
+
+    100% { left: 40vw;
+        top: 0;
+    }
+}
+.lobster{
+    font-family:'Lobster', cursive;
+    text-align: center;
+    font-size:x-large;
+    color: black;
+}
+#navbarNav:hover{
+    color:$bluecien;
+}
+  /*************Promo********************/
+.promo{
+    overflow: hidden;
+    .poc-promo{
+        height: 415px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -100%;
+        animation-duration: 8s;
+        animation-name: glissement;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        .image-promo img{
+            width: 100vw;
+            vertical-align: middle;
+            height: 50vh;
+            border: 2px solid #f7f8f8;
+
+        }
+        .box-text-promo{
+            
+            position: relative;
+            /* border-radius: 50%; */
+            top: -50%;
+            left: 38%;
+            background: rgba(255, 255, 255, 0.623);
+            width: 499px;
+            height: 67px;
+            display: flex;
+            align-items: center;
+            padding: 23px;
+            .text-promo{
+                text-align: center;
+                padding-top: 19px;
+                color: #023047;
+    
+            }
+        }
+
+        @keyframes glissement {
+            from {
+            left: -100%;
+            }
+
+            to {
+            left: 0%;
+            }
+        }
+    }
+}
+    

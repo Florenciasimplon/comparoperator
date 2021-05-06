@@ -39,7 +39,7 @@ foreach ($allOperator as $operator) : ?>
             <form action='../treatment/delete.php' method="post">
               <input type='hidden' name='idOperator' value='<?php echo $operator->getId(); ?> '>
 
-              <button type="submit" class="btn btn-primary" name="destinations">Delete Operator</button>
+              <button type="submit" class="btn btn-primary btn-delete-item" name="destinations">Delete Operator</button>
             </form>
           </div>
           <div class="col-lg-6">

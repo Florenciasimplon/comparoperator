@@ -16,7 +16,7 @@ if(isset($_POST['destination'])){
     foreach($allOperatorByDestination as $operatorByDestination){
         
         echo '</br>'.$operatorByDestination->getName();
-        echo '</br>'.$operatorByDestination->getGrade();
+        
         echo '</br>'.$operatorByDestination->getLink();
         if($operatorByDestination->getIs_premium()=== false){
             echo '</br>This Operator is not Premium ';
@@ -25,14 +25,18 @@ if(isset($_POST['destination'])){
         }
         
         $allReviews = $ReviewManager->getReviewByOperator($operatorByDestination->getId());
-        
+        echo '<div class="commentaire-list">';
+        echo '</br>'.$operatorByDestination->getGrade();
         foreach($allReviews as $reviews){
             
             echo '</br>'.$reviews->getMessage(); 
             echo '</br>'.$reviews->getAuthor(); 
             
 
-        }include 'forms/form-review.php';
+        }
+        echo '</div>';
+        
+        include 'forms/form-review.php';
     }
 }
 

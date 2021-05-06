@@ -1,0 +1,67 @@
+.DEST{
+    text-align: center;
+    color:$darktaupe;
+    margin-top: 4vw;
+    font-size: x-large;
+}
+.containe-carousel{
+    display: flex;
+    align-items: center;
+    
+    h4{
+        font-size: xx-large;
+    }
+        .wrapper{
+          width: 100%;
+          
+
+          .carousel{
+            width: 100%;
+            margin: auto;
+            padding:19px 108px;
+           
+
+            .card{
+              background-color:$beige;
+              text-align: center;
+              color: $taupe;
+              margin: 20px 0;
+              border-radius: 10px;
+              box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+              width: 90%;
+              height: 131px;
+              padding: 20px;
+              box-shadow: 12px 12px 2px 1px #a6808c;
+             
+
+            }
+            .card:hover{
+              color: $darkblue;
+              
+            }
+          }
+
+          .owl-dots{
+            text-align: center;
+            margin-top: 40px;
+          }
+          .owl-dot{ 
+            height: 15px;
+            width: 45px;
+            border-radius: 25px;
+            cursor: pointer;
+            outline: none;
+            margin: 0 5px;
+            border: 2px solid  rgba(0, 0, 0, 0.5); 
+          }
+          .owl-dot:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        }
+    
+    }
+    .cardbtn{
+        border: none;
+        font-size: medium;
+        color: $darkblue;
+    }
