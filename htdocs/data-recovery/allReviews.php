@@ -6,14 +6,12 @@ foreach($allReviewTourOperator as $oneReview):?>
     <div class="container pt-5 text-center">
       <div class="row">
        
-        <?php 
-        $allOperatorByReview = $OperatorManager->getOperatorById($oneReview->getId_tour_operator());
-        foreach($allOperatorByReview as $operatorReview):?>
+        <?php $operatorReview = new TourOperator($OperatorManager->getOperatorById($oneReview->getId_tour_operator()));?>
             <div class="col-lg-3">
             <h6>Operator</h6>
-            <?php echo $operatorReview->getName(); ?>
+            <?php  echo $operatorReview->getName(); ?>
             </div>
-            <?php endforeach; ?> 
+            
             
             <div class="col-lg-3">
             <h6>Message</h6>
@@ -43,10 +41,10 @@ foreach($allReviewTourOperator as $oneReview):?>
             $OperatorManager->updateOperatorGrade($tourOperator, $moyengrade['grade_moyenne']); 
         }
         ?>
-        <button type="submit" class="btn btn-primary" name="destinations">Delete Review</button>
+        <button type="submit" class="btn btn-danger" name="destinations">Delete Review</button>
     </form>
     </div>
   
-</div>
+  </div>
 </div>
   <?php endforeach; ?>  

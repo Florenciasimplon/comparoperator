@@ -23,3 +23,31 @@ jQuery(document).ready(function() {
       }
     });
   });
+
+  $(document).ready(function(){
+    $(".seeFormSearchReviewTourOperator").hide();
+    $(".seeSearchReviewTourOperator").hide();
+   
+  }); 
+    
+$( ".btnSeeReviewsSearch" ).click(function() {
+    let id = this.getAttribute('id')
+    $(`#seeSearchReviewTourOperator${id}`).toggle();
+    $(".accesUpdatePrice").hide();
+    $("#seeFormDestination").hide();
+    $("#seeFormTourOperator").hide();
+    $("#seeOperator").hide();
+    $("#seeReviews").hide();
+    $("#seeDestination").hide();
+  });
+  $( ".btnSeeAddReviewsSearch" ).click(function() {
+    let id = this.getAttribute('id')
+    $(`#accesUpdateOperator${id}`).toggle();
+    $(".accesUpdatePrice").hide();
+    $("#seeFormDestination").hide();
+    $("#seeFormTourOperator").hide();
+    $("#seeOperator").hide();
+    $("#seeReviews").hide();
+    $("#seeDestination").hide();
+  });
+console.log('hola')

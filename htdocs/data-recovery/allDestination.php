@@ -20,7 +20,7 @@ foreach ($allDestination as $destination) : ?>
           <div class=''>
             <form action='../treatment/delete.php' method="post">
               <input type='hidden' name='idDestination' value='<?php echo $destination->getId(); ?> '>
-              <button type="submit" class="btn btn-primary btn-sm mb-4" name="destinations">Delete Destination</button>
+              <button type="submit" class="btn btn-danger btn-sm mb-4" name="destinations">Delete Destination</button>
             </form>
           </div>
         </div>
@@ -31,10 +31,10 @@ foreach ($allDestination as $destination) : ?>
       $allImages = $ImageManager->getImageByDestination($destination->getId());
       foreach ($allImages as $imagen) : ?>
           <div class="col-lg-3 m-2">
-            <img src="<?php echo $imagen->getPhotoLink(); ?>" alt="" srcset="" class="imageModification">
+            <img src="<?php echo $imagen->getPhoto_Link(); ?>" alt="" srcset="" class="imageModification">
             <form action='../treatment/delete.php' method="post">
               <input type='hidden' name='idImagen' value='<?php echo $imagen->getId(); ?> '>
-              <button type="submit" class="btn btn-primary" name="destinations">Delete Photo</button>
+              <button type="submit" class="btn btn-danger" name="destinations">Delete Photo</button>
             </form>
           </div>
         <?php endforeach; ?>

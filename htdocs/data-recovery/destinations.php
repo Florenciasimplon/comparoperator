@@ -12,9 +12,9 @@ $destinations= $DestinationManager->getOneDestination();?>
                     <div class="text-zone">
                         <h4><?=ucfirst($destination->getLocation())?></h4>
                          <form action='../operatorByDestination.php' method="post">
-<input type='hidden' name='destination' value='<?php echo $destination->getLocation();?> '>
-<button type="submit" class="btn  cardbtn" name="destinations">See operators</button>
-</form>
+                            <input type='hidden' name='destination' value='<?php echo $destination->getLocation();?> '>
+                            <button type="submit" class="btn  cardbtn" name="destinations">See operators</button>
+                        </form>
                         </div>
                 </div>
                  

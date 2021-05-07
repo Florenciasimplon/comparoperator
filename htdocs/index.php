@@ -1,7 +1,6 @@
 <?php
 include 'config/db.php';
 include 'config/autoload.php';
-session_start();
 include 'partiels/header.php'; ?>
 <body>
 <?php 
@@ -12,12 +11,19 @@ $OperatorManager = new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
 include 'data-recovery/poc-promo.php';
 include 'forms/search.php';
-include 'data-recovery/destinations.php';
-
 ?>
+<div id='resultSearchDestination'></div> 
+<div id='resultSearchTourOperator'></div> 
+<?php include 'data-recovery/destinations.php';
+include 'data-recovery/gallery.php';?>
+
+
+
 <h1>test</h1>
-<i class='fa fa-star' style='color:yellow; border:black;'></i>
+<i class='fa fa-star text-warning' ></i>
 <i class='far fa-star'></i>
-<i class="fas fa-camera"></i> 
 </body>
-<?php include 'partiels/footer.php'; ?>
+<?php include 'partiels/footer.php'; 
+
+include 'partiels/footerScript.php'; 
+?>

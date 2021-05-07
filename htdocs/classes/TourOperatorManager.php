@@ -140,6 +140,37 @@ public function createTourOperator(TourOperator $tourOperator)
     return  $allOperatorById->fetch(PDO::FETCH_ASSOC); 
 
   }
+
+  public function getListOperatorById($id)
+  {
+    
+    $allOperatorById = $this->pdo->prepare('SELECT * FROM  tour_operators 
+    WHERE id = :id');
+    $allOperatorById->bindValue(':id', $id ,PDO::PARAM_INT);
+    $allOperatorById->execute();
+    
+    return  $allOperatorById->fetch(PDO::FETCH_ASSOC); 
+
+  }
+  public function getListOperatorSearch($search)
+  {
+    $operatorsBySearch = [];
+    $allOperatorSearch = $this->pdo->prepare('SELECT * FROM  tour_operators 
+    WHERE name LIKE :search');
+    $search="%".$search."%";
+    $allOperatorSearch->bindValue(':search', $search ,PDO::PARAM_STR);
+    $allOperatorSearch->execute();
+
+    while ($donneesOperatorSearch = $allOperatorSearch->fetch(PDO::FETCH_ASSOC))
+    {
+      array_push($operatorsBySearch, new TourOperator ($donneesOperatorSearch)); 
+  
+    }
+
+    return $operatorsBySearch;
+    
+
+  }
   
  
 }

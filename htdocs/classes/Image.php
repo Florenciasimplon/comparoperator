@@ -28,7 +28,7 @@ class Image {
      public function getId(){
          return $this->id;
      }  
-     public function getPhotoLink(){
+     public function getPhoto_Link(){
          return $this->photo_link;
      }
      public function getIdDestination(){

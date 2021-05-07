@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html class="no-js doc-rubric-grossesse" lang="fr">
+<head>
+        <script>
+        window.gdprAppliesGlobally=true;
+        (function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
+        else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
+            var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
+            if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
+            var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("1c7a6a97-5c7c-4b1d-8ea2-9ffa2349a26b")})();
+    </script>
+
+    <script type="text/javascript">
+        !function(o,r){var d=o.Didomi||{},t=!1,a=!1,s=!1,l=!1,c="",i=o.console||{log:function(e){}},u=function(){},p={wall_active:!0};function n(){u=!1,r.getElementById("didomi-host").remove();var e=r.getElementById("old-didomi-host");e.setAttribute("id","didomi-host"),e.style.display="block",d.notice.show("informations")}function m(){return"<div class='didomi-popup-notice-logo-container'><img class='didomi-popup-notice-logo' alt='Logo' src='"+d.getConfig().app.logoUrl+"'></div>"}function f(){var e,t;r.getElementById("old-didomi-host")||(e=r.getElementById("didomi-host"),(i=r.createElement("div")).setAttribute("id","didomi-host"),i.setAttribute("unifywall",!0),i.innerHTML=e.innerHTML,(t=i.querySelector(".didomi-popup-view"))&&(t.id="unify_wall_content",e.setAttribute("id","old-didomi-host"),e.style.display="none",r.body.insertBefore(i,r.getElementById("old-didomi-host")),r.body.classList.add("didomi-popup-open"),setTimeout(function(){r.body.classList.add("didomi-popup-open")},200),u=!1));var i=r.getElementById("unify_wall_content");return i&&(i.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text'>"+p.paywall_text+"<div id='buttons' class='multiple didomi-buttons didomi-popup-notice-buttons'><button class='didomi-components-button didomi-button didomi-button-highlight standard-button' id='unify-accept-finally'><span>"+p.btn_accept_finally+"</span></button><button class='didomi-components-button didomi-button didomi-button-highlight standard-button' id='unify-goto-subscribe'><span>"+p.btn_abo_text+"</span></button></div></div></div>",i.querySelector("#unify-accept-finally").addEventListener("click",function(){n(),d.setUserAgreeToAll(),r.body.classList.remove("didomi-popup-open")}),i.querySelector("#unify-goto-subscribe").addEventListener("click",function(){v()}),u=!1,1)}function v(){var o=r.getElementById("unify_wall_content");if(!o)return!1;var e=p.legal_text_full.split("</p>",1)[0]+"</p>";o.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text'><div class='didomi-popup-title'>"+p.prepayment_title+"</div><form action='/?payment' method='post' id='prepayment-form'><div class='didomi-popup-form-row'><div class='didomi-field-container didomi-field-container-2'><input type='email' name='email' value='"+c+"' placeholder='Adresse e-mail*' required /></div><div><small>* champ obligatoire</small></div></div><div class='didomi-popup-form-row'><p><strong>"+p.legal_text_title+"</strong></p>"+e+"<p style='margin-top:-5px; text-align:center'><svg id='unify-see-legal-screen' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 452 452' style='width:20px;margin:0 auto;cursor:pointer'><path fill='"+d.getConfig().theme.color+"' d='m226 355c-8 0-16-3-22-9l-194-194c-12-12-12-32 0-45 12-12 32-12 45 0l172 172 172-172c12-12 32-12 45 0 12 12 12 32 0 45l-194 194c-6 6-14 9-22 9z'/></svg></p></div><div class='multiple didomi-buttons didomi-popup-notice-buttons'><button id='unify-goback' class='didomi-components-button didomi-button standard-button'><span>Retour</span></button><button id='unify-pay' "+(c?"":"disabled")+" class='didomi-components-button didomi-button didomi-button-highlight standard-button'><span>Confirmer</span></button></div></form></div></div>",o.querySelector("#unify-goback").addEventListener("click",function(e){e.preventDefault(),o.querySelector("input[name=email]").remove(),f()}),o.querySelector("#unify-pay").addEventListener("click",function(e){t(),e.preventDefault(),o.querySelector("input[name=email]").remove(),g()}),o.querySelector("#unify-see-legal-screen").addEventListener("click",function(e){t(),e.preventDefault(),o.querySelector("input[name=email]").remove(),function(){var e=r.getElementById("unify_wall_content");if(!e)return;e.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text'><p><strong>"+p.legal_text_title+"</strong></p>"+p.legal_text_full+"<p style='margin-top:-5px; text-align:center; transform:rotate(180deg)'><svg class='unify-goback' id='unify-see-legal-screen-back' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 452 452' style='width:20px;margin:0 auto;cursor:pointer'><path fill='"+d.getConfig().theme.color+"' d='m226 355c-8 0-16-3-22-9l-194-194c-12-12-12-32 0-45 12-12 32-12 45 0l172 172 172-172c12-12 32-12 45 0 12 12 12 32 0 45l-194 194c-6 6-14 9-22 9z'/></svg></p></div></div>",e.querySelectorAll(".unify-goback").forEach(function(e){e.addEventListener("click",v)}),u=!1}()});var t=function(e){var t=o.querySelector("input[name=email]"),i=t.checkValidity(),n=o.querySelector("#unify-pay");i&&(c=t.value,n.removeAttribute("disabled")),i||n.hasAttribute("disabled")||n.setAttribute("disabled","disabled")};return o.querySelector("input[name=email]").addEventListener("keyup",t),o.querySelector("input[name=email]").addEventListener("onblur",t),s||_(function(){}),!(u=!1)}function y(e){e=e||"Merci de réitérer ultérieurement",o.clearTimeout(a);var t=r.getElementById("unify_wall_content");if(!t)return!1;t.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text' style='text-align:center'><div class='didomi-popup-title'>Désolé...</div><p>Une erreur s'est produite : <em>"+e+"</em></p></div></div>",u=!1}function g(){var t=r.getElementById("unify_wall_content");if(!t)return!1;if((i=r.getElementById("unify_wall_content"))&&(i.scrollHeight,i.scrollWidth,i.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text' style='text-align:center'><style>.unifywall-loader-icon {display: block;width: 80px;height: 80px;margin-left: auto;margin-right: auto;}.unifywall-loader-icon:after {content: \" \";display: block;width: 64px;height: 64px;margin: 8px;border-radius: 50%;border: 6px solid "+d.getConfig().theme.color+";border-color: "+d.getConfig().theme.color+" transparent "+d.getConfig().theme.color+" transparent;animation: unifywall-loader-icon 1.2s linear infinite;}@keyframes unifywall-loader-icon {0% { transform: rotate(0deg);}100% { transform: rotate(360deg);}}</style><div class='unifywall-loader-icon'></div><span class='didomi-popup-notice'>Chargement en cours...</span></div></div>",o.clearTimeout(a),a=o.setTimeout(function(){return y("temps d'attente dépassé")},2e4),u=!1),s){if(!l)return u=!1,void function t(i,e){if(!e){var n=w("create_intent");return void x(n,function(e){t(i,e)})}if("object"!=typeof e||!("status"in e))return void y();if("success"!==e.status)return void y();l=e.intent.client_secret;i();return}(g);o.clearTimeout(a),t.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text'><div class='didomi-popup-title'>S'abonner à <span>"+d.getConfig().app.name+"</span></div><div class='didomi-popup-arguments'>"+p.arguments_text+"</div><form action='/?payment' method='post' id='payment-form'><div id='card-errors' role='alert'></div><div class='didomi-popup-form-row'><label for='card-number'>&#x1F512; Informations de la carte*</label><div class='didomi-field-container'><div id='card-number'></div><div id='card-expiry'></div><div id='card-cvc'></div></div><div><small>* champs obligatoires</small></div></div><div class='didomi-popup-form-row'>"+p.payment_legal_text+"</div><div class='multiple didomi-buttons didomi-popup-notice-buttons'><button id='unify-goback' class='didomi-components-button didomi-button standard-button'><span>Retour</span></button><button id='unify-pay' disabled class='didomi-components-button didomi-button didomi-button-highlight standard-button'><span>"+p.btn_pay_text+"</span></button></div></form></div></div>",t.querySelector("#unify-goback").addEventListener("click",v);var e=s.elements(),i={base:{color:"#3F3735",fontWeight:500,fontSize:"15px",fontSmoothing:"antialiased","::placeholder":{color:"#CFD7DF"},":-webkit-autofill":{color:"#e39f48"}},invalid:{color:"#E25950","::placeholder":{color:"#FFCCA5"}}},n=e.create("cardNumber",{style:i,showIcon:!0,placeholder:"Numéro de carte"});n.mount("#card-number"),e.create("cardExpiry",{style:i}).mount("#card-expiry");i=e.create("cardCvc",{style:i});return i.mount("#card-cvc"),i.on("change",function(e){t.querySelector("#unify-pay").disabled=!e.complete,t.querySelector("#card-errors").textContent=e.error?e.error.message:""}),t.querySelector("#payment-form").addEventListener("submit",function(e){e.preventDefault(),t.querySelector("#unify-pay").disabled=!0,t.querySelector("#unify-pay span").innerHTML="Vérifications en cours",s.confirmCardPayment(l,{payment_method:{card:n,billing_details:{email:c}}}).then(b)}),!(u=!1)}_(g)}function b(e){var t,i=null;"object"!=typeof e?i="Une erreur innattendue est survenue":e.error?i=e.error.message:"paymentIntent"in e&&"status"in e.paymentIntent&&"succeeded"==e.paymentIntent.status||(i="Ce paiement a été refusé, veuillez vérifier vos informations bancaires"),i?(o.document.querySelector("#unify-pay span").innerHTML=p.btn_pay_text,t=i,(i=r.getElementById("card-errors"))&&(i.textContent=t)):x(w("check_and_grant_access",{stripe_client_secret:e.paymentIntent.id}),function(e){return(!(e&&"object"==typeof e&&"status"in e&&"success"===e.status)?y:function(){var e=r.getElementById("unify_wall_content");if(!e)return;e.innerHTML=m()+"<div class='didomi-popup-notice-text-container'><div class='didomi-popup-notice-text' style='text-align:center'><div style='width:80px;margin: 0 auto 20px'><svg viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'><path d='M42.833 7.792L19.062 31.584l-8.833-8.833 2.937-2.938 5.896 5.896L39.895 4.876l2.937 2.917zm-4.604 10.5c.27 1.188.437 2.438.437 3.708 0 9.209-7.458 16.667-16.667 16.667S5.332 31.21 5.332 22 12.791 5.333 22 5.333c3.292 0 6.334.959 8.917 2.605l3-3a20.625 20.625 0 00-11.917-3.771C10.499 1.167 1.166 10.5 1.166 22s9.333 20.833 20.833 20.833S42.832 33.499 42.832 22c0-2.48-.458-4.854-1.25-7.063l-3.354 3.354z' fill='"+d.getConfig().theme.color+"' fill-rule='nonzero' stroke='#fff' stroke-width='1.5'/></svg></div><div class='didomi-popup-title'>Votre paiement a bien été enregistré.</div><p><span>Vous allez recevoir un e-mail de confirmation dans quelques instants.</span></p><div id='buttons' class='multiple didomi-buttons didomi-popup-notice-buttons'><button id='btn-close-confirm-payment' class='didomi-components-button didomi-button didomi-button-highlight standard-button'><span>Je commence à naviguer</span></button></div></div></div>",e.querySelector("#btn-close-confirm-payment").addEventListener("click",function(){n(),d.setUserDisagreeToAll(),r.body.classList.remove("didomi-popup-open")}),u=!1})()})}function e(){var e=r.getElementById("didomi-host");o.MutationObserver&&!t&&(t=new MutationObserver(function(e){0<e.filter(function(e){return 0<e.addedNodes.length&&e.target.className.includes("notranslate")}).filter(function(e){return e.target.className.includes("notranslate")}).length&&u&&u()}),e.setAttribute("unify_wall",!0),t.observe(e,{childList:!0,subtree:!0}))}function h(){var e,t;for(e in p.required_purposes_ids){var i=p.required_purposes_ids[e];if(!1===d.getUserConsentStatusForPurpose(i))return!1}for(t in p.required_vendors_ids){var n=p.required_vendors_ids[t];if(!1===d.getUserConsentStatusForVendor(n))return!1}return!0}function _(e){var t=r.createElement("script");t.type="text/javascript",t.src="https://js.stripe.com/v3/",t.onload=function(){s=Stripe(p.stripe_publishable_key,{locale:"fr"}),e()},o.document.head.appendChild(t)}function x(e,t){var i=new XMLHttpRequest;i.onreadystatechange=function(){var e;i.readyState==XMLHttpRequest.DONE&&(e=JSON.parse(i.responseText),t(e))},i.ontimeout=function(){return y("Délai d'attente dépassé")},i.onerror=function(e){t(!0)},i.open("POST",e),i.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),i.withCredentials=!0,i.send()}function w(e,t){var i=p.stripe_proxy_url;if(i+=i.includes("?")?"&":"?",i+="action="+e,t)for(var n in t)i+="&"+n+"="+encodeURIComponent(t[n]);return i}o.didomiConfig=o.didomiConfig||{},o.didomiConfig.notice=o.didomiConfig.notice||{},"enable"in o.didomiConfig.notice&&!1===o.didomiConfig.notice.enable||(!0!=!!r.cookie.split("; ").find(function(e){return e.startsWith("unifywall_paid=")})?(o.didomiConfig.notice.enable=!0,o.didomiOnReady=o.didomiOnReady||[],o.didomiOnReady.push(function(){d=o.Didomi||{},0!=function(){0 in d.getConfig();0 in d.getConfig().custom;(p=Object.assign({},p,d.getConfig().custom.unify_wall)).debug&&p.debug;if(0<["wall_active","paywall_text","btn_abo_text","btn_accept_finally","required_purposes_ids","required_vendors_ids","stripe_publishable_key","stripe_proxy_url","prepayment_title","legal_text_title","legal_text_full","arguments_text","payment_legal_text","btn_pay_text"].reduce(function(e,t){return t in p?e:(i.error("-> Unify Wall: Missing mandatory variable "+t),e+1)},0))return!1;return!0}()&&p.wall_active&&(0==d.notice.isVisible()&&0==h()&&0==d.shouldConsentBeCollected()&&(e(),u=function(){f()},d.notice.show("informations")),d.on("notice.clickdisagree",function(){u=function(){f()},f()}),d.on("preferences.clickdisagreetoall",function(){e(),u=function(){f()},d.preferences.hide(),d.notice.show("informations")}),d.on("preferences.clicksavechoices",function(){0==h()&&(e(),u=function(){f()},d.preferences.hide(),d.notice.show("informations"))}),d.on("notice.shown",function(){}))})):o.didomiConfig.notice.enable=!1)}(window,document);
+
+    </script>
+
+    <title>Voyager enceinte : quels risques ? - Voyage et risque durant la grossesse - Doctissimo</title>
+
+    <link rel="preconnect" href="https://cdn.permutive.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+            <link rel="preconnect" href="https://cdn.prod.docfr.doc-media.fr" />
+        <link rel="preconnect" href="https://cdn.prod.docfr.doc-media.fr" crossorigin />
+            <link rel="preconnect" href="https://cdn1.prod.docfr.doc-media.fr" />
+        <link rel="preconnect" href="https://cdn1.prod.docfr.doc-media.fr" crossorigin />
+            <link rel="preconnect" href="https://cdn2.prod.docfr.doc-media.fr" />
+        <link rel="preconnect" href="https://cdn2.prod.docfr.doc-media.fr" crossorigin />
+            <link rel="preconnect" href="https://cdn3.prod.docfr.doc-media.fr" />
+        <link rel="preconnect" href="https://cdn3.prod.docfr.doc-media.fr" crossorigin />
+    
+            <link rel="preconnect" href="https://resize.prod.docfr.doc-media.fr" />
+            <link rel="preconnect" href="https://resize1.prod.docfr.doc-media.fr" />
+            <link rel="preconnect" href="https://resize2.prod.docfr.doc-media.fr" />
+            <link rel="preconnect" href="https://resize3.prod.docfr.doc-media.fr" />
+    
+        
+<meta charset="utf-8"/>
+<meta name="viewport"                       content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="description"                    content="Enceinte, peut-on voyager sans risques ? Le Docteur André Paugam de l&#039;Hôpital Cochin à Paris fait le point." />
+<meta name="keywords"                       content="voyage enceinte, voyage grossesse, voyage vaccination" />
+<meta name="author"                         content="Doctissimo"/>
+
+<meta property="og:title"                   content="Voyager enceinte : quels risques ? - Voyage et risque durant la grossesse - Doctissimo" />
+<meta property="og:description"             content="Enceinte, peut-on voyager sans risques ? Le Docteur André Paugam de l&#039;Hôpital Cochin à Paris fait le point." />
+<meta property="og:type"                    content="article" />
+<meta property="og:url"                     content="https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque" />
+<meta property="og:site_name"               content="Doctissimo" />
+<meta property="og:image"                   content="https://resize1.prod.docfr.doc-media.fr/rcrop/600,315,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg" />
+<meta property="og:image:width"             content="600"/>
+<meta property="og:image:height"            content="315"/>
+<meta property="og:locale"                  content="fr_FR"/>
+
+<meta property="fb:app_id"                  content="290600267704798" />
+<meta name="facebook-domain-verification" content="no6odwazkf1aogs2vac6pjsz817ikb" />
+
+<meta name="twitter:title"                  content="Voyager enceinte : quels risques ? - Voyage et risque durant la grossesse - Doctissimo" />
+<meta name="twitter:description"            content="Enceinte, peut-on voyager sans risques ? Le Docteur André Paugam de l&#039;Hôpital Cochin à Paris fait le point." />
+<meta name="twitter:card"                   content="summary" />
+<meta name="twitter:site"                   content="@doctissimo" />
+<meta name="twitter:image"                  content="https://resize1.prod.docfr.doc-media.fr/rcrop/600,315,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg" />
+<meta name="twitter:url"                    content="https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque" />
+<meta name="twitter:domain"                 content="doctissimo.fr" />
+
+    <meta name="apple-itunes-app" content="app-id=850438927, affiliate-data=at=10lxMt">    <meta name="apple-itunes-app" content="app-id=550460079, affiliate-data=at=10lxMt">    <meta name="apple-itunes-app" content="app-id=324685957, affiliate-data=at=10lxMt">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5053ff"/>
+
+<meta name="verify-v1"                      content="J3d60lX02f3NLFkGPztWLXcM2PFErfCVdnd+4+7jw/A=" />
+<meta name="robots"                         content="index, follow" />
+<meta name="robots"                         content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="application-name"               content="Doctissimo" />
+
+<meta name="theme-color"                    content="#ffffff"/>
+<meta name="msapplication-TileColor"        content="#ffffff"/>
+<meta name="msapplication-config"           content="/browserconfig.xml"/>
+<meta name="msapplication-tooltip"          content="Santé et bien être avec Doctissimo" />
+<meta name="msapplication-window"           content="width=1024;height=768" />
+<meta name="msapplication-navbutton-color"  content="#5053ff" />
+<meta name="msapplication-task"             content="name=Rechercher un article;action-uri=http://recherche.doctissimo.fr#utm_source=IE9&amp;utm_campaign=etude-epinglage&amp;utm_medium=recherche_site;icon-uri=http://medias.doctissimo.fr/html/doc/pinned-site/img/favicon16.ico" />
+<meta name="msapplication-task"             content="name=Rechercher un médicament; action-uri=http://sante.doctissimo.fr/medicaments/recherche-medicament.htm#utm_source=IE9&amp;utm_campaign=etude-epinglage&amp;utm_medium=recherche_medicament;icon-uri=http://medias.doctissimo.fr/html/doc/pinned-site/img/favicon16.ico" />
+<meta name="msapplication-task"             content="name=Poster sur le forum; action-uri=http://forum.doctissimo.fr#utm_source=IE9&amp;utm_campaign=etude-epinglage&amp;utm_medium=forum; icon-uri=http://medias.doctissimo.fr/html/doc/pinned-site/img/favicon16.ico" />
+<meta name="msapplication-task"             content="name=Accéder au club Doctissimo; action-uri=http://club.doctissimo.fr#utm_source=IE9&amp;utm_campaign=etude-epinglage&amp;utm_medium=club; icon-uri=http://medias.doctissimo.fr/html/doc/pinned-site/img/favicon16.ico" />
+<meta name="msapplication-task"             content="name=Rechercher une maternité; action-uri=http://maternites.doctissimo.fr#utm_source=IE9&amp;utm_campaign=etude-epinglage&amp;utm_medium=recherche_maternite; icon-uri=http://medias.doctissimo.fr/html/doc/pinned-site/img/favicon16.ico" />
+
+<meta name="p:domain_verify"                content="92002e2d669f4518a5dd6492da1ff93d" />
+
+            <link rel="canonical" href="https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque" />
+    
+        <style>@font-face{font-family:doc-font;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/doc-icon/doc-font.eot?lzct7l);src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/doc-icon/doc-font.eot?lzct7l#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/doc-icon/doc-font.ttf?lzct7l) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/doc-icon/doc-font.woff?lzct7l) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/doc-icon/doc-font.svg?lzct7l#doc-font) format('svg');font-weight:400;font-style:normal;font-display:block}[class*=' doc-icon-'],[class^=doc-icon-]{font-family:doc-font!important;speak:never;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.doc-icon-check:before{content:"\e900"}.doc-icon-apple:before{content:"\e901"}.doc-icon-youtube:before{content:"\e902"}.doc-icon-youtube-circle:before{content:"\e903"}.doc-icon-whatsapp-circle .path1:before{content:"\e904"}.doc-icon-whatsapp-circle .path2:before{content:"\e905";margin-left:-1em}.doc-icon-weight:before{content:"\e906"}.doc-icon-user:before{content:"\e907"}.doc-icon-twitter-circle:before{content:"\e908"}.doc-icon-timer:before{content:"\e909"}.doc-icon-search:before{content:"\e90a"}.doc-icon-search-2:before{content:"\e90b"}.doc-icon-quote:before{content:"\e90c"}.doc-icon-pregnancy:before{content:"\e90d"}.doc-icon-play:before{content:"\e90e"}.doc-icon-pinterest:before{content:"\e90f"}.doc-icon-pinterest-circle:before{content:"\e910"}.doc-icon-pill:before{content:"\e911"}.doc-icon-list:before{content:"\e912"}.doc-icon-life-ring:before{content:"\e913"}.doc-icon-instatagram:before{content:"\e914"}.doc-icon-instagram-circle:before{content:"\e915"}.doc-icon-facebook:before{content:"\e916"}.doc-icon-facebook-circle:before{content:"\e917"}.doc-icon-email-circle:before{content:"\e918"}.doc-icon-compass .path1:before{content:"\e919";color:#5053ff}.doc-icon-compass .path2:before{content:"\e91a";margin-left:-1em;color:#ff7b7b}.doc-icon-compass .path3:before{content:"\e91b";margin-left:-1em;color:#fff}.doc-icon-compass-half:before{content:"\e91c"}.doc-icon-collaboration:before{content:"\e91d"}.doc-icon-close:before{content:"\e91e"}.doc-icon-chat:before{content:"\e91f"}.doc-icon-book:before{content:"\e920"}.doc-icon-book-medical:before{content:"\e921"}.doc-icon-bars:before{content:"\e922"}.doc-icon-badge-check:before{content:"\e923"}.doc-icon-arrow-top:before{content:"\e924"}.doc-icon-arrow-right:before{content:"\e925"}.doc-icon-arrow-left:before{content:"\e926"}.doc-icon-arrow-bottom:before{content:"\e927"}.doc-icon-album:before{content:"\e928"}@font-face{font-family:Merriweather;font-style:normal;font-weight:300;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300.eot);src:local('Merriweather Light'),local('Merriweather-Light'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300.svg#Merriweather) format('svg')}@font-face{font-family:Merriweather;font-style:italic;font-weight:300;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300italic.eot);src:local('Merriweather Light Italic'),local('Merriweather-LightItalic'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300italic.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300italic.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300italic.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300italic.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-300italic.svg#Merriweather) format('svg')}@font-face{font-family:Merriweather;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-regular.eot);src:local('Merriweather Regular'),local('Merriweather-Regular'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-regular.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-regular.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-regular.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-regular.svg#Merriweather) format('svg')}@font-face{font-family:Merriweather;font-style:normal;font-weight:700;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700.eot);src:local('Merriweather Bold'),local('Merriweather-Bold'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700.svg#Merriweather) format('svg')}@font-face{font-family:Merriweather;font-style:italic;font-weight:700;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700italic.eot);src:local('Merriweather Bold Italic'),local('Merriweather-BoldItalic'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700italic.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700italic.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700italic.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700italic.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/merriweather/merriweather-v22-latin-700italic.svg#Merriweather) format('svg')}@font-face{font-family:Montserrat;font-style:normal;font-weight:300;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300.eot);src:local('Montserrat Light'),local('Montserrat-Light'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300.svg#Montserrat) format('svg')}@font-face{font-family:Montserrat;font-style:italic;font-weight:300;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300italic.eot);src:local('Montserrat Light Italic'),local('Montserrat-LightItalic'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300italic.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300italic.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300italic.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300italic.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-300italic.svg#Montserrat) format('svg')}@font-face{font-family:Montserrat;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-regular.eot);src:local('Montserrat Regular'),local('Montserrat-Regular'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-regular.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-regular.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-regular.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-regular.svg#Montserrat) format('svg')}@font-face{font-family:Montserrat;font-style:normal;font-weight:500;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-500.eot);src:local('Montserrat Medium'),local('Montserrat-Medium'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-500.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-500.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-500.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-500.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-500.svg#Montserrat) format('svg')}@font-face{font-family:Montserrat;font-style:normal;font-weight:600;font-display:swap;src:url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-600.eot);src:local('Montserrat SemiBold'),local('Montserrat-SemiBold'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-600.eot?#iefix) format('embedded-opentype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-600.woff2) format('woff2'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-600.woff) format('woff'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-600.ttf) format('truetype'),url(https://cdn.prod.docfr.doc-media.fr/bundles/app/fonts/montserrat/montserrat-v14-latin-600.svg#Montserrat) format('svg')}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}header,nav{display:block}a{background-color:transparent}strong{font-weight:700}h1{font-size:2em;margin:.67em 0}img{border:0}input{color:inherit;font:inherit;margin:0}input[type=submit]{-webkit-appearance:button}input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:1.42857143;color:#333;background-color:#fff}input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}.container{margin-right:auto;margin-left:auto;padding-left:8px;padding-right:8px}@media (min-width:768px){.container{width:736px}}@media (min-width:1024px){.container{width:1000px}}@media (min-width:1200px){.container{width:1000px}}.row{margin-left:-8px;margin-right:-8px}.col-md-12,.col-md-4,.col-md-8{position:relative;min-height:1px;padding-left:8px;padding-right:8px}@media (min-width:1024px){.col-md-12,.col-md-4,.col-md-8{float:left}.col-md-12{width:100%}.col-md-8{width:66.66666667%}.col-md-4{width:33.33333333%}}.collapse{display:none}.container:after,.container:before,.row:after,.row:before{content:" ";display:table}.container:after,.row:after{clear:both}.pull-right{float:right!important}@-ms-viewport{width:device-width}[class^=doc-icon-]{font-family:doc-font!important;speak:never;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.doc-icon-search:before{content:"\e900"}.doc-icon-user:before{content:"\e901"}.doc-icon-instatagram:before{content:"\e903"}.doc-icon-close:before{content:"\e90b"}.doc-icon-facebook:before{content:"\e910"}.doc-icon-badge-check:before{content:"\e913"}.doc-icon-pinterest:before{content:"\e914"}.doc-icon-youtube:before{content:"\e918"}.doc-icon-arrow-left:before{content:"\e91e"}body{font:normal 400 16px/27px Montserrat,sans-serif;color:#21242c}@media screen and (min-width:1024px){body{font-size:18px;line-height:28px}}a{color:#5053ff;text-decoration:none}strong{font-weight:600}h1,h5{font-family:Merriweather,serif;font-weight:700}h1{font-size:30px;line-height:32px}@media screen and (min-width:1024px){h1{font-size:35px;line-height:43px}}h5{font-size:16px;line-height:22px}@media screen and (min-width:1024px){h5{font-size:18px;line-height:28px}}ol,ul{margin:8px auto 16px auto;padding:0;list-style:none}ol li,ul li{padding-left:24px;margin-bottom:16px}ul li:before{content:"●";font-size:14px;width:24px;margin-left:-24px;float:left}ol{padding-left:32px;list-style-type:decimal}.doc-text-xs{font-size:12px;line-height:18px}.doc-text-sm{font-size:14px;line-height:18px}@media screen and (min-width:1024px){.doc-text-sm{font-size:16px;line-height:20px}}.doc-content h1{margin:0 auto 16px auto}@media screen and (min-width:1024px){.doc-content h1{margin:0 auto 24px auto}}.category-underline>span{position:relative;display:inline-block;z-index:0}.category-underline>span:after{content:"";position:absolute;height:8px;width:100%;left:0;bottom:7px;z-index:-1}.category-underline.famille>span:after{background:#89e9ff}.category-underline.sante>span:after{background:#93f1c7}.category-underline.bienetre>span:after{background:#ffd79e}@media (min-width:1024px){.doc-px-md-0{padding-left:0!important;padding-right:0!important}.doc-pl-md-0{padding-left:0!important}}.doc-p-1{padding:8px}.doc-px-1{padding-left:8px;padding-right:8px}.doc-pl-1{padding-left:8px}.doc-mr-1{margin-right:8px}.doc-my-neg-1{margin:-8px auto}.doc-p-2{padding:16px}.doc-px-2{padding-left:16px;padding-right:16px}.doc-py-2{padding-top:16px;padding-bottom:16px}@media (min-width:1024px){.doc-py-md-2{padding-top:16px!important;padding-bottom:16px!important}}.doc-my-2{margin:16px auto}.doc-mb-2{margin-bottom:16px}.doc-py-3{padding-top:24px;padding-bottom:24px}.doc-my-3{margin:24px auto}.doc-mt-3{margin-top:24px}.doc-mb-3{margin-bottom:24px}@media (min-width:1024px){.doc-px-md-5{padding-left:40px!important;padding-right:40px!important}}.bg-color-blue-0{background-color:#f0f0ff}.color-blue-50{color:#5053ff}.bg-color-category-famille{background-color:#89e9ff}.bg-color-category-sante{background-color:#93f1c7}.bg-color-category-bienetre{background-color:#ffd79e}.color-grey-medium{color:#939393}.doc-grid-2-auto{display:grid;grid-template-columns:auto auto;grid-gap:8px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.text-right{text-align:right}.text-center{text-align:center}.doc-img-responsive-100{display:block;width:100%;height:auto}.d-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.justify-content-between{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.align-items-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.rounded{border-radius:8px}.rounded-lg{border-radius:18px}.rounded-circle{border-radius:50%}.shadow{-webkit-box-shadow:0 1px 7px 0 rgba(0,0,0,.15);box-shadow:0 1px 7px 0 rgba(0,0,0,.15)}.doc-btn{border-radius:8px;display:inline-block;font-family:Montserrat,sans-serif;font-size:14px;line-height:28px;font-weight:500;padding:0 16px;color:#21242c;background-color:transparent;border:none;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;background-image:none;white-space:nowrap}@media (min-width:1024px){.doc-btn{padding:0 24px;font-size:15px;line-height:36px}}.doc-btn.doc-btn--outline-primary{color:#5053ff;border:solid .6px #5053ff}.card{position:relative;margin-bottom:16px}.card .card__body{margin-top:8px}.card .card__body>div:first-child{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.card .card__body>div:first-child span{font-size:14px;line-height:18px;margin-right:8px}.card .card__body>div:first-child span a{position:relative;z-index:2;color:#21242c}.card .card__body .strip{display:inline-block;width:50px;height:2px;margin-top:1px}.card .card__body .card__body__title{margin:8px auto 0 auto;font-size:19px;line-height:27px}@media (min-width:1024px){.card .card__body .card__body__title{font-size:20px;line-height:28px}}.card .card__body .card__body__title a{color:#21242c;display:inline-block}.card .card__body .card__body__title a:before{bottom:0;content:" ";left:0;position:absolute;right:0;top:0}.doc-collapse .doc-collapse__btn{font-family:Montserrat,sans-serif;font-size:14px;line-height:18px;font-weight:600;text-decoration:none}.doc-collapse .doc-collapse__btn .doc-collapse__btn__open{display:inline}.doc-collapse .doc-collapse__btn .doc-collapse__btn__close{display:none}@media screen and (min-width:1024px){.doc-collapse .doc-collapse__btn{font-size:16px;line-height:20px}}.doc-collapse .doc-collapse__btn.doc-collapse__btn--link{color:#5053ff}#doc-search-text{text-align:left;height:100%;font-size:18px;display:inline-block;border:none;outline:0;color:#21242c;padding:3px;padding-left:35%;padding-right:60px;width:0;position:absolute;top:0;right:0;background:0 0;background-color:#fff;z-index:3}@media screen and (min-width:768px){#doc-search-text{padding-left:45%}}#doc-search-text::-webkit-input-placeholder{text-align:left;padding-left:5px}#doc-search-text::-moz-placeholder{text-align:left;padding-left:5px}#doc-search-text:-ms-input-placeholder{text-align:left;padding-left:5px}.search-wrapper{display:none}header{z-index:2000;top:-150px;background:#fff}header>div.container{background-color:#fff!important}@media (max-width:1024px){header>div.container{padding:0}}@media (min-width:1024px){header>div.container{padding:0 10px}}header>div.container>div:first-child{position:relative;padding:16px 0}header>div.container .sub-header{position:relative;border-top:solid 1px rgba(80,83,255,.2)}header>div.container>div .light-header,header>div.container>div.sub-header{display:none}@media (min-width:1024px){body:not(.header-sticky) header>div.container>div:first-child .doc-burger-menu{display:none}body:not(.header-sticky) header>div.container>div:first-child .right-items .doc-btn{display:none}body:not(.header-sticky) header>div.container>div.sub-header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}body:not(.header-sticky) header>div.container>div .light-header{display:inline}}header>div.container a{color:#21242c}header>div.container a:visited{text-decoration:none}header>div.container .doc-burger-menu{z-index:2001}header>div.container .master-categories{font-family:Montserrat,sans-serif;font-size:15px;font-weight:500}header>div.container .master-categories .master-categories__dropdown{padding:16px 40px}header>div.container .master-categories .master-categories__dropdown>span+div{display:inline-grid;visibility:hidden;position:absolute;grid-template-columns:repeat(3,33%);z-index:2000;width:80%;left:10%;top:100%;opacity:0;background:#fff}header>div.container .master-categories .master-categories__dropdown>span+div>*{visibility:hidden;opacity:0}header>div.container .master-categories .master-categories__dropdown>span+div:before{content:"";position:absolute;height:2px;width:0;left:50%;border-radius:5px}header>div.container .master-categories .master-categories__dropdown ul a{font-size:16px;font-weight:400;line-height:18px}header>div.container .master-categories .master-categories__dropdown .card .card__body .card__body__title{font-size:16px}header>div.container .top-header .left-items,header>div.container .top-header .right-items{line-height:20px}header>div.container .left-items span{padding:0 4px}header>div.container .left-items span:first-child{padding-left:0}header>div.container .right-items .doc-btn{margin-right:16px}@media (max-width:374px){header>div.container .right-items .doc-btn{font-size:14px;padding:0 8px;margin-right:0}}header>div.container .right-items span{padding:0 12px;vertical-align:middle;font-size:22px}header>div.container .right-items span:last-child{padding-right:0}@media (min-width:1024px){body:not(.header-sticky) header>div.container .right-items{text-align:right}body:not(.header-sticky) header>div.container>div:first-child .left-items,body:not(.header-sticky) header>div.container>div:first-child .right-items{width:120px}body:not(.header-sticky) header>div.container .sub-header .left-items,body:not(.header-sticky) header>div.container .sub-header .right-items{width:108px}}header>div.container img.logo{width:140px}@media (min-width:1024px){header>div.container img.logo{width:auto}}@media (max-width:480px){header>div.container img.logo{margin-left:-30px}}@media (max-width:374px){header>div.container img.logo{width:120px}}header>div.container #doc-burger-menu-content{position:absolute;visibility:hidden;width:100%;height:-webkit-calc(28vh);height:calc(28vh);overflow-y:scroll;background:#fff;-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);-o-transform:translateX(-100%);transform:translateX(-100%)}header>div.container #doc-burger-menu-content .le-lab-logo{width:68px;margin-left:-6px}header>div.container #doc-burger-menu-content nav{position:relative;z-index:2000}header>div.container #doc-burger-menu-content nav div>span{font-family:Merriweather,serif;font-size:24px;font-weight:600;line-height:36px}header>div.container #doc-burger-menu-content nav div.category-underline+a{font-size:14px;font-weight:500;color:#5053ff;text-decoration:underline}header>div.container #doc-burger-menu-content nav div.category-underline+a+div a{font-weight:600}header>div.container #doc-burger-menu-content ul{border-bottom:1px solid #ebebeb;padding-bottom:8px;padding-right:16px}header>div.container #doc-burger-menu-content ul li{font-size:16px;border:none}@media (min-width:1024px){header>div.container #doc-burger-menu-content ul li.doc-burger-menu-first-print{font-weight:600}}header>div.container #doc-burger-menu-content .doc-burger-menu__sub{position:absolute;visibility:hidden;left:-100%;top:0;width:100%;height:100%;background:#fff;z-index:2001}header>div.container #doc-burger-menu-content .doc-burger-menu__sub div.category-underline>span{font-size:20px;line-height:30px;font-weight:500}header>div.container #doc-burger-menu-content .doc-burger-menu__sub div.category-underline:after{bottom:4px}header>div.container #doc-burger-menu-content .doc-burger-menu__sub>i{font-size:16px}header>div.container #doc-burger-menu-content .doc-burger-menu__sub>i+div{display:inline-block;margin-left:8px}@media (min-width:1024px){header>div.container #doc-burger-menu-content{display:none;width:900px;height:auto;overflow-y:initial;margin-top:-84px;border-radius:18px;-webkit-box-shadow:2px 4px 18px 1px rgba(0,0,0,.13);box-shadow:2px 4px 18px 1px rgba(0,0,0,.13)}header>div.container #doc-burger-menu-content nav{display:inline-block;padding:0 32px;margin-top:32px}header>div.container #doc-burger-menu-content nav .doc-burger-menu__sub{padding:0 24px;width:310px}header>div.container #doc-burger-menu-content nav .doc-burger-menu__sub.doc-burger-menu__sub--first-print{visibility:visible;border-left:1px solid #ebebeb;left:100%}header>div.container #doc-burger-menu-content nav .doc-burger-menu__sub div.category-underline,header>div.container #doc-burger-menu-content nav .doc-burger-menu__sub>i{display:none}header>div.container #doc-burger-menu-content nav .doc-burger-menu__sub div.category-underline+a{position:absolute;right:-294px;top:-32px;z-index:2002}header>div.container #doc-burger-menu-content nav .doc-burger-menu__sub div.category-underline+a+div{padding-top:0;padding-bottom:8px}header>div.container #doc-burger-menu-content nav li a:after{display:none}header>div.container #doc-burger-menu-content nav ul{border:none;margin:0}header>div.container #doc-burger-menu-content nav ul>div>ul{position:relative;height:90%}header>div.container #doc-burger-menu-content nav ul li{padding-bottom:8px;padding-top:8px}}html.no-js img.lazyload{display:none}#main-container{position:relative;background-color:#fff!important;padding-bottom:24px!important}@media (min-width:1024px){#main-container{padding:0 10px}}@media (min-width:1024px){#main-container #content-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media (min-width:1024px){#main-container #content-container #right-col{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}#main-container #content-container #right-col>div{width:300px;max-width:300px;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0}#main-container #content-container #right-col>div.doc-sticky-col-container{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}}#main-container .doc-sticky-col{will-change:min-height}#main-container .doc-sticky-col .doc-sticky-col__inner{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);will-change:position,transform}#main-container .doc-block-ad{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}#main-container .doc-block-ad#banner_atf>div{background-color:transparent}#main-container .doc-block-ad#banner_atf{margin-left:-8px;margin-right:-8px}@media (min-width:1024px){#main-container .doc-block-ad#banner_atf{margin-left:auto;margin-right:auto}}footer>div.container>div a{display:inline-block;font-size:14px;font-weight:500;line-height:20px;color:#21242c;text-decoration:underline;padding-right:16px;padding-bottom:8px}footer div div{padding:8px;margin:8px}footer div div div{padding:8px}footer .doc-collapse{margin-left:0;padding-left:0}footer>div.container .doc-collapse .doc-collapse__content a{display:inline-block}ul.doc-list{margin:8px 0}ul.doc-list li{position:relative;display:block;padding:16px 0;margin:0;border-bottom:1px solid #ebebeb;font-size:18px;line-height:28px}ul.doc-list li:before{content:none}ul.doc-list li a{display:block}ul.doc-list li a:before{bottom:0;content:" ";left:0;position:absolute;right:0;top:0}ul.doc-list li:last-child{border-bottom:0}ul.doc-list.doc-list--arrow-right li a{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding-right:16px}ul.doc-list.doc-list--arrow-right li a:after{content:"\e905";position:absolute;right:0;font-family:doc-font;font-size:14px}.doc-burger-menu{display:block;position:relative;width:40px;height:40px}.doc-burger-menu span{display:inline-block;position:absolute;top:50%;left:50%;right:auto;bottom:auto;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);width:18px;height:2px;background-color:#5053ff}.doc-burger-menu span,.doc-burger-menu span:after,.doc-burger-menu span:before{border-radius:10px}.doc-burger-menu span:after,.doc-burger-menu span:before{content:"";width:130%;height:100%;position:absolute;background-color:#5053ff;right:-18%;top:8px}.doc-burger-menu span:after{top:-8px}.doc-menu-breadcrumb{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;font:normal 12px Montserrat,sans-serif;list-style-type:none;white-space:nowrap;overflow:auto;width:100%;margin:0 auto 16px auto}.doc-menu-breadcrumb li{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;margin-bottom:0}.doc-menu-breadcrumb li a{color:#21242c}@media screen and (min-width:1024px){.doc-menu-breadcrumb .collapse{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex}.doc-menu-breadcrumb>li:first-child{padding-left:0}}.doc-menu-breadcrumb .doc-collapse{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.doc-menu-breadcrumb .doc-collapse .doc-collapse__btn--link{margin-left:8px;color:#21242c;line-height:10px}.doc-menu-breadcrumb .doc-collapse .doc-collapse__btn--link[aria-expanded=false] .doc-collapse__btn__close{display:none}@media screen and (min-width:1024px){.doc-menu-breadcrumb .doc-collapse .doc-collapse__btn--link{display:none}}.doc-user{display:grid;grid-template-columns:40px auto;grid-gap:8px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font:normal 400 14px/18px Montserrat,sans-serif}.doc-user>a.doc-user__img-wrapper{display:inline-block}.doc-user>a.doc-user__img-wrapper img{width:40px;height:40px}.doc-user>.doc-user__content strong{display:block;font-weight:600}.doc-user>.doc-user__content strong a{color:#21242c}.doc-user>.doc-user__content strong+span{display:inline-block;margin-top:4px}@media screen and (min-width:1024px){.doc-user{grid-template-columns:48px auto;font-size:16px;line-height:20px}.doc-user a.doc-user__img-wrapper img{width:48px;height:48px}}.doc-collapse .doc-collapse__content#sourcesContent{padding:0 8px;font-size:12px;line-height:24px}@media screen and (min-width:1024px){.doc-collapse .doc-collapse__content#sourcesContent{font-size:14px;line-height:28px}}.doc-content img{display:block;max-width:100%;height:auto;margin:auto}</style>
+
+                
+
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.doctissimo.fr"
+    }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Grossesse",
+        "item": "https://www.doctissimo.fr/html/grossesse/grossesse.htm"
+    }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Limiter\u0020les\u0020risques\u0020de\u0020la\u0020grossesse",
+        "item": "https://www.doctissimo.fr/html/grossesse/pendant/index_facteurs_risques.htm"
+    }    ]
+}
+</script>
+    
+    
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Voyager\u0020enceinte\u0020\u003A\u0020quels\u0020sont\u0020les\u0020risques\u0020\u003F",
+    "alternateName": "Voyager\u0020enceinte\u0020\u003A\u0020quels\u0020risques\u0020\u003F",
+    "datePublished": "2014-10-13T13:37:00+02:00",
+    "dateModified": "2017-08-18T13:37:00+02:00",
+    "articlebody": "Peut\u002Don\u0020voyager\u0020quand\u0020on\u0020est\u0020enceinte\u0020\u003F\u00A0Docteur\u0020Andr\u00E9\u0020Paugam\u0020\u003A\u00A0D\u0027un\u0020point\u0020de\u0020vue\u0020g\u00E9n\u00E9ral,\u0020il\u0020faut\u0020d\u00E9conseiller\u0020le\u0020voyage\u0020d\u0027une\u0020femme\u0020enceinte\u0020surtout\u0020s\u0027il\u0020s\u0027agit\u0020\u003A\u0020\u0020\u0020d\u0027une\u0020destination\u0020lointaine,\u0020\u0020d\u0027une\u0020destination\u0020tropicale,\u0020\u0020d\u0027une\u0020destination\u0020o\u00F9\u0020s\u00E9vissent\u0020des\u0020maladies\u0020infectieuses\u0020comme\u0020le\u0020\u0020\u0020paludisme,\u0020le\u0020\u0020\u0020chikungunya,\u0020la\u0020\u0020\u0020fi\u00E8vre\u0020jaune\u0020notamment,\u0020maladies\u0020graves\u0020pour\u0020la\u0020femme\u0020enceinte\u0020et\u0020l\u0027enfant\u0020\u00E0\u0020na\u00EEtre.\u00A0Il\u0020s\u0027agit\u0020de\u0020pays\u0020dont\u0020les\u0020structures\u0020sanitaires\u0020ne\u0020peuvent\u0020prendre\u0020ais\u00E9ment\u0020en\u0020charge\u0020une\u0020urgence\u0020obst\u00E9tricale\u0020en\u0020dehors\u0020des\u0020grands\u0020centres\u0020urbains.\u0020\u0020\u0020Il\u0020faut\u0020aussi\u0020prendre\u0020en\u0020compte\u0020l\u0027histoire\u0020de\u0020la\u0020grossesse.\u0020Ainsi\u0020voyager\u0020enceinte\u0020est\u0020d\u00E9conseill\u00E9\u0020lorsqu\u0027il\u0020s\u0027agit\u0020\u003A\u0020\u0020\u0020d\u0027une\u0020grossesse\u0020difficile,\u0020dite\u0020\u00E0\u0020risque\u0020de\u0020complications,\u0020comme\u0020une\u0020attente\u0020de\u0020\u0020\u0020jumeaux,\u0020\u0020d\u0027une\u0020grossesse\u0020survenue\u0020apr\u00E8s\u0020un\u0020\u0020\u0020traitement\u0020pour\u0020lutter\u0020contre\u0020la\u0020st\u00E9rilit\u00E9\u0020\u0028par\u0020exemple\u0029.\u0020\u0020\u0020Il\u0020faut\u0020donc\u0020connaitre\u0020les\u0020circonstances\u0020dans\u0020lesquelles\u0020la\u0020grossesse\u0020se\u0020d\u00E9roule\u0020pour,\u0020parfois,\u0020contre\u002Dindiquer\u0020le\u0020voyage.\u0020L\u0027avis\u0020du\u0020gyn\u00E9cologue,\u0020qui\u0020suit\u0020la\u0020femme\u0020enceinte\u00A0doit\u0020\u00EAtre\u0020demand\u00E9\u0020avant\u0020tout\u0020d\u00E9part.Les\u0020risques\u0020sont\u002Dils\u0020diff\u00E9rents\u0020selon\u0020le\u0020trimestre\u0020de\u0020la\u0020grossesse\u0020\u003FLes\u0020risques,\u0020toujours\u0020pr\u00E9sents\u0020lors\u0020d\u0027un\u0020voyage,\u0020ne\u0020sont\u0020pas\u0020les\u0020m\u00EAmes\u0020en\u0020fonction\u0020des\u0020trimestres\u0020de\u0020grossesse.\u0020\u0020\u0020Au\u0020\u0020\u0020premier\u0020trimestre\u003A\u0020le\u0020risque\u0020principal\u0020est\u0020la\u0020\u0020\u0020fausse\u0020couche,\u0020\u0020Au\u0020\u0020\u0020troisi\u00E8me\u0020trimestre\u00A0\u003A\u0020c\u0027est\u0020\u0020\u0020l\u0027accouchement\u0020pr\u00E9matur\u00E9.\u0020\u0020\u0020Aussi,\u0020la\u0020\u0020\u0020toxicit\u00E9\u0020des\u0020m\u00E9dicaments\u0020contre\u002Dindiqu\u00E9s\u0020a\u0020un\u0020plus\u0020grand\u0020risque\u0020de\u0020malformation\u0020sur\u0020l\u0027embryon\u0020\u00281er\u0020trimestre\u0029\u0020que\u0020sur\u0020le\u0020f\u0153tus\u0020\u00283\u00E8me\u0020trimestre\u0029.Pour\u0020toutes\u0020ces\u0020raisons,\u0020le\u0020risque\u0020le\u0020plus\u0020faible\u0020pour\u0020voyager\u0020enceinte\u0020se\u0020situe\u0020au\u0020\u0020\u00202\u00E8me\u0020trimestre\u0020de\u0020la\u0020grossesse.Avion,\u0020voiture...\u0020Quelles\u0020sont\u0020les\u0020indications\u0020ou\u0020contre\u002Dindications\u0020selon\u0020les\u0020moyens\u0020de\u0020transport\u0020\u003FConcernant\u0020l\u0027avion,\u0020il\u0020faut\u0020savoir\u0020que\u0020les\u0020compagnies\u0020a\u00E9riennes\u0020n\u0027acceptent\u0020pas\u0020les\u0020femmes\u0020enceintes\u0020apr\u00E8s\u0020le\u00207\u00E8me\u0020mois\u0020de\u0020grossesse\u0020parfois\u0020m\u00EAme\u0020\u00E0\u0020partir\u0020du\u0020\u0020\u00206\u00E8me\u0020mois\u0020en\u0020raison\u0020du\u0020risque\u0020d\u0027accouchement.Pour\u0020la\u0020voiture,\u0020si\u0020un\u0020long\u0020trajet\u0020ne\u0020peut\u0020\u00EAtre\u0020diff\u00E9r\u00E9,\u0020des\u0020pauses\u0020toutes\u0020les\u0020heures\u0020pour\u0020une\u0020marche\u0020de\u002010\u0020minutes\u0020doivent\u0020\u00EAtre\u0020programm\u00E9es.\u0020De\u0020plus,\u0020\u0020\u0020la\u0020voiture\u0020expose\u0020au\u0020risque\u0020d\u0027accidents,\u0020celui\u002Dci\u0020varie\u0020en\u0020fonction\u0020de\u0020la\u0020qualit\u00E9\u0020des\u0020routes\u0020emprunt\u00E9es,\u0020du\u0020v\u00E9hicule.Le\u0020voyage\u0020en\u0020train\u0020appara\u00EEt\u00A0donc\u0020comme\u0020le\u0020moyen\u0020de\u0020transport\u0020le\u0020plus\u0020s\u00FBr\u0020pour\u0020une\u0020femme\u0020enceinte,\u0020il\u0020permet\u0020facilement\u0020de\u0020marcher\u0020r\u00E9guli\u00E8rement.\u00A0Aussi,\u0020de\u0020mani\u00E8re\u0020plus\u0020g\u00E9n\u00E9rale,\u0020sachez\u0020que\u00A0tous\u0020les\u0020moyens\u0020de\u0020transport\u0020exposent\u0020au\u0020risque\u0020thromboembolique\u0020avec\u0020le\u0020risque\u0020de\u0020survenue\u0020d\u0027une\u0020\u0020\u0020phl\u00E9bite\u0020pouvant\u0020se\u0020compliquer\u0020d\u0027\u0020\u0020embolie\u0020pulmonaire,\u0020potentiellement\u0020mortelle.\u0020Ce\u0020risque,\u0020directement\u0020proportionnel\u00A0\u00E0\u0020la\u0020dur\u00E9e\u0020du\u0020transport\u0020et\u00A0au\u00A0degr\u00E9\u0020d\u0027immobilit\u00E9\u0020pendant\u0020le\u0020trajet,\u0020est\u0020particuli\u00E8rement\u0020\u00E9lev\u00E9\u0020chez\u0020la\u0020femme\u0020enceinte.Sur\u0020quoi\u0020les\u0020femmes\u0020enceintes\u0020doivent\u002Delles\u0020\u00EAtre\u0020particuli\u00E8rement\u0020vigilantes\u0020\u003FUne\u0020femme\u0020enceinte\u0020devrait\u00A0\u00E9viter\u0020de\u0020se\u0020rendre\u0020dans\u0020un\u0020pays\u0020\u0022\u00E0\u0020risque\u0022.\u0020Pour\u0020connaitre\u0020les\u0020risques\u0020sp\u00E9cifiques\u0020\u00E0\u0020la\u0020destination\u0020envisag\u00E9e\u0020et\u0020les\u0020zones\u0020\u00E0\u0020risque,\u0020ainsi\u0020que\u0020les\u0020structures\u0020sanitaires\u0020qui\u0020pourraient\u0020\u00EAtre\u0020sollicit\u00E9es\u0020sur\u0020place,\u0020je\u0020recommande\u0020la\u0020consultation\u0020du\u0020site\u0020du\u0020minist\u00E8re\u0020des\u0020affaires\u0020\u00E9trang\u00E8res\u0020et\u0020du\u0020d\u00E9veloppement\u0020international\u0020\u003A\u00A0\u0020\u0020http\u003A\/\/www.diplomatie.gouv.fr\/fr\/conseils\u002Daux\u002Dvoyageurs\/Pour\u0020les\u0020\u0020\u0020risques\u0020infectieux,\u0020une\u0020fois\u0020sur\u0020place,\u0020la\u0020femme\u0020enceinte\u0020doit,\u0020comme\u0020tout\u0020voyageur,\u0020veiller\u0020\u00E0\u0020\u00E9viter\u0020la\u0020\u0020\u0020diarrh\u00E9e\u0020du\u0020voyageur,\u0020la\u0020bien\u0020nomm\u00E9e\u0020\u0022tourista\u0022\u0020dont\u0020sont\u0020victimes\u0020au\u0020moins\u00201\u0020voyageur\u0020sur\u00203.Pour\u0020cela\u0020il\u0020est\u0020recommand\u00E9\u0020de\u0020\u003A\u0020\u0020\u0020Bien\u0020se\u0020laver\u0020les\u0020mains\u0020avant\u0020les\u0020repas\u0020et\u0020apr\u00E8s\u0020chaque\u0020passage\u0020aux\u0020toilettes.\u0020\u0020Ne\u0020consommer\u0020que\u0020des\u0020aliments\u0020bien\u0020cuits,\u0020\u0020Proscrire\u0020les\u0020crudit\u00E9s,\u0020\u0020Peler\u0020soi\u002Dm\u00EAme\u0020ses\u0020fruits,\u0020\u0020Ne\u0020consommer\u00A0que\u0020des\u0020boissons\u0020capsul\u00E9es\u0020ou\u0020du\u0020th\u00E9,\u0020\u0020Proscrire\u0020tous\u0020les\u0020aliments\u0020\u00E0\u0020base\u0020de\u0020laitage\u0020non\u0020pasteuris\u00E9\u0020comme\u0020les\u0020fromages\u0020crus.\u0020\u0020\u0020Comment\u0020\u00E9viter\u0020tout\u0020probl\u00E8me\u0020m\u00E9dical\u0020\u003FPour\u0020\u00E9viter\u0020tout\u0020probl\u00E8me\u0020m\u00E9dical,\u0020il\u0020n\u0027y\u0020a\u0020qu\u0027une\u0020solution\u0020\u003A\u00A0reporter\u0020son\u0020voyage.\u0020Si\u0020cela\u0020n\u0027est\u0020pas\u0020possible,\u0020je\u0020recommande\u0020de\u0020prendre\u0020une\u0020assurance\u0020rapatriement\u0020sanitaire\u0020en\u0020v\u00E9rifiant\u0020que\u0020la\u0020grossesse\u0020est\u0020bien\u0020prise\u0020en\u0020compte\u0020dans\u0020le\u0020contrat.Les\u0020\u0020\u0020bas\u0020de\u0020contention\u0020sont\u0020fortement\u0020recommand\u00E9s\u0020pour\u0020les\u0020\u0020\u0020voyages\u0020en\u0020avion,\u0020d\u0027autant\u0020plus\u0020que\u0020le\u0020voyage\u0020est\u0020prolong\u00E9,\u0020de\u0020plus\u0020de\u0020six\u0020heures.\u0020Techniquement\u0020il\u0020est\u0020recommand\u00E9\u0020de\u0020s\u0027assurer\u0020que\u0020la\u0020contention\u0020\u00E9lastique\u0020soit\u0020de\u0020classe\u00202,\u0020permettant\u0020une\u0020pression\u0020\u00E0\u0020la\u0020cheville\u0020de\u002015\u0020\u00E0\u002030\u0020mmHg.\u0020Les\u0020mod\u00E8les\u0020\u00E0\u0020mi\u002Dcuisse\u0020\u00E9tant\u0020plus\u0020confortables\u0020que\u0020les\u0020mod\u00E8les\u0020qui\u0020remontent\u0020sous\u0020le\u0020genou.\u0020Ceci\u002Ddit,\u0020il\u0020faut\u0020insister\u0020sur\u0020le\u0020fait\u0020que\u0020le\u0020port\u0020de\u0020ces\u0020bas\u0020ne\u0020peut\u0020\u00EAtre,\u0020en\u0020aucun\u0020cas,\u0020consid\u00E9r\u00E9\u0020comme\u0020la\u0020pr\u00E9vention\u0020qui\u0020\u00E9carterait\u0020formellement\u0020tout\u0020risque\u0020thromboembolique,\u0020car\u0020leur\u0020efficacit\u00E9\u0020n\u0027a\u0020pas\u0020\u00E9t\u00E9\u0020sp\u00E9cifiquement\u0020\u00E9tudi\u00E9e\u0020chez\u0020la\u0020femme\u0020enceinte.Pour\u0020les\u0020femmes\u0020qui\u0020cumulent\u0020les\u0020facteurs\u0020\u00E0\u0020risque\u0020d\u0027accident\u0020thromboembolique\u0020comme\u0020une\u0020\u0020\u0020ob\u00E9sit\u00E9,\u0020un\u00A0ant\u00E9c\u00E9dent\u0020de\u0020phl\u00E9bite\u0020par\u0020exemple,\u0020il\u0020faut\u0020savoir\u0020que\u0020les\u0020risques\u0020thromboemboliques\u0020ne\u0020s\u0027additionnent\u0020pas\u0020mais\u0020se\u0020multiplient\u0020\u0021\u0020Le\u0020gyn\u00E9cologue\u0020qui\u0020suit\u0020la\u0020grossesse\u0020pourrait\u0020prescrire,\u0020s\u0027il\u0020le\u0020juge\u0020n\u00E9cessaire,\u0020une\u0020injection\u0020d\u0027anticoagulant\u0020avant\u0020le\u0020vol.Quelles\u0020destinations\u0020sont\u0020\u00E0\u0020proscrire\u0020chez\u0020la\u0020femme\u0020enceinte\u0020\u003FLes\u0020destinations\u0020lointaines,\u0020n\u00E9cessitant\u0020des\u0020\u0020\u0020vaccinations,\u0020dans\u0020des\u0020pays\u0020o\u00F9\u0020les\u0020structures\u0020sanitaires\u0020sont\u0020limit\u00E9es,\u0020o\u00F9\u0020s\u00E9vissent\u0020des\u0020maladies\u0020infectieuses\u0020comme\u0020le\u0020paludisme,\u0020la\u0020dengue,\u0020le\u0020chikungunya,\u0020maladies\u0020qui\u0020pr\u00E9sentent\u0020des\u0020risques\u0020sp\u00E9cifiques\u0020pour\u0020la\u0020grossesse,\u0020sont\u0020\u00E0\u0020proscrire.\u0020L\u00E0\u002Dencore\u0020la\u0020consultation\u0020du\u0020site\u0020web\u0020du\u0020minist\u00E8re\u0020des\u0020affaires\u0020\u00E9trang\u00E8res\u0020est\u0020particuli\u00E8rement\u0020utile.Enfin,\u0020dans\u0020les\u0020pays\u0020tropicaux,\u0020il\u0020existe\u0020un\u0020risque\u0020d\u0027infection\u0020alimentaire\u0020en\u0020fonction\u0020du\u0020niveau\u0020d\u0027hygi\u00E8ne.\u0020Les\u0020repas\u0020peuvent\u0020\u00EAtre\u0020la\u0020source\u0020de\u0020transmission\u0020d\u0027agents\u0020infectieux\u0020responsables\u0020de\u0020diarrh\u00E9es.\u0020Les\u0020diarrh\u00E9es\u0020bact\u00E9riennes,\u0020qui\u0020peuvent\u0020se\u0020manifester\u0020par\u0020de\u0020la\u0020fi\u00E8vre\u0020et\u0020du\u0020sang\u0020dans\u0020les\u0020selles,\u0020\u00E0\u0020la\u0020diff\u00E9rence\u0020de\u0020la\u0020\u0022tourista\u0022,\u0020sont\u0020difficiles\u0020\u00E0\u0020prendre\u0020en\u0020charge\u0020chez\u0020la\u0020femme\u0020enceinte,\u0020car\u00A0les\u0020antibiotiques\u0020de\u0020ces\u0020infections\u0020sont\u0020contre\u002Dindiqu\u00E9s\u0020ou\u0020d\u0027indications\u0020limit\u00E9s\u0020chez\u0020la\u0020femme\u0020enceinte,\u0020selon\u0020le\u0020terme\u0020de\u0020la\u0020grossesse.\u00A0De\u0020m\u00EAme,\u0020l\u0027alimentation\u0020peut\u0020transmettre\u00A0des\u0020infections\u0020virales,\u0020notamment\u0020l\u0027\u0020\u0020h\u00E9patite\u0020E,\u0020particuli\u00E8rement\u0020dangereuse\u0020pour\u0020la\u0020femme\u0020enceinte.Les\u0020vaccins\u0020pour\u0020les\u0020voyages\u0020tropicaux\u0020peuvent\u002Dils\u0020\u00EAtre\u0020inject\u00E9s\u0020\u00E0\u0020une\u0020femme\u0020enceinte\u0020\u003FLe\u0020seul\u0020vaccin\u0020du\u0020voyageur\u0020qui\u0020puisse\u0020\u00EAtre\u0020administrativement\u0020obligatoire\u0020\u00E0\u0020l\u0027entr\u00E9e\u0020de\u0020certains\u0020pays\u0020d\u0027Afrique\u0020sub\u002Dsaharienne\u0020et\u0020d\u0027Am\u00E9rique\u0020du\u0020Sud,\u0020est\u0020le\u0020\u0020\u0020vaccin\u0020contre\u0020la\u0020fi\u00E8vre\u0020jaune,\u0020vaccin\u0020qui\u0020est\u0020contre\u002Dindiqu\u00E9\u0020chez\u0020la\u0020femme\u0020enceinte.\u0020Il\u0020faut\u0020savoir\u0020que\u0020ce\u0020vaccin\u0020n\u0027est\u0020pas\u0020disponible\u0020en\u0020pharmacie\u0020et\u0020ne\u0020peut\u0020\u00EAtre\u0020administr\u00E9\u0020que\u0020dans\u0020les\u0020centres\u0020de\u0020vaccinations\u0020internationaux.Les\u0020autres\u0020vaccins\u0020du\u0020voyageur,\u0020comme\u0020ceux\u0020qui\u0020prot\u00E8gent\u0020de\u0020l\u0027h\u00E9patite\u0020A,\u0020de\u0020la\u0020fi\u00E8vre\u0020typho\u00EFde\u0020et\u0020de\u0020l\u0027enc\u00E9phalite\u0020japonaise,\u0020ne\u0020sont\u0020pas\u0020recommand\u00E9s,\u0020m\u00EAme\u0020si\u0020aucun\u0020effet\u0020sur\u0020la\u0020grossesse\u0020n\u0027a\u0020jusqu\u0027\u00E0\u0020lors\u0020\u00E9t\u00E9\u0020signal\u00E9.\u0020En\u0020l\u0027absence\u0020de\u0020donn\u00E9es\u0020suffisantes,\u0020la\u0020prudence\u0020justifie\u0020de\u0020ne\u0020pas\u0020les\u0020administrer.\u00A0Et\u0020pour\u0020les\u0020femmes\u0020qui\u0020allaitent\u0020\u003FPour\u0020les\u0020femmes\u0020qui\u0020\u0020\u0020allaitent,\u0020les\u0020vaccins\u0020vivant\u0020att\u00E9nu\u00E9s\u0020peuvent\u0020pr\u00E9senter\u0020un\u0020risque\u0020de\u0020transmission\u0020au\u0020nourrisson.Si\u0020une\u0020vaccination\u0020contre\u0020la\u0020fi\u00E8vre\u0020jaune\u0020a\u0020\u00E9t\u00E9\u0020r\u00E9alis\u00E9e,\u0020un\u0020arr\u00EAt\u0020de\u0020l\u0027allaitement\u0020au\u0020cours\u0020des\u002015\u0020jours\u0020qui\u0020suivent\u0020la\u0020vaccination\u0020doit\u0020\u00EAtre\u0020respect\u00E9,\u0020car\u0020il\u0020s\u0027agit\u0020d\u0027un\u0020vaccin\u0020\u0022vivant\u0020att\u00E9nu\u00E9\u0022,\u0020\u0020\u0020le\u0020lait\u0020de\u0020la\u0020m\u00E8re\u0020pourrait\u0020transmettre\u0020la\u0020maladie\u0020\u00E0\u0020l\u0027enfant.\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020",
+    "description": "Enceinte,\u0020peut\u002Don\u0020voyager\u0020sans\u0020risque\u0020\u003F\u0026nbsp\u003BLe\u0020Docteur\u0020Andr\u00E9\u0020Paugam\u0020de\u0020l\u0027H\u00F4pital\u0020Cochin\u0020\u00E0\u0020Paris\u0020fait\u0020le\u0020point.\u0020",
+    "keywords": "voyage enceinte, voyage grossesse, voyage vaccination",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque"
+    },
+    "image": [
+        "https://resize1.prod.docfr.doc-media.fr/rcrop/1200,678,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg",
+        "https://resize1.prod.docfr.doc-media.fr/rcrop/1200,902,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg",
+        "https://resize1.prod.docfr.doc-media.fr/s/1200/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg"
+    ],
+        "author": {
+        "@type": "Person",
+        "name": "AFP/Relaxnews",
+        "jobTitle": "Agence de Presse",        "url": "https://www.doctissimo.fr/equipe/auteurs/afp-relaxnews"
+    },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Doctissimo",
+        "url": "https://www.doctissimo.fr/",
+        "sameAS": "https://fr.wikipedia.org/wiki/Doctissimo",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn3.prod.docfr.doc-media.fr/bundles/app/images/refonte/logos/logo-doctissimo-270x270.png?1615378331181",
+            "width": 270,
+            "height": 270
+        }
+    }
+}
+</script>
+
+            <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "MedicalWebPage",
+    "headline": "Voyager\u0020enceinte\u0020\u003A\u0020quels\u0020sont\u0020les\u0020risques\u0020\u003F",
+    "alternateName": "Voyager\u0020enceinte\u0020\u003A\u0020quels\u0020risques\u0020\u003F",
+    "lastReviewed": "2017-10-02T22:56:04+02:00",
+        "reviewedBy": [
+                {
+            "@type": "Person",
+            "name": "Dr Jesus Cardenas",
+            "url": "https://www.doctissimo.fr/equipe/les-experts-de-doctissimo/jesus-cardenas"
+        }        ]
+    }
+</script>
+    
+    
+    <!--300_atf,dyninfeed-->
+
+    <script type="text/javascript">
+    /** https://github.com/geraintluff/sha256 */
+var sha256=function a(b){function c(a,b){return a>>>b|a<<32-b}for(var d,e,f=Math.pow,g=f(2,32),h="length",i="",j=[],k=8*b[h],l=a.h=a.h||[],m=a.k=a.k||[],n=m[h],o={},p=2;64>n;p++)if(!o[p]){for(d=0;313>d;d+=p)o[d]=p;l[n]=f(p,.5)*g|0,m[n++]=f(p,1/3)*g|0}for(b+="\x80";b[h]%64-56;)b+="\x00";for(d=0;d<b[h];d++){if(e=b.charCodeAt(d),e>>8)return;j[d>>2]|=e<<(3-d)%4*8}for(j[j[h]]=k/g|0,j[j[h]]=k,e=0;e<j[h];){var q=j.slice(e,e+=16),r=l;for(l=l.slice(0,8),d=0;64>d;d++){var s=q[d-15],t=q[d-2],u=l[0],v=l[4],w=l[7]+(c(v,6)^c(v,11)^c(v,25))+(v&l[5]^~v&l[6])+m[d]+(q[d]=16>d?q[d]:q[d-16]+(c(s,7)^c(s,18)^s>>>3)+q[d-7]+(c(t,17)^c(t,19)^t>>>10)|0),x=(c(u,2)^c(u,13)^c(u,22))+(u&l[1]^u&l[2]^l[1]&l[2]);l=[w+x|0].concat(l),l[4]=l[4]+w|0}for(d=0;8>d;d++)l[d]=l[d]+r[d]|0}for(d=0;8>d;d++)for(e=3;e+1;e--){var y=l[d]>>8*e&255;i+=(16>y?0:"")+y.toString(16)}return i};
+    var device = '';
+var device_ua = ''; // just to not break something
+let userAgent = navigator.userAgent.toLowerCase();
+
+if (/(android|iphone|ipad|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi.test(userAgent)) {
+    if (((screen.width >= 480) && (screen.height >= 800)) || ((screen.width >= 800) && (screen.height >= 480)) || navigator.userAgent.match(/ipad/gi)) {
+        device = 'tablette';
+        device_ua = 'tablette';
+    } else {
+        device = 'mobile';
+        device_ua = 'mobile';
+    }
+} else {
+    device = 'desktop';
+    device_ua = 'desktop';
+}
+    //<![CDATA[
+var readCookie = readCookie ? readCookie : function (cname) {
+    var c, i,
+        name = cname.concat("="),
+        ca = document.cookie.split(';');
+
+    for (i = 0; i < ca.length; i += 1) {
+        c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return null;
+};
+//]]>
+
+    var af_consentInternetTargeting = true;
+    var af_consentAdsTargeting = true;
+
+    if (typeof(window.__cmp) !== 'undefined' && typeof(window.__cmp.getCustomConsentBeforeLoad) !== 'undefined') {
+        var customCookieData = JSON.parse(window.__cmp.getCustomConsentBeforeLoad());
+
+        if (customCookieData !== null) {
+            if (typeof(customCookieData.internet_targeting) !== 'undefined') {
+                af_consentInternetTargeting = customCookieData.internet_targeting;
+            }
+
+            if (typeof(customCookieData.ads_targeting) !== 'undefined') {
+                af_consentAdsTargeting = customCookieData.ads_targeting;
+            }
+        }
+    }
+
+    const pageIds = {"animaux":"section_animals","beaute":"section_beauty","bebe":"section_baby","famille":"section_family","forme":"section_fit","grossesse":"section_pregnancy","medicaments":"section_drugs","medecines-douces":"section_altmed","mode":"section_fashion","nutrition":"section_nutrition","psychologie":"section_psycho","sante":"section_health","sexualite":"section_sexo","videos":"section_video","recettes":"section_food","home":"homepage","homepageprincipale":"homepage"};
+
+    var segment = window.afSession ? afSession.getSegment() : 0;
+
+    
+        
+        var othersData = {
+    "client": "none",
+    "cm_section": "grossesse",
+    "cm_rubrique": "grossesse et risques",
+    "section": "grossesse",
+    "subsection": "grossesse et risques",
+    "level1": "grossesse",
+    "level2": "grossesse et risques",
+    "level3": "voyage-enceinte-risque",
+    "level4": "",
+    "level_1": "Grossesse",
+    "level_2": "Grossesse : apprenez à limiter les risques !",
+    "level_3": "Voyager enceinte : quels sont les risques ?",
+    "contenttype": "article",
+    "content_tpl": "article",
+    "content_class": "article",
+    "content_keywords": "voyage enceinte, voyage grossesse, voyage vaccination",
+    "seo_tag": "voyage enceinte, voyage grossesse, voyage vaccination",
+    "env": "prod",
+    "ops_tag": "none",
+    "url": "www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque",
+        "platform": "mobile",
+    "login": "0",
+    "segment": "4"
+}
+;
+        othersData.platform = device;
+        othersData.login = readCookie('CF_connected') ? 1 : 0;
+        othersData.segment = segment;
+
+    
+    var aufSectionDetected = (othersData.section === 'videos') ? othersData.subsection : othersData.section;
+
+    var sas_dfpPageId = (pageIds[aufSectionDetected]) ? pageIds[aufSectionDetected] : 'others';
+    var sas_formatIds = "banner_atf,300_atf,dyninfeed";
+    var sas_pageId = 1006319;
+    let sas_target = ';platform=' + device;
+    Object.keys(othersData).forEach(function(key){
+        if (othersData[key] !== '' && key !== 'content_keywords') sas_target += ';' + key + '=' + othersData[key];
+    });
+</script>
+
+    <script type="text/javascript">
+    var i = window,
+        e = document.documentElement,
+        b = document.body;
+
+    var segment = window.afSession ? afSession.getSegment() : 0;
+
+            
+        var unify_dataSlayer = [{
+            "page": {
+    "section": "grossesse",
+    "sectionId": 3978,
+    "subSection": "grossesse et risques",
+    "subSectionId": 4793,
+    "ID": 49773,
+    "nodeID": 49731,
+    "URLBO": "www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque",
+    "mainTag": "voyage enceinte, voyage grossesse, voyage vaccination",
+    "trackPageview": 1,
+    "level_1": "Grossesse",
+    "level_2": "Grossesse : apprenez à limiter les risques !",
+    "subSecLvl3": "voyage-enceinte-risque",
+    "level_3": "Voyager enceinte : quels sont les risques ?",
+    "subSecLvl4": "",
+    "level_4": "",
+    "subSecLvl5": "",
+    "level_5": ""
+},
+            "content": {
+    "type": "article",
+    "author": "AFP/Relaxnews",
+    "date": "20141013",
+    "modificationDate": "20171002",
+    "label": "Voyager enceinte : quels sont les risques ?",
+    "medReview": "Dr Jesus Cardenas",
+    "wordsCount": 1326,
+    "dynInfeedCount": ""
+},
+            "site": {
+    "platform": "doctissimo",
+    "lang": "fr",
+    "sid": 51,
+    "environment": "prod"
+},
+            "user": {
+    "id": "",
+    "dom": "",
+    "device": "",
+    "screenResolution": "",
+    "referer": "",
+    "segment": "",
+    "adblocker": "",
+    "isLoggedIn": "",
+    "registrationDate": "",
+    "firstPost": "",
+    "newsletterOptin": "",
+    "registrationType": "",
+    "activity": "",
+    "lastPost": ""
+},
+            "ops": {
+    "id": "none",
+    "name": "none",
+    "brand": "none"
+},
+            "utm": {
+    "campaign": "",
+    "medium": "",
+    "source": ""
+},
+        }];
+
+        window.unify_dataSlayer[0].page.version = '';
+        window.unify_dataSlayer[0].page.section = aufSectionDetected;
+        window.unify_dataSlayer[0].user.id = readCookie('CF_user_id') ? "doctissimo-" + sha256('UNIFY-DMP-' + readCookie('CF_user_id')) : '';
+        window.unify_dataSlayer[0].user.dom = "FR";
+        window.unify_dataSlayer[0].user.device = device;
+        window.unify_dataSlayer[0].user.screenResolution = (i.innerWidth || e.clientWidth || b.clientWidth || 0) + 'x' + (i.innerHeight || e.clientHeight || b.clientHeight || 0);
+        window.unify_dataSlayer[0].user.referer = document.referrer;
+        window.unify_dataSlayer[0].user.segment = segment;
+        window.unify_dataSlayer[0].user.adblocker = "N/A";
+        window.unify_dataSlayer[0].user.isLoggedIn = readCookie('CF_connected') ? 1 : 0;
+        if (window.unify_dataSlayer[0].utm.medium !== 'Google News') { // don't override UTM values if they’re already set for GNews
+            window.unify_dataSlayer[0].utm.campaign = window.afSession ? afSession.getUtmCampaign() : '';
+            window.unify_dataSlayer[0].utm.medium = window.afSession ? afSession.getUtmMedium() : '';
+            window.unify_dataSlayer[0].utm.source = window.afSession ? afSession.getUtmSource() : '';
+        }
+
+        var CM_RUBRIQUE = othersData.cm_rubrique;
+        var CM_SECTION1 = othersData.cm_section;
+
+    </script>
+
+    <script>
+    var pegasusConf = {
+        params: {
+            site: 'doctissimo_fr',
+            traffic: 'organic',
+            country: 'FR',
+            keywords: sas_target,
+            section: sas_dfpPageId,
+            contenttype: window.unify_dataSlayer[0].content.type,
+        }
+    }
+</script>
+
+<script type="text/javascript" src="https://pegasus.unifygroup.com/lib/pegasus.min.js" async></script>
+
+    
+        <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','unify_dataSlayer','GTM-PGLVR9V');
+
+    </script>
+
+    <script defer src="https://cdn3.prod.docfr.doc-media.fr/bundles/app/js/jquery.min.js?1615378331181"></script>
+
+<script>
+    var trafficing_exclu_300mtf = false;
+
+    var trafficing_exclu_all = (
+        window.unify_dataSlayer[0].page.subSection === 'régimes'                                                // 2021-05-02
+        || window.unify_dataSlayer[0].page.subSecLvl5 === 'lesrumdenuitaurtinolpur-revitaliftlaserdeloralparis' // 2021-05-04
+        || window.unify_dataSlayer[0].page.subSecLvl5 === 'soinjouranti-agerevitaliftfillerdeloralparis'        // 2021-05-08
+        || window.unify_dataSlayer[0].page.subSecLvl3 === 'lethermomtreaxillaireconnecte-torm'                  // 2021-05-16
+        || window.unify_dataSlayer[0].page.subSection === 'vitamine'                                           // 2021-06-12
+    );
+
+    var trafficing_exclu_full = (
+        window.unify_dataSlayer[0].page.level_1==='Equipe'
+        ||window.unify_dataSlayer[0].page.subSecLvl3==='test-qi'
+        ||window.unify_dataSlayer[0].page.subSecLvl4==='panier-100-pourcent-sante-bien-choisir-aide-auditives' // 2021-04-30
+    );
+
+    // Remove dyninfeed for pages in exclu pub
+    window.addEventListener('DOMContentLoaded', function() {
+        if (trafficing_exclu_all || trafficing_exclu_full) {
+            document.querySelectorAll('.doc-block-pub-dyn-infeed').forEach(function(e) {
+                e.remove();
+            });
+        }
+        if (trafficing_exclu_full && document.querySelector('#taboola-below-article-thumbnails')) {
+            document.querySelector('#taboola-below-article-thumbnails').remove();
+        }
+    });
+</script>
+
+
+
+<script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'');
+</script>
+
+        
+    <link href="https://cdn3.prod.docfr.doc-media.fr/bundles/app/css/refonte-article.min.css?1615378331181" rel="preload" media="screen" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://cdn3.prod.docfr.doc-media.fr/bundles/app/css/refonte-article.min.css?1615378331181" rel="stylesheet" media="screen" /></noscript>
+
+    </head>
+<body class="doc-rubric-grossesse doc-type-article">
+            <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGLVR9V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+                    <header class="">
+    <div class="container">
+        <div class="top-header d-flex justify-content-between align-items-center">
+            <div class="left-items">
+                <span class="light-header"><a href="https://fr-fr.facebook.com/doctissimo/" target="_blank" rel="noopener noreferrer"><i class="doc-icon-facebook"></i></a></span>
+                <span class="light-header"><a href=" https://www.pinterest.fr/doctissimo/" target="_blank" rel="noopener noreferrer"><i class="doc-icon-pinterest"></i></a></span>
+                <span class="light-header"><a href="https://www.instagram.com/doctissimo/?hl=fr" target="_blank" rel="noopener noreferrer"><i class="doc-icon-instatagram"></i></a></span>
+                <span class="light-header"><a href="https://www.youtube.com/user/Doctissimo" target="_blank" rel="noopener noreferrer"><i class="doc-icon-youtube"></i></a></span>
+                <span class="light-header"><a href="https://twitter.com/doctissimo" target="_blank" rel="noopener noreferrer"><i class="doc-icon-twitter-circle"></i></a></span>
+                <span class="doc-burger-menu" data-url="https://www.doctissimo.fr/header/menu/content"><span></span></span>
+            </div>
+            <div class="header-logo"><a href="https://www.doctissimo.fr" title="Doctissimo : Santé et bien être avec Doctissimo"><img class="logo header-logo" alt="Doctissimo : Santé et bien être avec Doctissimo" src="https://cdn3.prod.docfr.doc-media.fr/bundles/app/images/refonte/logos/doctissimo.svg?1615378331181"></a></div>
+            <div class="header-right-item right-items">
+                <a href="https://forum.doctissimo.fr/" class="doc-btn doc-btn--outline-primary">Forums</a>
+                <span><i id="header-icon-search" class="doc-icon-search"></i></span>
+                <div class="search-wrapper">
+                    <form class="d-flex" action="https://www.doctissimo.fr/recherche" method="get">
+                        <input id="doc-search-text" name="search[query]" type="text" autocomplete="off" placeholder="Rechercher" aria-label="Rechercher">
+                        <input type="submit" title="Recherchez sur Doctissimo" value="Go" tabindex="2">
+                        <i class="doc-icon-close color-blue-50"></i>
+                    </form>
+                </div>
+                <span class="light-header">
+                    <a href="https://forum.doctissimo.fr/inscription.html" title="Club Doctissimo"><i class="doc-icon-user"></i></a>
+                </span>
+            </div>
+        </div>
+        <div class="sub-header d-flex justify-content-between align-items-center">
+            <div class="left-items"><span class="doc-burger-menu" data-url="https://www.doctissimo.fr/header/menu/content"><span></span></span></div>
+            <nav class="master-categories d-flex justify-content-between align-items-center">
+                                    <div class="master-categories__dropdown">
+                        <span class="sante" href="#">Santé</span>
+                    </div>
+                                    <div class="master-categories__dropdown">
+                        <span class="famille" href="#">Famille</span>
+                    </div>
+                                    <div class="master-categories__dropdown">
+                        <span class="bienetre" href="#">Bien-Être</span>
+                    </div>
+                            </nav>
+            <div class="right-items"><a href="https://forum.doctissimo.fr/" class="doc-btn doc-btn--outline-primary">Forums</a></div>
+        </div>
+        <div class="coronavirus-banner d-flex">
+            <a onclick="unify_ua_trackEvent('covid-banner', 'click', 'covid-banner-click')" href="https://www.doctissimo.fr/sante/epidemie/coronavirus-live-actualites"></a>
+            <div class="banner-item banner-item--left"><span>DIRECT<span class="hidden-xs"> Coronavirus</span></span></div>
+            <ul class="banner-item banner-item--middle">
+                <li><a onclick="unify_ua_trackEvent('Publisher', 'CovidBanner_Click', 'COVID-19');" href="https://www.doctissimo.fr/sante/epidemie/coronavirus-chinois">COVID-19</a></li>
+                <li><a onclick="unify_ua_trackEvent('Publisher', 'CovidBanner_Click', 'Vaccin_Pfizer');"href="https://www.doctissimo.fr/sante/epidemie/coronavirus-chinois/pfizer-biontech-vaccin-coronavirus-covid">Vaccin Pfizer</a></li>
+                <li><a onclick="unify_ua_trackEvent('Publisher', 'CovidBanner_Click', 'Symptomes_Covid');"href="https://www.doctissimo.fr/sante/epidemie/coronavirus-chinois/symptomes-coronavirus-que-faire">Symptômes Covid</a></li>
+                <li><a onclick="unify_ua_trackEvent('Publisher', 'CovidBanner_Click', 'Vaccins_Covid');"href="https://www.doctissimo.fr/sante/epidemie/coronavirus-chinois/coronavirus-vaccins-covid-19-pfizer-moderna-astrazeneca-sanofi-russie-chine">Vaccins Covid</a></li>
+                <li><a onclick="unify_ua_trackEvent('Publisher', 'CovidBanner_Click', 'Actualite_Covid');" href="https://www.doctissimo.fr/sante/epidemie/coronavirus-live-actualites">Actualité Covid</a></li>
+            </ul>
+        </div>
+
+        <div id="doc-burger-menu-content" class="doc-px-2 doc-py-3">
+            
+ <nav>
+            <div class="sante category-underline"><span>Santé</span></div>
+        <ul class="doc-list">
+                            <li class="hidden-xs"><a role="button">Coronavirus</a></li>
+                <li class="first-level hidden-lg hidden-sm hidden-md row">
+                    <a href="/sante/epidemie/coronavirus-live-actualites" class="pull-left col-md-6" role="button">Coronavirus</a>
+                    <span class="col-md-6 pull-right text-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub">
+                    <i class="doc-icon-arrow-left"></i><div class="category-underline"><span>Coronavirus</span></div>
+                    <a href="#" class="pull-right"></a>
+                    <div class="hidden-xs doc-py-3"><a href="/sante/epidemie/coronavirus-live-actualites" title="Actualités Coronavirus">Actualités coronavirus en direct</a></div>                    <ul class="doc-list doc-list--arrow-right">
+                        <li><a href="https://www.doctissimo.fr/sante/epidemie/coronavirus-chinois" title="Tout savoir sur le coronavirus">Tout savoir sur le coronavirus</a></li>
+                        <li><a href="https://www.doctissimo.fr/forme/garder-forme-confinement-fitness-nutrition" title="Covid 19 : gardez la forme">Covid 19 : gardez la forme</a></li>
+                        <li><a href="https://www.doctissimo.fr/psychologie/zen-confinement" title="Prenez soin de vous">Prenez soin de vous</a></li>
+                        <li><a href="https://www.doctissimo.fr/famille/confinement-famille" title="En famille">En famille</a></li>
+                        <li><a href="https://www.doctissimo.fr/sante/epidemie/coronavirus-chinois/coronavirus-vaccins-covid-19-pfizer-moderna-astrazeneca-sanofi-russie-chine" title="Vaccin anti-Covid 19">Vaccin anti-Covid 19</a></li>
+                    </ul>
+                </div>
+                                        <li class="hidden-xs doc-burger-menu-first-print"><a role="button">Santé</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row doc-burger-menu-first-print">
+                    <a href="https://www.doctissimo.fr/html/sante/sante.htm" class="pull-left col-md-6" role="button">Santé</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub doc-burger-menu__sub--first-print">
+                    <i class="doc-icon-arrow-left"></i><div class="sante category-underline"><span>Santé</span></div>
+                    <a href="https://forum.doctissimo.fr/" class="pull-right">Forums Santé</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/sante/sante.htm" title="Santé">Santé</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Médicaments</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/medicaments/medicaments.htm" class="pull-left col-md-6" role="button">Médicaments</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="sante category-underline"><span>Santé</span></div>
+                    <a href="https://forum.doctissimo.fr/medicaments/liste_categorie.htm" class="pull-right">Forums Médicaments</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/medicaments/medicaments.htm" title="Médicaments">Médicaments</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Médecines douces</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/medecines-douces" class="pull-left col-md-6" role="button">Médecines douces</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="sante category-underline"><span>Santé</span></div>
+                    <a href="https://forum.doctissimo.fr/sante/medecines-douces/liste_sujet-1.htm" class="pull-right">Forums Médecines douces</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/medecines-douces" title="Médecines douces">Médecines douces</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                    </ul>
+            <div class="famille category-underline"><span>Famille</span></div>
+        <ul class="doc-list">
+                                        <li class="hidden-xs "><a role="button">Grossesse</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/grossesse/grossesse.htm" class="pull-left col-md-6" role="button">Grossesse</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="famille category-underline"><span>Famille</span></div>
+                    <a href="https://forum.doctissimo.fr/grossesse-bebe/liste_categorie.htm" class="pull-right">Forums Grossesse</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/grossesse/grossesse.htm" title="Grossesse">Grossesse</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Bébé</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/bebe/bebe.htm" class="pull-left col-md-6" role="button">Bébé</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="famille category-underline"><span>Famille</span></div>
+                    <a href="https://forum.doctissimo.fr/grossesse-bebe/liste_categorie.htm" class="pull-right">Forums Bébé</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/bebe/bebe.htm" title="Bébé">Bébé</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Famille</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/famille/famille.htm" class="pull-left col-md-6" role="button">Famille</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="famille category-underline"><span>Famille</span></div>
+                    <a href="https://forum.doctissimo.fr/famille/liste_categorie.htm" class="pull-right">Forums Famille</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/famille/famille.htm" title="Famille">Famille</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Animaux</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/animaux" class="pull-left col-md-6" role="button">Animaux</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="famille category-underline"><span>Famille</span></div>
+                    <a href="https://forum.doctissimo.fr/animaux/liste_categorie.htm" class="pull-right">Forums Animaux</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/animaux" title="Animaux">Animaux</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                    </ul>
+            <div class="bienetre category-underline"><span>Bien-Être</span></div>
+        <ul class="doc-list">
+                                        <li class="hidden-xs "><a role="button">Beauté</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/beaute/beaute.htm" class="pull-left col-md-6" role="button">Beauté</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="bienetre category-underline"><span>Bien-Être</span></div>
+                    <a href="https://forum.doctissimo.fr/forme-beaute/liste_categorie.htm" class="pull-right">Forums Beauté</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/beaute/beaute.htm" title="Beauté">Beauté</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Forme</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/forme/forme.htm" class="pull-left col-md-6" role="button">Forme</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="bienetre category-underline"><span>Bien-Être</span></div>
+                    <a href="https://forum.doctissimo.fr/forme-sport/liste_categorie.htm" class="pull-right">Forums Forme</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/forme/forme.htm" title="Forme">Forme</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Nutrition</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/nutrition/nutrition.htm" class="pull-left col-md-6" role="button">Nutrition</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="bienetre category-underline"><span>Bien-Être</span></div>
+                    <a href="https://forum.doctissimo.fr/nutrition/liste_categorie.htm" class="pull-right">Forums Nutrition</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/nutrition/nutrition.htm" title="Nutrition">Nutrition</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Psycho</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/psychologie/psychologie.htm" class="pull-left col-md-6" role="button">Psycho</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="bienetre category-underline"><span>Bien-Être</span></div>
+                    <a href="https://forum.doctissimo.fr/psychologie/liste_categorie.htm" class="pull-right">Forums Psycho</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/psychologie/psychologie.htm" title="Psycho">Psycho</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                            <li class="hidden-xs "><a role="button">Sexualité</a></li>
+                <li class="hidden-lg hidden-sm hidden-md first-level row ">
+                    <a href="https://www.doctissimo.fr/html/sexualite/sexualite.htm" class="pull-left col-md-6" role="button">Sexualité</a>
+                    <span class="col-md-6 pull-right">
+                        <i class="doc-icon-arrow-right"></i>
+                    </span>
+                </li>
+                <div class="doc-burger-menu__sub ">
+                    <i class="doc-icon-arrow-left"></i><div class="bienetre category-underline"><span>Bien-Être</span></div>
+                    <a href="https://forum.doctissimo.fr/doctissimo/liste_categorie.htm" class="pull-right">Forums Sexualité</a>
+                    <div class="hidden-xs doc-py-3"><a href="https://www.doctissimo.fr/html/sexualite/sexualite.htm" title="Sexualité">Sexualité</a></div>
+                    <ul class="doc-list doc-list--arrow-right">
+                                                                                                </ul>
+                </div>
+                    </ul>
+    
+    <div><span>Autres</span></div>
+    <ul class="doc-list doc-list-parts">
+        <li class="hidden-xs"><a role="button">Actualités</a></li>
+        <li class="first-level hidden-lg hidden-sm hidden-md row">
+            <a href="https://www.doctissimo.fr/news" class="pull-left col-md-6" role="button">Actualités</a>
+            <span class="col-md-6 pull-right">
+                <i class="doc-icon-arrow-right"></i>
+            </span>
+        </li>
+        <div class="doc-burger-menu__sub">
+            <i class="doc-icon-arrow-left"></i><div class="category-underline"><span>Actualités</span></div>
+            <a href="#" class="pull-right"></a>
+            <div class="doc-py-3 hidden-xs"><a href="https://www.doctissimo.fr/news" title="Actualités">Actualités</a></div>
+            <ul class="doc-list doc-list--arrow-right">
+                <li><a href="https://www.doctissimo.fr/sante/news" title="Actualités Santé">Santé</a></li>
+                <li><a href="https://www.doctissimo.fr/medicaments/news" title="Actualités Médicaments">Médicaments</a></li>
+                <li><a href="https://www.doctissimo.fr/grossesse/news" title="Actualités Grossesse & bébé">Grossesse & bébé</a></li>
+                <li><a href="https://www.doctissimo.fr/nutrition/news" title="Actualités Nutrition">Nutrition</a></li>
+                <li><a href="https://www.doctissimo.fr/beaute/news" title="Actualités Beauté">Beauté</a></li>
+                <li><a href="https://www.doctissimo.fr/psychologie/news" title="Actualités Psycho">Psycho</a></li>
+                <li><a href="https://www.doctissimo.fr/sexualite/news" title="Actualités Sexualité">Sexualité</a></li>
+                <li><a href="https://www.doctissimo.fr/forme/news" title="Actualités Forme">Forme</a></li>
+                <li><a href="https://www.doctissimo.fr/famille/news" title="Actualités Famille">Famille</a></li>
+            </ul>
+        </div>
+        <li class="first-level row">
+            <a class="pull-left col-md-6" href="https://videos.doctissimo.fr">Vidéos</a>
+        </li>
+        <li class="first-level row">
+            <a class="pull-left col-md-6" href="https://www.doctissimo.fr/tests">Tests</a>
+        </li>
+    </ul>
+
+    <div><span>Espace membre</span></div>
+    <ul class="doc-list">
+        <li class="first-level row">
+            <a class="pull-left col-md-6" href="https://forum.doctissimo.fr/login.html">Se connecter</a>
+        </li>
+        <li class="first-level row">
+            <a class="pull-left col-md-6" href="https://club.doctissimo.fr/">Club Doctissimo</a>
+        </li>
+        <li class="first-level row">
+            <a class="pull-left col-md-6" href="https://www.doctissimo.fr/lelab">
+                <img class="le-lab-logo" src="https://cdn2.prod.docfr.doc-media.fr/bundles/app/images/refonte/doc-le-lab-by-doctissimo-small.png?1615378331181" alt="Le Lab" />
+            </a>
+        </li>
+    </ul>
+</nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    if (typeof device !== 'undefined' && device === 'mobile') {
+        document.getElementsByTagName("header").className += " sticky";
+        document.body.className += " header-sticky";
+    }
+</script>
+
+        
+                                    <div class="row">
+                <div class="col-md-12">
+                    <div id="banner_atf">
+                                                <div id="banner_atf__container">
+                            <script type="text/javascript">
+        if (!trafficing_exclu_full) {
+            var ads_element_banner_atf = document.createElement('div');
+            ads_element_banner_atf.setAttribute('data-ad', 'banner_atf');
+            document.getElementById('banner_atf__container').appendChild(ads_element_banner_atf);
+        }
+    </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
+        <div id="main-container" class="container">
+                                        <div class="row">
+                    <div class="col-md-12">
+                        <ol class="doc-menu-breadcrumb doc-pl-1 doc-pl-md-0">
+                                                            <li class="doc-pl-1">
+        <a href="https://www.doctissimo.fr" title="Accueil">
+        <span>Accueil</span>
+    </a>
+</li>
+                                                        <li class="doc-pl-1">
+            <span class="doc-mr-1"> / </span>
+        <a href="https://www.doctissimo.fr/html/grossesse/grossesse.htm" title="Grossesse">
+        <span>Grossesse</span>
+    </a>
+</li>
+            <div class="doc-collapse">
+                <div class="doc-collapse__content collapse" id="sourcesContents" aria-expanded="false" style="height: 0px;">
+                    
+            <li class="doc-pl-1">
+            <span class="doc-mr-1"> / </span>
+        <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_facteurs_risques.htm" title="Limiter les risques de la grossesse">
+        <span>Limiter les risques de la grossesse</span>
+    </a>
+</li>
+                                                                </div>
+                                <span class="doc-collapse__btn doc-collapse__btn--link collapsed" role="button" data-toggle="collapse" href="#sourcesContents" aria-expanded="false" aria-controls="sourcesContents">
+                <span class="doc-collapse__btn__open">...</span>
+                <span class="doc-collapse__btn__close">...</span>
+            </span>
+                </div>
+                        </ol>
+                    </div>
+                </div>
+            
+    
+            
+                                                <div id="content-container" class="row">
+                                            <div class="col-md-8">
+                                
+<div class="doc-content doc-px-2 doc-px-md-0" data-ad-sticky-reference="#pegasus_300_atf">
+            
+<h1>Voyager enceinte : quels sont les risques ?</h1>
+
+    <div class="doc-my-3">
+                            <div class="doc-user">
+                    <a class="doc-user__img-wrapper" href="https://www.doctissimo.fr/equipe/auteurs/afp-relaxnews" title="AFP/Relaxnews">
+        
+                    <img
+                src="https://resize2.prod.docfr.doc-media.fr/r/50,50,center-middle,ffffff,smartcrop/img/var/doctissimo/storage/images/fr/www/equipe/auteurs/afp-relaxnews/649000-3-fre-FR/afp-relaxnews.jpg"
+                alt="AFP/Relaxnews"
+                class="rounded-circle"
+            />
+        
+                    </a>
+        
+        <div class="doc-user__content">
+            <strong>
+                                    <a href="https://www.doctissimo.fr/equipe/auteurs/afp-relaxnews" title="AFP/Relaxnews">
+                
+                    AFP/Relaxnews
+
+                                    </a>
+                            </strong>
+
+                            <span>Agence de Presse</span>
+                    </div>
+    </div>
+
+
+            </div>
+
+<div class="doc-text-xs doc-my-neg-1">
+            Mis à jour le 02 octobre 2017
+    </div>
+
+
+
+
+                            <div class="doc-my-3">
+                <picture>
+                    <source media="(max-width: 380px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/380,288,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+                    <source media="(max-width: 480px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/480,363,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+                    <source media="(max-width: 1023px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/720,420,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+                    <source media="(min-width: 1024px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/650,380,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+                    <img src="https://resize1.prod.docfr.doc-media.fr/rcrop/480,280,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg" alt="voyage grossesse" class="doc-img-responsive-100 rounded-lg">
+                </picture>
+            </div>
+            
+            <div class="bg-color-blue-0 rounded doc-mt-3 doc-mb-3 doc-p-2 doc-px-md-5 doc-py-md-2">
+            <div class="doc-grid-2-auto color-blue-50 doc-mb-2">
+                <span class="doc-text-sm"><i class="doc-icon-badge-check doc-mr-1"></i><strong>Validation médicale&nbsp;:</strong></span>
+                <span class="doc-text-xs text-right">02 octobre 2017</span>
+            </div>
+                                    <div class="doc-user">
+                    <a class="doc-user__img-wrapper" href="https://www.doctissimo.fr/equipe/les-experts-de-doctissimo/jesus-cardenas" title="Dr Jesus Cardenas">
+        
+                    <img
+                src="https://resize1.prod.docfr.doc-media.fr/r/50,50,center-middle,ffffff,smartcrop/img/var/doctissimo/storage/images/fr/www/equipe/les-experts-de-doctissimo/jesus-cardenas/4935326-9-fre-FR/jesus-cardenas.jpg"
+                alt="Dr Jesus Cardenas"
+                class="rounded-circle"
+            />
+        
+                    </a>
+        
+        <div class="doc-user__content">
+            <strong>
+                                    <a href="https://www.doctissimo.fr/equipe/les-experts-de-doctissimo/jesus-cardenas" title="Dr Jesus Cardenas">
+                
+                    Dr Jesus Cardenas
+
+                                    </a>
+                            </strong>
+
+                            <span>Allergologue</span>
+                    </div>
+    </div>
+
+
+                    </div>
+    
+    <div class="doc-my-4">
+        <p><strong>Enceinte, peut-on voyager sans risque ?&nbsp;Quels sont les conseils à&nbsp;donner aux&nbsp;femmes enceintes qui souhaitent voyager ?&nbsp;Le Docteur André&nbsp;Paugam, praticien au service de parasitologie et mycologie de l'Hôpital&nbsp;Cochin&nbsp;à Paris, fait le point à l'occasion des Entretiens de Bichat.</strong></p>
+
+    </div>
+
+                
+                                    
+                
+                                    
+                                                                                                                                                            <script type="text/javascript">
+                    // Remove dyninfeed for pages in exclu pub
+                    if (!trafficing_exclu_all && !trafficing_exclu_full) {
+                        window.unify_dataSlayer[0].content.dynInfeedCount = 5;
+                    }
+                </script>
+                    
+        <div class="doc-menu-summary"><strong>Sommaire</strong><ol><li><a href="#peut-on-voyager-quand-on-est-enceinte-nbsp">Peut-on voyager quand on est enceinte ? </a></li><li><a href="#les-risques-sont-ils-differents-selon-le-trimestre-de-la-grossesse">Les risques sont-ils différents selon le trimestre de la grossesse ?</a></li><li><a href="#avion-voiture-quelles-sont-les-indications-ou-contre-indications-selon-les-moyens-de-transport">Avion, voiture... Quelles sont les indications ou contre-indications selon les moyens de transport ?</a></li><li><a href="#sur-quoi-les-femmes-enceintes-doivent-elles-etre-particulierement-vigilantes">Sur quoi les femmes enceintes doivent-elles être particulièrement vigilantes ?</a></li><li><a href="#comment-eviter-tout-probleme-medical">Comment éviter tout problème médical ?</a></li><li><a href="#quelles-destinations-sont-a-proscrire-chez-la-femme-enceinte">Quelles destinations sont à proscrire chez la femme enceinte ?</a></li><li><a href="#les-vaccins-pour-les-voyages-tropicaux-peuvent-ils-etre-injectes-a-une-femme-enceinte">Les vaccins pour les voyages tropicaux peuvent-ils être injectés à une femme enceinte ?</a></li><li><a href="#et-pour-les-femmes-qui-allaitent">Et pour les femmes qui allaitent ?</a></li></ol></div><div id="300_atf"> <script type="text/javascript"> if ("desktop" !== device && !trafficing_exclu_full) { var ads_element_300_atf = document.createElement("div"); ads_element_300_atf.setAttribute("data-ad", "300_atf"); document.getElementById("300_atf").appendChild(ads_element_300_atf); } </script> </div><h2 id="peut-on-voyager-quand-on-est-enceinte-nbsp">Peut-on voyager quand on est enceinte ? </h2><p><strong>Docteur André Paugam : </strong>D'un point de vue général, il faut déconseiller le voyage d'une femme enceinte surtout s'il s'agit :</p> <ul> <li>d'une <strong>destination lointaine</strong>,</li> <li>d'une <strong>destination tropicale</strong>,</li> <li>d'une <strong>destination où sévissent des</strong> <strong>maladies infectieuses</strong> comme le <a href="https://www.doctissimo.fr/html/sante/voyageurs/paludisme-malaria.htm" target="_self">paludisme</a>, le <a href="https://www.doctissimo.fr/html/dossiers/chikungunya/chikungunya.htm" target="_self">chikungunya</a>, la <a href="https://www.doctissimo.fr/html/dossiers/fievre_jaune.htm" target="_self">fièvre jaune</a> notamment, maladies graves pour la femme enceinte et l'enfant à naître. Il s'agit de pays dont les structures sanitaires ne peuvent prendre aisément en charge une urgence obstétricale en dehors des grands centres urbains. </li> </ul> <p>Il faut aussi prendre en compte l'histoire de la grossesse. Ainsi voyager enceinte est déconseillé lorsqu'il s'agit :</p> <ul> <li>d'une <strong>grossesse difficile</strong>, dite <strong>à risque de complications</strong>, comme une attente de <a href="https://www.doctissimo.fr/html/grossesse/dossiers/jumeaux/jumeaux.htm" target="_self">jumeaux</a>,</li> <li>d'une g<strong>rossesse survenue après un <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-pma-fecondation-in-vitro-fiv.htm" target="_self">traitement pour lutter contre la stérilité</a></strong> (par exemple). </li> </ul> <div class="doc-block-pub doc-block-pub-dyn-infeed" id="dyn_infeed_1" data-ad="dyninfeed"></div> <p>Il faut donc connaitre les circonstances dans lesquelles la grossesse se déroule pour, parfois, contre-indiquer le voyage. <strong>L'avis du gynécologue</strong>, qui suit la femme enceinte<strong> doit être demandé avant tout départ</strong>. </p><h2 id="les-risques-sont-ils-differents-selon-le-trimestre-de-la-grossesse">Les risques sont-ils différents selon le trimestre de la grossesse ?</h2><p>Les risques, toujours présents lors d'un voyage, ne sont pas les mêmes <strong>en fonction des trimestres de grossesse</strong>. </p> <ul> <li><strong>Au <a href="https://www.doctissimo.fr/html/grossesse/mag_2002/0628/gr_5675_grossesse_premier_trimestre.htm" target="_self">premier trimestre</a></strong>: le risque principal est la <a href="https://www.doctissimo.fr/html/sante/femmes/sa_763__fausse_couches.htm" target="_self">fausse couche</a>,</li> <li><strong>Au <a href="https://www.doctissimo.fr/html/grossesse/pendant/articles/11778-faits-marquants-3e-trimestre.htm" target="_self">troisième trimestre</a></strong> : c'est <a href="https://www.doctissimo.fr/html/grossesse/bebe/premature/niv2/prematures.htm" target="_self">l'accouchement prématuré</a>. </li> </ul> <p>Aussi, la <a href="https://www.doctissimo.fr/html/grossesse/pendant/facteurs_risque/gr_4056_medicaments_grossesse.htm" target="_self">toxicité des médicaments contre-indiqués</a> a un plus grand risque de malformation sur l'embryon (1er trimestre) que sur le fœtus (3ème trimestre). </p><p>Pour toutes ces raisons, le <strong>risque le plus faible</strong> pour voyager enceinte se situe <strong>au <a href="https://www.doctissimo.fr/html/grossesse/pendant/articles/11488-points-essentiels-deuxieme-trimestre.htm" target="_self">2ème trimestre de la grossesse</a></strong>. </p><h2 id="avion-voiture-quelles-sont-les-indications-ou-contre-indications-selon-les-moyens-de-transport">Avion, voiture... Quelles sont les indications ou contre-indications selon les moyens de transport ?</h2><p><strong>Concernant l'avion</strong>, il faut savoir que les compagnies aériennes n'acceptent pas les femmes enceintes <strong>après le 7ème mois de grossesse</strong> parfois même à partir du <a href="https://www.doctissimo.fr/html/grossesse/pendant/niv2/grossesse-mois-par-mois-sixieme-mois.htm" target="_self">6ème mois</a> <strong>en raison du risque d'accouchement</strong>. </p><p><strong>Pour la voiture,</strong> si un long trajet ne peut être différé, <strong>des pauses toutes les heures pour une marche de 10 minutes</strong> doivent être programmées. De plus, <a href="https://www.doctissimo.fr/html/grossesse/pendant/facteurs_risque/gr_3952_chocs_attention.htm" target="_self">la voiture expose au risque d'accidents</a>, celui-ci varie en fonction de la qualité des routes empruntées, du véhicule. </p> <div class="doc-block-pub doc-block-pub-dyn-infeed" id="dyn_infeed_2" data-ad="dyninfeed"></div><p>Le <strong>voyage en train</strong> apparaît donc comme le moyen de transport le plus sûr pour une femme enceinte, il permet facilement de marcher régulièrement. </p><p>Aussi, de manière plus générale, sachez que <strong>tous les moyens de transport exposent au</strong> <strong>risque thromboembolique</strong> avec le risque de survenue d'une <a href="https://www.doctissimo.fr/html/sante/mag_2001/mag0511/sa_4017_phlebite.htm" target="_self">phlébite</a> pouvant se compliquer d' <a href="https://www.doctissimo.fr/html/sante/encyclopedie/sa_1575_embolie_pulmon.htm" target="_self">embolie pulmonaire</a>, potentiellement mortelle. Ce risque, directement <strong>proportionnel </strong><strong>à la durée du transport </strong>et au<strong> degré d'immobilité pendant le trajet</strong>, est particulièrement élevé chez la femme enceinte. </p><h2 id="sur-quoi-les-femmes-enceintes-doivent-elles-etre-particulierement-vigilantes">Sur quoi les femmes enceintes doivent-elles être particulièrement vigilantes ?</h2><p>Une femme enceinte devrait<strong> éviter de se rendre dans un pays "à risque"</strong>. Pour connaitre les risques spécifiques à la destination envisagée et les zones à risque, ainsi que les structures sanitaires qui pourraient être sollicitées sur place, je recommande la consultation du <strong>site du ministère des affaires étrangères et du développement international :</strong>  <a href="http://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/" target="_blank">http://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/</a></p><p>Pour les <a href="https://www.doctissimo.fr/html/dossiers/epidemies/niv2/nouveaux-risques-infectieux.htm" target="_self">risques infectieux</a>, <strong>une fois sur place</strong>, la femme enceinte doit, comme tout voyageur, veiller à éviter la <a href="https://www.doctissimo.fr/html/dossiers/diarrhee/niv2/diarrhee-turista-voyage.htm" target="_self">diarrhée du voyageur</a>, la bien nommée <strong>"tourista"</strong> dont sont victimes au moins 1 voyageur sur 3. </p><p>Pour cela il est recommandé de :</p> <ul> <li><strong>Bien se laver les mains</strong> avant les repas et après chaque passage aux toilettes. </li> <li>Ne consommer que des <strong>aliments bien cuits</strong>,</li> <li><strong>Proscrire les crudités,</strong></li> <li><strong>Peler soi-même ses fruits</strong>,</li> <li>Ne consommer<strong> que des boissons capsulées ou du thé,</strong></li> <li><strong>Proscrire tous les aliments à base de laitage</strong> <strong>non pasteurisé</strong> comme les fromages crus. </li> </ul> <div class="doc-block-pub doc-block-pub-dyn-infeed" id="dyn_infeed_3" data-ad="dyninfeed"></div> <h2 id="comment-eviter-tout-probleme-medical">Comment éviter tout problème médical ?</h2><p>Pour éviter tout problème médical, il n'y a qu'une solution :<strong> reporter son voyage</strong>. Si cela n'est pas possible, je recommande de prendre <strong>une assurance rapatriement sanitaire</strong> en vérifiant que la grossesse est bien prise en compte dans le contrat. </p> <div class="doc-recommendations doc-recommendations--article"> <div class="h2">À voir aussi</div> <div class="row"> <div class="col-md-6"> <div class="card card--band card--band-50 card--no-strip"> <div class="card__img-wrapper"> <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://resize1.prod.docfr.doc-media.fr/s/160/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/pas-de-fumee-pour-bebe/87623-2-fre-FR/pas-de-fumee-pour-bebe.jpg" alt="Le sevrage tabagique pendant la grossesse" class="doc-img-responsive-100 rounded-lg lazyload" /> <noscript> <img src="https://resize1.prod.docfr.doc-media.fr/s/160/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/pas-de-fumee-pour-bebe/87623-2-fre-FR/pas-de-fumee-pour-bebe.jpg" alt="Le sevrage tabagique pendant la grossesse" class="doc-img-responsive-100 rounded-lg" /> </noscript> </div> <div class="card__body"> <div> <span class="color-grey-medium">Article</span> </div> <h5 class="card__body__title"> <a href="https://www.doctissimo.fr/html/grossesse/mag_2004/mag0521/gr_7727_tabac_grossesse_bebe_itw.htm" title="Le sevrage tabagique pendant la grossesse" >Le sevrage tabagique pendant la grossesse</a> </h5> </div> </div> </div> </div> </div> <p>Les <a href="https://www.doctissimo.fr/html/dossiers/varices/sa_5561_varices_bas_contention.htm" target="_self">bas de contention</a> sont fortement recommandés pour les <a href="https://www.doctissimo.fr/html/dossiers/vacances/niv2/voyage-avion.htm" target="_self">voyages en avion</a>, d'autant plus que le voyage est prolongé, <strong>de plus de six heures</strong>. Techniquement il est recommandé de s'assurer que la contention élastique soit de classe 2, permettant une pression à la cheville de 15 à 30 mmHg. Les modèles à mi-cuisse étant plus confortables que les modèles qui remontent sous le genou. Ceci-dit, il faut insister sur le fait que <strong>le port de ces bas ne peut être, en aucun cas, considéré comme la prévention</strong> qui écarterait formellement <strong>tout risque thromboembolique</strong>, car leur efficacité n'a pas été spécifiquement étudiée chez la femme enceinte. </p> <div class="doc-block-pub doc-block-pub-dyn-infeed" id="dyn_infeed_4" data-ad="dyninfeed"></div><p>Pour les femmes qui <strong>cumulent les facteurs à risque</strong> d'accident thromboembolique comme une <strong> <a href="https://www.doctissimo.fr/html/nutrition/poids/obesite_niv2.htm" target="_self">obésité</a></strong>, un<strong> antécédent de phlébite</strong> par exemple, il faut savoir que les risques thromboemboliques ne s'additionnent pas mais se multiplient ! Le gynécologue qui suit la grossesse pourrait prescrire, s'il le juge nécessaire, <strong>une injection d'anticoagulant avant le vol</strong>. </p><h2 id="quelles-destinations-sont-a-proscrire-chez-la-femme-enceinte">Quelles destinations sont à proscrire chez la femme enceinte ?</h2><p>Les <strong>destinations lointaines, nécessitant des <a href="https://www.doctissimo.fr/html/sante/voyageurs/fiches_conseils/avant_depart/sa_5724_vaccination_voyageur.htm" target="_self">vaccinations</a></strong>, dans des pays où <strong>les structures sanitaires sont limitées</strong>, <strong>où sévissent des maladies infectieuses</strong> comme le paludisme, la dengue, le chikungunya, maladies qui présentent des risques spécifiques pour la grossesse, sont à proscrire. Là-encore la consultation du <strong>site web du ministère des affaires étrangères</strong> est particulièrement utile. </p><p>Enfin, dans les pays tropicaux, il existe un risque <strong>d'infection alimentaire en fonction du niveau d'hygiène</strong>. Les repas peuvent être la source de transmission d'agents infectieux responsables de diarrhées. <strong>Les diarrhées bactériennes</strong>, qui peuvent se manifester par de la fièvre et du sang dans les selles, à la différence de la "tourista", sont difficiles à prendre en charge chez la femme enceinte, car<strong> les antibiotiques de ces infections sont contre-indiqués</strong> ou d'indications limités chez la femme enceinte, selon le terme de la grossesse. De même, l'alimentation peut transmettre<strong> des infections virales, notamment l' <a href="https://www.doctissimo.fr/html/dossiers/hepatites/articles/12936-hepatites-d-e-f-g.htm" target="_self">hépatite E</a></strong>, particulièrement dangereuse pour la femme enceinte. </p> <div class="doc-block-pub doc-block-pub-dyn-infeed" id="dyn_infeed_5" data-ad="dyninfeed"></div><h2 id="les-vaccins-pour-les-voyages-tropicaux-peuvent-ils-etre-injectes-a-une-femme-enceinte">Les vaccins pour les voyages tropicaux peuvent-ils être injectés à une femme enceinte ?</h2><p>Le seul vaccin du voyageur qui puisse être administrativement obligatoire à l'entrée de certains pays d'Afrique sub-saharienne et d'Amérique du Sud, est <strong>le <a href="https://www.doctissimo.fr/html/dossiers/fievre_jaune/sa_8042_fievre_jaune_vaccination.htm" target="_self">vaccin contre la fièvre jaune</a></strong>, <strong>vaccin qui est contre-indiqué chez la femme enceinte</strong>. Il faut savoir que ce vaccin n'est pas disponible en pharmacie et ne peut être administré que dans les <strong>centres de vaccinations internationaux</strong>. </p><p>Les autres vaccins du voyageur, comme ceux qui protègent de l'hépatite A, de la fièvre typhoïde et de l'encéphalite japonaise, <strong>ne sont pas recommandés</strong>, même si aucun effet sur la grossesse n'a jusqu'à lors été signalé. En l'absence de données suffisantes, <strong>la prudence justifie de ne pas les administrer</strong>. </p><h2 id="et-pour-les-femmes-qui-allaitent">Et pour les femmes qui allaitent ?</h2><p>Pour les femmes qui <a href="https://www.doctissimo.fr/html/grossesse/bebe/nourrir/allaitement.htm" target="_self">allaitent</a>, les vaccins vivant atténués peuvent présenter <strong>un risque de transmission au nourrisson</strong>. </p><p>Si une vaccination contre la fièvre jaune a été réalisée, <strong>un arrêt de l'allaitement au cours des 15 jours qui suivent la vaccination doit être respecté</strong>, car il s'agit d'un vaccin "vivant atténué", <a href="https://www.doctissimo.fr/html/dossiers/tabac/8304-sevrage-tabagique-grossesse-allaitement.htm" target="_self">le lait de la mère pourrait transmettre la maladie à l'enfant</a>. </p> 
+        
+        </div>
+
+<source media="(max-width: 380px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/380,288,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+<source media="(max-width: 480px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/480,363,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+<source media="(max-width: 1023px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/720,420,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+<source media="(min-width: 1024px)" srcset="https://resize1.prod.docfr.doc-media.fr/rcrop/650,380,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg">
+
+<div class="doc-px-2 doc-px-md-0">
+    <hr class="doc-hr-100"/>
+
+    <div class="doc-text-xs doc-my-1">
+                    Mis à jour le 02 octobre 2017
+            </div>
+
+            <div class="doc-grid-2-auto doc-my-2">
+            <span class="h3 doc-m-0">Révision médicale :</span>
+            <span class="text-right doc-text-xs">02/10/2017</span>
+        </div>
+
+        <div class="doc-my-3">
+                                    <div class="doc-user">
+                    <a class="doc-user__img-wrapper" href="https://www.doctissimo.fr/equipe/les-experts-de-doctissimo/jesus-cardenas" title="Dr Jesus Cardenas">
+        
+                    <img
+                src="https://resize1.prod.docfr.doc-media.fr/r/50,50,center-middle,ffffff,smartcrop/img/var/doctissimo/storage/images/fr/www/equipe/les-experts-de-doctissimo/jesus-cardenas/4935326-9-fre-FR/jesus-cardenas.jpg"
+                alt="Dr Jesus Cardenas"
+                class="rounded-circle"
+            />
+        
+                    </a>
+        
+        <div class="doc-user__content">
+            <strong>
+                                    <a href="https://www.doctissimo.fr/equipe/les-experts-de-doctissimo/jesus-cardenas" title="Dr Jesus Cardenas">
+                
+                    Dr Jesus Cardenas
+
+                                    </a>
+                            </strong>
+
+                            <span>Allergologue</span>
+                    </div>
+    </div>
+
+
+                    </div>
+    
+    
+    
+
+<div class="doc-menu-social doc-my-3 doc-ml-neg-3 doc-mr-neg-3 doc-ml-neg-md-0 doc-mr-neg-md-0">
+    <span class="doc-text-sm">Partager sur :</span>
+    <div class="doc-menu-social__share text-right">
+        <a class="doc-social-btn" href="https://www.facebook.com/dialog/share?app_id=290600267704798&display=popup&href=https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque" target="_blank" data-toggle="tooltip">
+            <i class="doc-icon-facebook-circle"></i>
+        </a>
+        <a class="doc-social-btn" href="https://twitter.com/intent/tweet?text=Voyager%20enceinte%20%3A%20quels%20sont%20les%20risques%20%3F&url=https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque" target="_blank" data-toggle="tooltip">
+            <i class="doc-icon-twitter-circle"></i>
+        </a>
+        <a class="doc-social-btn whatsapp" role="button" target="_blank" data-toggle="tooltip" data-text="https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque">
+            <i class="doc-icon-whatsapp-circle"><span class="path1"></span><span class="path2"></span></i>
+        </a>
+        <a class="doc-social-btn" href="//www.pinterest.com/pin/create/button/?url=https://www.doctissimo.fr/grossesse/grossesse-et-risques/voyage-enceinte-risque&media=https://resize1.prod.docfr.doc-media.fr/rcrop/720,420,center-middle/img/var/doctissimo/storage/images/fr/www/grossesse/grossesse-et-risques/voyage-enceinte-risque/649165-5-fre-FR/voyage-enceinte-risque.jpg&description=Voyager%20enceinte%20%3A%20quels%20sont%20les%20risques%20%3F" target="_blank" data-toggle="tooltip">
+            <i class="doc-icon-pinterest-circle"></i>
+        </a>
+
+            </div>
+</div></div>
+
+                                                    </div>
+                                                                <div id="right-col" class="col-md-4">
+                                    
+    
+                                                                                        
+<div id="300_atf-col">
+    <script type="text/javascript">
+        if (!trafficing_exclu_full && device !== 'mobile' && device !== 'tablette') {
+            var ads_element_300_atf = document.createElement('div');
+            ads_element_300_atf.setAttribute('data-ad', '300_atf');
+            document.getElementById('300_atf-col').appendChild(ads_element_300_atf);
+        }
+    </script>
+</div>
+                                    
+                                    
+                            </div>
+                        
+                                        </div>
+                    <div class="doc-my-2">
+        <div id="taboola-below-article-thumbnails" data-ad-sticky-unstick-to="#pegasus_banner_atf"></div>
+
+        <div class="col-md-8">
+                            <!-- centerBottomInscriptionNewsletter.html.twig -> to remove -->
+                            <div class="row">
+    <div class="col-md-12">
+        
+<div class="doc-mx-2 doc-mx-md-0" id="doc-block-middle-center-bottom-remontees-videos">
+
+    <h4><a href="https://videos.doctissimo.fr/grossesse/sante-de-la-femme-enceinte">Santé de la femme enceinte : la vidéo à la une</a></h4>
+
+                                        <div class="embed-responsive embed-responsive-16by9">
+                    <!-- ESI - video player - doc: https://www.doctissimo.fr/esi/video-player?videoid=622377&startOnSight=1&position=BTF&npr=0&context=bloc_bottom -->
+            <!-- ESI - video player - auf: https://dfp.doctissimo.fr/reloaded/esi/videoplayer.php?videoid=622377&startOnSight=1&position=BTF&npr=0&context=bloc_bottom --><!-- ESI - VideoPlayer : http://dfp.doctissimo.fr/reloaded/esi/videoplayer.php?context=bloc_bottom&npr=0&position=BTF&startOnSight=1&videoid=622377 -->
+
+<script type="text/javascript" crossorigin="anonymous" src="https://static.afcdn.com/reldocfr/concat.js?PCM-lVLRboJAEPwaH0sAo299ME3aNDWpSRtfyXKseHrcktu7Gv--iwQFYxQTAsPcDLPs7hptQW6Svmu7Rac9WIXyxrqqDX5euGjHr29U1WTRehH86QJpZeCIjbk-ARaUQQG1RzdWvzu0uNFvva95Ml0ILZcqbHQ-VVQJZXTuwGlsjDO1_0q-3fJ-EBSrJ0vrO_rFrbtGSSmsyGEPZuwdQsVoGaNK2_sJ3oHatwHdB9aN4LfhtS1Huz8WT_hqE0ptG1uBeSi751gTe632xzMYa4PgqelhD462WjBHCRvgwSQgbORewi3SUA4mk_5WZDMJHmgMFcDbtgUUHm538Nrw6KlIAaexLKksr1anDjmHXEASzaP4TLywTM-gJztQ53RgvIBusa7-FDY3grqjH2TW9GAf2csG3pdUMoA2I0rjNIln8TyZpdN_"></script>
+<script type="text/javascript">
+ window.afSession = window.afSession || new AufSession();
+ </script>
+<script type="text/javascript">
+ window.afLogger = window.afLogger || new Aflog.Logger({
+ context: {
+ revision: 'd0b261ada2eba790cbfe0e2682fe2fc19f872788'
+ }
+ });
+ af_addEvent(window, 'beforeunload', function() {
+ afLogger.sendLogsToBigQuery();
+ }, false);
+ </script>
+<link href="https&#x3A;&#x2F;&#x2F;cdn.jwplayer.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;dfp.doctissimo.fr" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;assets.afcdn.com" rel="preconnect">
+<style amp-custom>/** https://dfp.doctissimo.fr/reloaded/static/Front/Component/videoPlayer/videoPlayer.scss?v=202105061523 **/ .video-player-debug .ima-ad-container, .video-player-debug .jw-plugin-googima{opacity:0.5}.video-player-sticky-container{width:100%}.af-videoplayer{width:100%}.af-videoplayer>.jwplayer{overflow:visible}.af-videoplayer video{width:100%;max-height:100%;background:black}.af-videoplayer.sticky-top{-webkit-box-shadow:#000 0 0 4px;-moz-box-shadow:#000 0 0 4px;box-shadow:#000 0 0 4px;height:56.25vw;width:100vw;top:52px;position:fixed;z-index:2000000;margin-left:auto;margin-right:auto}.af-videoplayer.sticky-top .gotoplayer{top:70%}.af-videoplayer.sticky-top>div{height:56.25vw;width:100vw}.af-videoplayer.sticky-top-right{-webkit-animation-name:sticky;-moz-animation-name:sticky;-ms-animation-name:sticky;-o-animation-name:sticky;animation-name:sticky;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-out;-moz-animation-timing-function:ease-out;-ms-animation-timing-function:ease-out;-o-animation-timing-function:ease-out;animation-timing-function:ease-out;height:90px;width:160px;-webkit-box-shadow:#000 0 0 4px;-moz-box-shadow:#000 0 0 4px;box-shadow:#000 0 0 4px;position:fixed;top:10px;right:10px;z-index:2000000}.af-videoplayer.sticky-top-right .gotoplayer{top:61%}.af-videoplayer.sticky-top-right>div{height:90px;width:160px}.af-videoplayer.sticky-bottom-right{-webkit-animation-name:sticky;-moz-animation-name:sticky;-ms-animation-name:sticky;-o-animation-name:sticky;animation-name:sticky;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-out;-moz-animation-timing-function:ease-out;-ms-animation-timing-function:ease-out;-o-animation-timing-function:ease-out;animation-timing-function:ease-out;height:90px;width:160px;-webkit-box-shadow:#000 0 0 4px;-moz-box-shadow:#000 0 0 4px;box-shadow:#000 0 0 4px;bottom:10px;position:fixed;right:10px;z-index:2000000}.af-videoplayer.sticky-bottom-right .gotoplayer{top:-45px}.af-videoplayer.sticky-bottom-right>div{height:90px;width:160px}.af-videoplayer.fix-width-sticky-bottom-right{height:90px;width:160px}.af-videoplayer.fix-width-sticky-bottom-right>div{height:90px;width:160px}.af-videoplayer .video-player-sticky-custom-btn{font-size:24px;height:40px;opacity:0.5;position:absolute;right:5px;text-align:right;text-decoration:none;top:5px;width:40px;z-index:2000001}.af-videoplayer .video-player-sticky-custom-btn:hover{opacity:1}.af-videoplayer .video-player-sticky-custom-btn.close{right:5px;top:-30px}.af-videoplayer .video-player-sticky-custom-btn.gotoplayer{opacity:1;right:2rem}.af-videoplayer .video-player-sticky-custom-btn.close:before{content:'\2716'}.gotoplayer.af-btn-v2-center{padding-top:7px}.video-revolver,.video-related-next-video{height:100%;width:100%;position:absolute;top:0;left:0}.video-revolver img, .video-related-next-video img{width:100%;height:auto}.video-revolver #replay_video, .video-related-next-video #replay_video{color:#fff;cursor:pointer;display:block;font-size:16px;font-style:bold;position:absolute;right:60px;top:7px;z-index:1000003}.video-revolver .hidden, .video-related-next-video .hidden,.video-revolver.hidden,.video-related-next-video.hidden{display:none;visibility:hidden}.video-revolver [class*='close-'], .video-related-next-video [class*='close-']{color:#777;font:18px/100% arial, sans-serif;position:absolute;right:10px;font-style:bold;cursor:pointer;text-decoration:none;color:#fff;top:10px;z-index:1000003}.video-revolver .close-classic:after, .video-related-next-video .close-classic:after{content:'X'}.video-revolver .ly, .video-related-next-video .ly{background:#000;position:absolute;text-align:center;vertical-align:middle;z-index:1000000;top:0;opacity:0.8;width:100%;height:100%;left:0}.video-revolver .chart, .video-related-next-video .chart{text-decoration:none;opacity:1;position:absolute;top:0;bottom:0;right:0;left:0;z-index:1000001;height:auto;width:100%;margin:auto;text-align:center}.video-revolver .chart h2, .video-related-next-video .chart h2{font:23px Arial, sans-serif;text-align:center;display:block;padding-bottom:5px;margin:50px auto 25px;z-index:1000001;color:#fff}.video-revolver .chart span, .video-related-next-video .chart span{color:#fff;font:14px Arial, sans-serif}.video-revolver .chart span.timer, .video-related-next-video .chart span.timer{display:block;margin-top:-15px}.video-revolver .chart span #sec, .video-related-next-video .chart span #sec{padding-left:5px}.video-revolver .playB, .video-related-next-video .playB{text-align:center;position:inherit;z-index:1000001;margin:auto;top:0;left:17px;bottom:0;right:0;width:0;height:0;border-width:34px 0 34px 60px;border-style:solid;border-color:transparent transparent transparent #fff}.video-revolver .progress, .video-related-next-video .progress{position:absolute;margin:auto;height:150px;width:150px;top:0;left:0;right:0;bottom:0}.video-revolver .progress h2, .video-related-next-video .progress h2{font:16px Arial, sans-serif}.video-revolver .progress svg, .video-related-next-video .progress svg{height:80px;padding-top:20px}.video-player-sticky-bg{background-color:#f2f2f2;padding-top:56.25%;width:100%}@-webkit-keyframes sticky{0%{opacity:0}100%{opacity:1}}@-moz-keyframes sticky{0%{opacity:0}100%{opacity:1}}@-ms-keyfra sticky{0%{opacity:0}100%{opacity:1}}@-o-keyframes sticky{0%{opacity:0}100%{opacity:1}}@keyframes sticky{0%{opacity:0}100%{opacity:1}}@media (min-width: 768px){.af-videoplayer.sticky-bottom-right{height:185.625px;width:330px}.af-videoplayer.sticky-bottom-right>div{height:185.625px;width:330px}.af-videoplayer.fix-width-sticky-bottom-right{height:185.625px;width:330px}.af-videoplayer.fix-width-sticky-bottom-right>div{height:185.625px;width:330px}.af-videoplayer.sticky-top-right{height:185.625px;width:330px}.af-videoplayer.sticky-top-right>div{height:185.625px;width:330px}.af-videoplayer.sticky-top{height:185.625px;width:330px}.af-videoplayer.sticky-top>div{height:185.625px;width:330px}}@media (min-width: 1024px){.af-videoplayer .video-player-sticky-custom-btn.gotoplayer{opacity:1}}</style>
+
+<div id="af_player_6093ee37629f86_41031479-container" class="af-videoplayer">
+	<video id="af_player_6093ee37629f86_41031479"
+		   class=" "
+		   poster="https://assets.afcdn.com/video51/20190417/v_622377_w640h360c1.jpg"
+		   preload="none"
+		   controls
+		   playsinline
+		muted	>
+					<source src="https://assets.afcdn.com/video51/20190417/v_622377.m3u8" type="application/x-mpegURL">
+						<source src="https://assets.afcdn.com/video51/20190417/v_622377_sd.mp4" type="video/mp4">
+					<p class="vjs-no-js">
+			Your browser cannot play this video.		</p>
+	</video>
+</div>
+<script>
+	(function() {
+				// JS logger
+		var logger = new VideoLogger({
+			context: {
+				adPlayer: {
+					name: 'JWPlayer'
+				},
+				player: {
+					name: 'JWPlayer',
+					version: 'JWP ' + jwplayer.version.substr(0,jwplayer.version.indexOf('+')),
+					videoId: 622377,
+					context: 'bloc_bottom',
+					position: 'BTF',
+				}
+			}
+		});
+		var gaTracker = AufVideo.Tracker.GA.get();
+				AufVideo.Tracker.Comscore.init();
+		
+						var player = new AufVideo.JWPlayer({
+					id: 'af_player_6093ee37629f86_41031479',
+					aspectRatio: '16\x3A9',
+					muted: true,
+					videoId: 622377,
+					title: 'Sophrologie\x20\x2D\x20Eviter\x20les\x20naus\u00E9es\x20de\x20la\x20grossesse',
+					height: 360,
+					playlist: {
+						sources: [{"file":"https:\/\/assets.afcdn.com\/video51\/20190417\/v_622377.m3u8","type":"application\/x-mpegURL"},{"file":"https:\/\/assets.afcdn.com\/video51\/20190417\/v_622377_sd.mp4","type":"video\/mp4","label":"SD"}],
+						image: 'https://assets.afcdn.com/video51/20190417/v_622377_w640h360c1.jpg'
+					},
+				});
+						player.publish('video.player.setup', { file: 'https://assets.afcdn.com/video51/20190417/v_622377.m3u8' });
+		
+		var adPlayer;
+					window.unfyVideoPlacement =  [];
+			window.unfyVideoPlacement.push(
+				{
+					videoId: 622377,
+					context: 'bloc_bottom',
+					adUnit: '\x2F229683329\x2Fdoctissimo_fr\x2Fvideo\x2Fpreroll_BTF',
+					placementId: 'preroll_btf',
+					playerName: 'jwplayer',
+					adPlayerName: 'jwplayer\x2Dads',
+					playerId: 'af_player_6093ee37629f86_41031479'
+			});
+
+			// Ad player configuration
+			var adTargeting = ';'
+				+ ';player=jwplayer'
+				+ ';adplayer=jwplayer\x2Dads'
+				+ ';context=bloc_bottom'
+				+ ';video=622377v';
+
+								var adPlayer = new AufVideo.JWPlayerAds({
+						id: 'af_player_6093ee37629f86_41031479',
+						player: player,
+						adUnit: '\x2F229683329\x2Fdoctissimo_fr\x2Fvideo\x2Fpreroll_BTF',
+						adTargeting: adTargeting,
+						allowMultipleTinyAds: true,
+						siteId: 51,
+						position: 'BTF',
+						adScheduleId: '',
+						hbVideoActive: false,
+						isCM: false,
+						midrollActive: false,
+						minTimeMidroll: false,
+						jwpAdvertisingParameters: false,
+						needPegasus: false,
+						adRule: false,
+					});
+					
+				var manager = AufVideo.Manager.get({
+			labels: {
+				nextVideo: 'Next video in #SECONDS#'
+			}
+		});
+
+		var store = AufVideo.Store.get();
+		store.addInstance('af_player_6093ee37629f86_41031479', {
+			logger: logger,
+			player: player,
+			adPlayer: adPlayer,
+			context: 'bloc_bottom',
+			position: 'BTF',
+			autoplay: {
+				startOnSight: true,
+			},
+			sticky: {
+				stickTo: '',
+				blockedCookieTtl: '',
+				scrollUp: false,
+				fullMobile: false,
+				showBackToOriginalPositionButton: true			}
+		});
+	})();
+</script>
+
+
+                </div>
+                <a href="https://videos.doctissimo.fr/grossesse/maternite/sophrologie-nausee-grossesse.html">
+                    <h5>Sophrologie - Eviter les nausées de la grossesse</h5>
+                </a>
+                                                                                                    
+        <div class="doc-my-4">
+            <div class="doc-slider doc-slider--with-padding-lg doc-slider--js doc-slider--js-3">
+                <div class="doc-slider__head">
+                    <div class="title">Autres vidéos</div>
+                    <div class="controls">
+                        <span class="controls__prev"><i class="doc-icon-arrow-left"></i></span>
+                        <span class="controls__next"><i class="doc-icon-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="doc-slider__container">
+                                                                                                                    <div class="doc-slider__container__item">
+                                            
+                    
+    <div class="card card--relief">
+        <div class="card__img-wrapper image-overlay">
+            <img
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="https://resize1.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/maternite/saignements-grossesse/3966701-1-fre-FR/Saignements-pendant-la-grossesse.jpg"
+                                alt="Saignements pendant la grossesse"
+                class="doc-img-responsive-100 rounded-lg lazyload"
+            />
+                            <noscript>
+                    <img src="https://resize1.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/maternite/saignements-grossesse/3966701-1-fre-FR/Saignements-pendant-la-grossesse.jpg" alt="Saignements pendant la grossesse" class="doc-img-responsive-100 rounded-lg" />
+                </noscript>
+            
+                            <span class="image-overlay__overlay">
+                    <span></span>
+                    <i class="doc-icon-play"></i>
+                </span>
+                    </div>
+        <div class="card__body">
+            <div>
+                
+                
+                                    <span class="color-grey-medium">Vidéo</span>
+                
+                            </div>
+                            <h5 class="card__body__title">
+                        <a href="https://videos.doctissimo.fr/grossesse/maternite/saignements-grossesse.html"
+               title="Saignements pendant la grossesse" onclick="unify_ua_trackEvent('Publisher', 'Click_VideoBlockBottom', '2');">Saignements pendant la grossesse</a>
+                            </h5>
+                                </div>
+    </div>
+
+                            </div>
+                                                                                                <div class="doc-slider__container__item">
+                                            
+                    
+    <div class="card card--relief">
+        <div class="card__img-wrapper image-overlay">
+            <img
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="https://resize2.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/maternite/symptomes-grossesse/3966596-1-fre-FR/Les-premiers-signes-d-une-grossesse.jpg"
+                                alt="Les premiers signes d’une grossesse"
+                class="doc-img-responsive-100 rounded-lg lazyload"
+            />
+                            <noscript>
+                    <img src="https://resize2.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/maternite/symptomes-grossesse/3966596-1-fre-FR/Les-premiers-signes-d-une-grossesse.jpg" alt="Les premiers signes d’une grossesse" class="doc-img-responsive-100 rounded-lg" />
+                </noscript>
+            
+                            <span class="image-overlay__overlay">
+                    <span></span>
+                    <i class="doc-icon-play"></i>
+                </span>
+                    </div>
+        <div class="card__body">
+            <div>
+                
+                
+                                    <span class="color-grey-medium">Vidéo</span>
+                
+                            </div>
+                            <h5 class="card__body__title">
+                        <a href="https://videos.doctissimo.fr/grossesse/maternite/symptomes-grossesse.html"
+               title="Les premiers signes d’une grossesse" onclick="unify_ua_trackEvent('Publisher', 'Click_VideoBlockBottom', '3');">Les premiers signes d’une grossesse</a>
+                            </h5>
+                                </div>
+    </div>
+
+                            </div>
+                                                                                                <div class="doc-slider__container__item">
+                                            
+                    
+    <div class="card card--relief">
+        <div class="card__img-wrapper image-overlay">
+            <img
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="https://resize.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/alimentation-maman/eviter-nausees-de-la-grossesse/3950360-1-fre-FR/Eviter-les-nausees-de-la-grossesse.jpg"
+                                alt="Eviter les nausées de la grossesse"
+                class="doc-img-responsive-100 rounded-lg lazyload"
+            />
+                            <noscript>
+                    <img src="https://resize.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/alimentation-maman/eviter-nausees-de-la-grossesse/3950360-1-fre-FR/Eviter-les-nausees-de-la-grossesse.jpg" alt="Eviter les nausées de la grossesse" class="doc-img-responsive-100 rounded-lg" />
+                </noscript>
+            
+                            <span class="image-overlay__overlay">
+                    <span></span>
+                    <i class="doc-icon-play"></i>
+                </span>
+                    </div>
+        <div class="card__body">
+            <div>
+                
+                
+                                    <span class="color-grey-medium">Vidéo</span>
+                
+                            </div>
+                            <h5 class="card__body__title">
+                        <a href="https://videos.doctissimo.fr/grossesse/alimentation-maman/eviter-nausees-de-la-grossesse.html"
+               title="Eviter les nausées de la grossesse" onclick="unify_ua_trackEvent('Publisher', 'Click_VideoBlockBottom', '4');">Eviter les nausées de la grossesse</a>
+                            </h5>
+                                </div>
+    </div>
+
+                            </div>
+                                                                                                <div class="doc-slider__container__item">
+                                            
+                    
+    <div class="card card--relief">
+        <div class="card__img-wrapper image-overlay">
+            <img
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="https://resize1.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/alimentation-maman/alcool-et-grossesse/3950150-1-fre-FR/Alcool-et-grossesse-attention-!.jpg"
+                                alt="Alcool et grossesse : attention ! "
+                class="doc-img-responsive-100 rounded-lg lazyload"
+            />
+                            <noscript>
+                    <img src="https://resize1.prod.docfr.doc-media.fr/rcrop/450,340,center-middle/img/var/doctissimo/storage/images/fr/www/videos/grossesse/alimentation-maman/alcool-et-grossesse/3950150-1-fre-FR/Alcool-et-grossesse-attention-!.jpg" alt="Alcool et grossesse : attention ! " class="doc-img-responsive-100 rounded-lg" />
+                </noscript>
+            
+                            <span class="image-overlay__overlay">
+                    <span></span>
+                    <i class="doc-icon-play"></i>
+                </span>
+                    </div>
+        <div class="card__body">
+            <div>
+                
+                
+                                    <span class="color-grey-medium">Vidéo</span>
+                
+                            </div>
+                            <h5 class="card__body__title">
+                        <a href="https://videos.doctissimo.fr/grossesse/alimentation-maman/Alcool-et-grossesse.html"
+               title="Alcool et grossesse : attention !" onclick="unify_ua_trackEvent('Publisher', 'Click_VideoBlockBottom', '5');">Alcool et grossesse : attention ! </a>
+                            </h5>
+                                </div>
+    </div>
+
+                            </div>
+                                                                <div class="doc-slider__container__item">
+                                                
+        
+    <div class="card card__empty rounded-lg card--relief">
+        <div class="card__img-wrapper image-overlay">
+            <span class="image-overlay__overlay">
+                <span></span>
+                <i class="doc-icon-close"></i>
+            </span>
+        </div>
+        <div class="card__body">
+            <div class="card__body__title">
+                <a href="https://videos.doctissimo.fr/grossesse/sante-de-la-femme-enceinte" title="Tout voir" >Tout voir</a>
+            </div>
+        </div>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+
+    </div>
+</div>
+
+            
+            
+        
+                    <div class="doc-savoirplus doc-list doc-my-5 doc-my-md-6">
+                                                
+                                                            
+                                                                            
+                                                <div class="doc-savoirplus__section fr_www_savoir_plus_articles">
+                                                            <span>Nos articles pour en savoir plus</span>
+                                                                                                                                        <ul>
+
+<li>
+
+<a href="https://www.doctissimo.fr/html/grossesse/mag_2002/0517/gr_5514_voyage_femme_enceinte.htm" target="_self">Voyager enceinte : tous nos conseils</a></li>
+
+</ul>
+                                                                                                                                                                </div>
+                        
+                                                                            
+                                                <div class="doc-savoirplus__section fr_www_savoir_plus_forums">
+                                                            <span>Discutez-en avec la communauté</span>
+                                                                                                                                        <ul>
+
+<li>
+
+<a href="http://forum.doctissimo.fr/grossesse-bebe/grossesse/liste_sujet-1.htm" target="_self">Forum Grossesse</a></li>
+
+<li>
+
+<a href="http://forum.doctissimo.fr/grossesse-bebe/alimentation-grossesse/liste_sujet-1.htm" target="_self">Forum Alimentation et grossesse</a></li>
+
+<li>
+
+<a href="http://forum.doctissimo.fr/grossesse-bebe/sexe-grossesse/liste_sujet-1.htm" target="_self">Forum Sexe et grossesse</a></li>
+
+<li>
+
+<a href="http://forum.doctissimo.fr/grossesse-bebe/grossesse-libre/liste_sujet-1.htm" target="_self">Forum Les enfants en voiture</a></li>
+
+<li>
+
+<a href="http://forum.doctissimo.fr/sante/sante-libre/liste_sujet-1.htm" target="_self">Forum Santé en Voyages</a></li>
+
+<li>
+
+<a href="http://forum.doctissimo.fr/viepratique/bons-plans/liste_sujet-1.htm" target="_self">Forum Voyages</a></li>
+
+</ul>
+                                                            
+                                </div>
+                            </div>
+                    </div>
+
+        <div class="col-md-12">
+            <div class="doc-my-5 doc-my-md-6">
+                
+
+            </div>
+        </div>
+    </div>
+            
+        </div>
+
+        <div class="doc-mb-4 doc-mb-md-1">
+                    
+                                    
+                                    
+            <footer>
+    <div class="container">
+
+                <div class="text-center">
+            <div class="doc-mb-2"><img class="logo" title="Doctissimo : Santé et bien être avec Doctissimo" alt="Doctissimo : Santé et bien être avec Doctissimo" src="https://cdn3.prod.docfr.doc-media.fr/bundles/app/images/refonte/logos/doctissimo.svg?1615378331181"></div>
+            <div class="doc-py-1"><span>Suivez-nous sur :</span></div>
+            <div class="social doc-py-1">
+                <a href="https://fr-fr.facebook.com/doctissimo/" target="_blank" rel="noopener noreferrer" title="Facebook Doctissimo"><i class="doc-icon-facebook-circle"></i></a>
+                <a href=" https://www.pinterest.fr/doctissimo/" target="_blank" rel="noopener noreferrer" title="Pinterest Doctissimo"><i class="doc-icon-pinterest-circle"></i></a>
+                <a href="https://www.instagram.com/doctissimo/?hl=fr" target="_blank" rel="noopener noreferrer" title="Instagram Doctissimo"><i class="doc-icon-instagram-circle"></i></a>
+                <a href="https://www.youtube.com/user/Doctissimo" target="_blank" rel="noopener noreferrer" title="Youtube Doctissimo"><i class="doc-icon-youtube-circle"></i></a>
+                <a href="https://twitter.com/doctissimo" target="_blank" rel="noopener noreferrer" title="Twitter Doctissimo"><i class="doc-icon-twitter-circle"></i></a>
+            </div>
+        </div>
+
+                
+                                        <div class="bg-color-blue-0 doc-p-3 doc-mt-2">
+                <span>Voir aussi&nbsp;:</span>
+                <div class="doc-p-1">
+                                            
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_accouchement.htm" target="_self">Accouchement</a>
+                                                    <a href="https://www.doctissimo.fr/html/bebe/bebe.htm" target="_self">Alimentation des bébés</a>
+                                                    <a href="https://www.doctissimo.fr/grossesse/diaporamas/aliments-conseilles-pendant-la-grossesse" target="_self">Alimentation et grossesse</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/nourrir/allaitement.htm" target="_self">Allaitement</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/nourrir/biberon.htm" target="_self">Biberon</a>
+                                                    <a href="https://www.doctissimo.fr/html/sante/femmes/grossesse_mois_par_mois.htm" target="_self">Ma grossesse par semaine</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/index_envie_enfant.htm" target="_self">Envie d'enfant</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/eveil/index_eveil_bebe.htm" target="_self">Eveil de bébé</a>
+                                                    <a href="https://www.doctissimo.fr/html/sante/femmes/grossesse_mois_par_mois.htm" target="_self">Grossesse mois par mois</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/index_infertilite.htm" target="_self">Infertilité</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/nouveau_ne/index_soins_naissance.htm" target="_self">Nouveau-né</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/eveil/8993-pipi-lit.htm" target="_self">Pipi au lit</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/puericulture/puericulture.htm" target="_self">Puériculture</a>
+                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/soins_quot/index_soins_bebe.htm" target="_self">Soins de bébé</a>
+                                                    <a href="https://www.doctissimo.fr/html/dossiers/rhume-bebe.htm" target="_self">Rhume de Bébé</a>
+                                                    <a href="https://www.doctissimo.fr/famille/diaporamas/appli-famille-pour-faciliter-la-vie/mes-vaccins-appli-famille" target="_self">Vaccination de bébé</a>
+                                                            </div>
+            </div>
+
+                                            <div class="bg-color-blue-0 doc-p-3 doc-mt-1">
+                    <div class="doc-collapse">
+                        <span>Pour aller plus loin&nbsp;:</span>
+                        <a class="doc-collapse__btn collapsed" role="button" data-toggle="collapse" href="#dossiersContent" aria-expanded="false" aria-label="Voir liens pour aller plus loin" aria-controls="dossiersContent">
+                            <i class="doc-icon-arrow-bottom"></i>
+                        </a>
+                        <div class="doc-collapse__content collapse doc-p-1" id="dossiersContent">
+                                                                                                                                <a href="https://www.doctissimo.fr/grossesse/voyages-grossesse" target="_self">Voyager pendant la grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_facteurs_risques.htm" target="_self">Grossesse : limiter les risques !</a>
+                                                                    <a href="https://www.doctissimo.fr/html/sante/voyageurs/index.htm" target="_self">La santé en voyage</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_pleine_forme.htm" target="_self">9 mois en pleine forme</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/niv2/grossesse-mois-par-mois-sport.htm" target="_self">Dynamique et sportive pendant la grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/dossiers/vacances/niv2/voyage-age.htm" target="_self">A chaque âge son voyage</a>
+                                                            
+                                                            
+                                                                    <a href="https://www.doctissimo.fr/grossesse/choisir-un-prenom" target="_self">Choisir un prénom</a>
+                                                                    <a href="https://www.doctissimo.fr/prenoms" target="_self">Guide des prénoms</a>
+                                                                    <a href="https://www.doctissimo.fr/grossesse/choisir-un-prenom/prenom-tendance" target="_self">Prénoms tendance</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/grands-dossiers/dossiers-grossesse-bebe.htm" target="_self">Les grands dossiers</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/grands-dossiers/dossiers-grossesse.htm" target="_self">Dossiers grossesse</a>
+                                                                    <a href="https://babyblog.doctissimo.fr" target="_blank">Baby blog</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/grands-dossiers/dossiers-bebe.htm" target="_self">Dossiers bébé</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/index_envie_enfant.htm" target="_self">Envie d'enfant</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant/niv2/envie-enfant-prete.htm" target="_self">Suis-je prête ?</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant/niv2/envie-enfant-decrypter.htm" target="_self">Décrypter son envie d'enfant</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant/niv2/envie-enfant-rendez-vous-medecin.htm" target="_self">Conseils médicaux</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant/niv2/envie-enfant-surveiller-alimentation.htm" target="_self">Bien manger</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant/articles/15642-courbe-temperature.htm" target="_self">Courbe de température</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant-fertilite.htm" target="_self">La fertilité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-reproduction-organes-genitaux.htm" target="_self">Les organes génitaux</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-cycles-reproduction.htm" target="_self">Cycles de reproduction</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/envie-enfant/niv2/envie-enfant-connaitre-ovulation.htm" target="_self">Ovulation</a>
+                                                                    <a href="https://www.doctissimo.fr/grossesse/envie-d-enfant/ovulation/calcul-date-ovulation" target="_self">Calcul d'ovulation</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/index_infertilite.htm" target="_self">Les troubles de la fertilité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-causes.htm" target="_self">Causes de l'infertilité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-consultations-examens.htm" target="_self">Bilan de la fertilité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-traitements.htm" target="_self">Traitements de l'infertilité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/fertilite/niv2/infertilite-pma-procreation-medicale-assistee.htm" target="_self">PMA</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/index_cycle_enceinte.htm" target="_self">Suis-je enceinte ?</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/gr_4183_premiers_signes.htm" target="_self">Symptômes de grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/avant/niv2/test-grossesse.htm" target="_self">Tests de grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/grossesse/diaporamas/annonce-grossesse" target="_self">Annoncer sa grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/sante/femmes/grossesse_mois_par_mois.htm" target="_self">Ma grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/grossesse-semaine-par-semaine/grossesse-semaine-par-semaine.htm" target="_self">Grossesse semaine par semaine</a>
+                                                                    <a href="https://www.doctissimo.fr/html/sante/femmes/grossesse_mois_par_mois.htm" target="_self">Grossesse mois par mois</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_examens_consult.htm" target="_self">Consultations et examens de la grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_pleine_forme.htm" target="_self">Neuf mois en pleine forme</a>
+                                                                    <a href="https://www.doctissimo.fr/html/nutrition/femmes/alimentation_grossesse_niv2.htm" target="_self">Bien manger pendant la grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/niv2/grossesse-mois-par-mois-depression-tristesse.htm" target="_self">Psychologie et grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/niv2/grossesse-mois-par-mois-sport.htm" target="_self">Dynamique et sportive</a>
+                                                                    <a href="https://www.doctissimo.fr/html/sexualite/mag_2001/mag0202/se_3400_sexualite_grossesse_niv2.htm" target="_self">Sexualité et grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/niv2/grossesse-mois-par-mois-belle-enceinte.htm" target="_self">Belle et enceinte</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_facteurs_risques.htm" target="_self">Limiter les risques</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/patho_femme_enceinte/grossesse_malaises_courants_niv2.htm" target="_self">Santé et grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/patho_femme_enceinte/grossesse_malaises_courants_niv2.htm" target="_self">Les malaises courants de la grossesse</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/patho_femme_enceinte/index_pathologies.htm" target="_self">La femme enceinte malade</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/index_droits.htm" target="_self">Droits et démarches</a>
+                                                                    <a href="https://www.doctissimo.fr/grossesse/droits-et-demarches-durant-la-grossesse/calcul-conges-maternite" target="_self">Congés maternité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/mag_2001/mag1228/gr_4955_conge_paternite.htm" target="_self">Congé paternité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/pendant/droits/13398-conge-parental.htm" target="_self">Congé parental</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/mag_2003/0509/gr_6716_mesures_meres.htm" target="_self">PAJE</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_maternite.htm" target="_self">Maternité</a>
+                                                                    <a href="http://maternites.doctissimo.fr" target="_self">Guide des maternités</a>
+                                                                    <a href="http://maternites.doctissimo.fr/palmares-des-maternites.htm" target="_self">Palmarès des maternités</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_maternite.htm" target="_self">Bien choisir sa maternité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/valise-maternite-sac-maternite.htm" target="_self">Valise pour la maternité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_preparation.htm" target="_self">Tout prévoir avant l'accouchement</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_preparation.htm" target="_self">Les préparations</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/accouchement-jour-j.htm" target="_self">Prévoir le jour J</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_accouchement.htm" target="_self">L'accouchement</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/accouchement-peur.htm" target="_self">Guide pratique</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/accouchement-douleur-peridurale.htm" target="_self">Douleur et péridurale</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/accouchement-peur.htm" target="_self">Accouchements difficiles</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/accouchement-cesarienne.htm" target="_self">Césarienne</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/index_forme_post_accouchement.htm" target="_self">La forme après l'accouchement</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/apres-accouchement-corps.htm" target="_self">Retrouver son corps</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/apres-accouchement-tete.htm" target="_self">Bien dans sa tête</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/accouchement/apres-accouchement-forme-beaute.htm" target="_self">Conseils forme</a>
+                                                                    <a href="https://www.doctissimo.fr/html/hommes/hommes_pere.htm" target="_self">La paternité</a>
+                                                                    <a href="https://www.doctissimo.fr/html/hommes/hommes_pere.htm" target="_self">Comprendre sa partenaire</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/bebe.htm" target="_self">La naissance de bébé</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/nouveau_ne/index_soins_naissance.htm" target="_self">Soins à la naissance</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/nouveau_ne/index_arrivee.htm" target="_self">Accueillir bébé</a>
+                                                                    <a href="https://www.doctissimo.fr/html/grossesse/bebe/premature/niv2/prematures.htm" target="_self">Les prématurés</a>
+                                                                                    </div>
+                    </div>
+                </div>
+                    
+                    <div class="bg-color-blue-0 doc-p-3 doc-mt-1 d-flex align-items-center flex-wrap">
+        <span>Mentions légales&nbsp;:</span>
+        <div class="doc-p-1">
+                        <a href="javascript:Didomi.preferences.show()" title="Préférences de cookies">Préférences de cookies</a>
+                        <a href="https://www.doctissimo.fr/notice_legale.htm" title="Mentions légales">Mentions légales</a>
+            <a href="https://www.doctissimo.fr/equipe/charte/charte-donnees-personnelles-cookies" title="Charte de données personnelles et cookies">Charte de données personnelles et cookies</a>
+        </div>
+    </div>
+
+    </div>
+</footer>
+            </div>
+
+            <script defer src="https://cdn3.prod.docfr.doc-media.fr/bundles/app/js/refonte/article.min.js?1615378331181" ></script>
+
+        <script defer src="https://cdn.prod.docfr.doc-media.fr/bundles/app/js/doctissimo_footer_tags.min.js?1615378331181"></script>
+
+            
+<script>
+    /*loadCss*/
+    !function(w){"use strict";var loadCSS=function(href,before,media){function ready(cb){return doc.body?cb():void setTimeout(function(){ready(cb)})}function loadCB(){ss.addEventListener&&ss.removeEventListener("load",loadCB),ss.media=media||"all"}var ref,doc=w.document,ss=doc.createElement("link");if(before)ref=before;else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet",ss.href=href,ss.media="only x",ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){for(var resolvedHref=ss.href,i=sheets.length;i--;)if(sheets[i].href===resolvedHref)return cb();setTimeout(function(){onloadcssdefined(cb)})};return ss.addEventListener&&ss.addEventListener("load",loadCB),ss.onloadcssdefined=onloadcssdefined,onloadcssdefined(loadCB),ss};"undefined"!=typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+
+    /*link[rel=preload] polyfill*/
+    !function(w){if(w.loadCSS){var rp=loadCSS.relpreload={};if(rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){return!1}},rp.poly=function(){for(var links=w.document.getElementsByTagName("link"),i=0;i<links.length;i++){var link=links[i];"preload"===link.rel&&"style"===link.getAttribute("as")&&(w.loadCSS(link.href,link),link.rel=null)}},!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);w.addEventListener&&w.addEventListener("load",function(){w.clearInterval(run)}),w.attachEvent&&w.attachEvent("onload",function(){w.clearInterval(run)})}}}(this);
+</script>
+</body>
+</html>

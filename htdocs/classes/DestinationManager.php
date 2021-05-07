@@ -92,5 +92,42 @@ public function createDestination(Destination $destination)
     
     return $destinations;
   }
+  public function getListDestinationSearch($search)
+  {
+    $destinationsBySearch = [];
+    $allDestinationsSearch = $this->pdo->prepare('SELECT * FROM  destinations 
+    WHERE location LIKE :search');
+    $search="%".$search."%";
+    $allDestinationsSearch->bindValue(':search', $search ,PDO::PARAM_STR);
+    $allDestinationsSearch->execute();
+
+    while ($donneesDestinationSearch = $allDestinationsSearch->fetch(PDO::FETCH_ASSOC))
+    {
+      array_push($destinationsBySearch, new Destination ($donneesDestinationSearch)); 
+  
+    }
+
+    return $destinationsBySearch;
+    
+
+  }
+  public function getListDestinationByIdTO($id)
+  {
+    $destinationsByIdTO = [];
+    $allDestinationsByIdTO = $this->pdo->prepare('SELECT * FROM  destinations 
+    WHERE id_tour_operator = :id_tour_opererator');
+    $allDestinationsByIdTO->bindValue(':id_tour_opererator', $id ,PDO::PARAM_INT);
+    $allDestinationsByIdTO->execute();
+
+    while ($donneesDestinationByIdTO = $allDestinationsByIdTO->fetch(PDO::FETCH_ASSOC))
+    {
+      array_push($destinationsByIdTO, new Destination ($donneesDestinationByIdTO)); 
+  
+    }
+
+    return $destinationsByIdTO;
+    
+
+  }
   
 }

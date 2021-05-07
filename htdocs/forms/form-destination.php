@@ -1,15 +1,25 @@
 <?php
 
+$OperatorManager = new TourOperatorManager($pdo);
+$allOperatorManager = $OperatorManager->getAllOperator();
 ?>
 <div class='bg-light border border-secondary m-5 p-5 rounded text-center'>
   <h5>Create New Destination</h5>
   <form class="form" action="../treatment/create.php" method="post" enctype="multipart/form-data">
     <div class='row align-items-end'>
+    <div class='col-lg-4'>
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Select Tour Operator</label>
+    <select class="form-control" id="exampleFormControlSelect1" name='id_tour_operator' >
+      <?php foreach($allOperatorManager as $operator){ ?>
+        <option value="<?=$operator->getId()?>"><?=$operator->getName()?></option>
+      <?php } ?>
+    </select>
+  </div>
+  </div>
       <div class="col-lg-4">
-        <input type='hidden' name='id_tour_operator' value='1'>
         <label for="text" class="form-label">Destination</label>
         <input type="text" class="form-control" id="destinations" name="location">
-
       </div>
       <div class="col-lg-4">
         <div class='row align-items-end'>

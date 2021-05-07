@@ -5,7 +5,7 @@ class Destination {
     private int $id; 
     private string $location; 
     private int $price;
-    private int $id_tour_operator;
+    private $id_tour_operator;
      
 
 

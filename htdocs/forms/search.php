@@ -6,10 +6,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-9 col-sm-12">
-                <input class="form-control" type="search" placeholder="Destination" aria-label="Search">
+                <input class="form-control" type="search" placeholder="Destination" aria-label="Search" id='searchDestination'>
             </div>
             <div class="col-lg-3 col-sm-12">
-                <button class="btn btn-outline-secondary" type="submit">Search</button>
+              
             </div>
         
 </div>
@@ -20,10 +20,10 @@
         </div>
         <div class="row">
         <div class="col-lg-9 col-sm-12">
-        <input class="form-control" type="search" placeholder="Tour Opérator" aria-label="Search">
+        <input class="form-control" type="search" placeholder="Tour Opérator" aria-label="Search" id='searchTourOperator'>
         </div>
         <div class="col-lg-3 col-sm-12">
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
+        
         </div>
         
         </div>

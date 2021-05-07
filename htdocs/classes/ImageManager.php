@@ -20,7 +20,7 @@ class ImageManager
  { 
    $insertPhotoLink = $this->pdo->prepare('INSERT INTO photos(photo_link,id_destination) 
   VALUES(:photo_link, :id_destination)');
-   $insertPhotoLink->bindValue(':photo_link', $image->getPhotoLink(),PDO::PARAM_STR);
+   $insertPhotoLink->bindValue(':photo_link', $image->getPhoto_Link(),PDO::PARAM_STR);
    $insertPhotoLink->bindValue(':id_destination', $image->getIdDestination(), PDO::PARAM_INT);
    $insertPhotoLink->execute();
    }

@@ -10,9 +10,8 @@ $OperatorManager = new TourOperatorManager($pdo);
 $ImageManager = new ImageManager($pdo);
 include '../treatment/uploadimg.php';
 
-
 // Create Destination 
-if(isset($_POST['location']) && isset($_POST['price'])){
+if(isset($_POST['location']) && isset($_POST['price']) && isset($_POST['id_tour_operator'])){
     $destination= new Destination(['location'=> $_POST['location'], 'price'=>$_POST['price'], 'id_tour_operator'=>$_POST['id_tour_operator']]);
     $DestinationManager->createDestination($destination);
     uploadImage();
@@ -34,6 +33,7 @@ else if(isset($_POST['message']) && isset($_POST['author'])){
     $tourOperator= $OperatorManager->getOneOperator($_POST['id_tour_operator']);
     $moyengrade= $ReviewManager->getGradeByOperator($_POST['id_tour_operator']);
     $OperatorManager->updateOperatorGrade($tourOperator, $moyengrade['grade_moyenne']);
+    
 }
 //image
 else if(isset($_POST['idDestination']) && isset($_FILES['photo_link'])){

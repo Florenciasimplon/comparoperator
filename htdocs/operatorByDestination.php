@@ -11,39 +11,33 @@ include 'partiels/navBar.php';
 $OperatorManager=new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
 
-if(isset($_POST['destination'])){
-    $allOperatorByDestination = $OperatorManager->getOperatorByDestination($_POST['destination']);
-    foreach($allOperatorByDestination as $operatorByDestination){
+if(isset($_POST['destination'])):?>
+   <?php $allOperatorByDestination = $OperatorManager->getOperatorByDestination($_POST['destination']);
+    foreach($allOperatorByDestination as $operatorByDestination):?>
         
-        echo '</br>'.$operatorByDestination->getName();
+        <?= $operatorByDestination->getName();?>
         
-        echo '</br>'.$operatorByDestination->getLink();
-        if($operatorByDestination->getIs_premium()=== false){
+        <?= $operatorByDestination->getLink();?>
+        <?php if($operatorByDestination->getIs_premium()=== false){
             echo '</br>This Operator is not Premium ';
         }else{
             echo '</br>This Operator is Premium ';
-        }
+        } ?>
         
-        $allReviews = $ReviewManager->getReviewByOperator($operatorByDestination->getId());
-        echo '<div class="commentaire-list">';
+        <?php $allReviews = $ReviewManager->getReviewByOperator($operatorByDestination->getId());
+        echo '<div class="commentaire-list'.$operatorByDestination->getId().'">';
         echo '</br>'.$operatorByDestination->getGrade();
-        foreach($allReviews as $reviews){
+        foreach($allReviews as $reviews):?>
             
-            echo '</br>'.$reviews->getMessage(); 
-            echo '</br>'.$reviews->getAuthor(); 
+            <?= $reviews->getMessage();?> 
+            <?= $reviews->getAuthor(); ?>
             
 
-        }
-        echo '</div>';
         
+        <?php  endforeach; echo '</div>';
         include 'forms/form-review.php';
-    }
-}
+        endforeach; endif?>
 
-
-    
-         
-
-?>
 </body>
-<?php include 'partiels/footer.php'; ?>
+<?php include 'partiels/footer.php';
+include 'partiels/footerScript.php'; ?>

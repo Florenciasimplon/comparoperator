@@ -1,5 +1,5 @@
 <div class='bg-light border border-secondary m-5 p-5 rounded text-center'>
-  <h5>Create New Destination</h5>
+  <h5>Create New Tour Operator</h5>
   <form class="form" action="../treatment/create.php" method="post">
     <div class='row '>
       <div class="col-lg-3">

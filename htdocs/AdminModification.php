@@ -55,7 +55,7 @@ include 'partiels/header.php'; ?>
   <div id='seeDestination'>
     <?php include 'data-recovery/allDestination.php'; ?>
   </div>
-  <?php include 'partiels/footer.php'; ?>
+  <?php include 'partiels/footerScript.php'; ?>
 </body>
 
 </html>

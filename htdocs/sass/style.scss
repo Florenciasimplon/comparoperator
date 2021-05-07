@@ -7,19 +7,19 @@
 @import "../sass/footer";
 
 @import "margin.scss"; 
+@import "carouseloperator.scss"; 
+@import "gallery.scss"; 
+@import "scrool.scss"; 
 .imageModification{
     width: 200px;
     height: 100px;
     border-radius: 10px;
     margin-bottom: 1%;
 }
-body{
-    font-family: 'Lobster', 'cursive';
-}
 .title{
-    font-size: x-large;
+    font-size: medium;
 }
-/*************NAVBAR********************/
+/*************NAVBAR*********************/
 .plane{
     
     animation: 6s linear 1s infinite running slidein;
@@ -38,14 +38,19 @@ body{
         top: 0;
     }
 }
+
+.navstyle{
+    color: black;
+    font-family: "Lobster", "cursive";
+    padding-right: 22px;
+    font-size: 15px;
+    text-decoration: none;
+}
 .lobster{
-    font-family:'Lobster', cursive;
-    text-align: center;
-    font-size:x-large;
     color: black;
 }
-#navbarNav:hover{
-    color:$bluecien;
+.navstyle:hover{
+    color: $bluecien;
 }
   /*************Promo********************/
 .promo{
@@ -99,4 +104,4 @@ body{
         }
     }
 }
-    
+  
