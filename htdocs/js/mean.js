@@ -25,29 +25,22 @@ jQuery(document).ready(function() {
   });
 
   $(document).ready(function(){
-    $(".seeFormSearchReviewTourOperator").hide();
-    $(".seeSearchReviewTourOperator").hide();
-   
+    $(".reviewsAll").hide(); 
+    $(".hideDestination1").hide(); 
   }); 
     
-$( ".btnSeeReviewsSearch" ).click(function() {
+$( ".btnFormSearchAjax" ).click(function() {
     let id = this.getAttribute('id')
-    $(`#seeSearchReviewTourOperator${id}`).toggle();
-    $(".accesUpdatePrice").hide();
-    $("#seeFormDestination").hide();
-    $("#seeFormTourOperator").hide();
-    $("#seeOperator").hide();
-    $("#seeReviews").hide();
-    $("#seeDestination").hide();
+    $(`#reviewsAll${id}`).toggle(1000);
   });
-  $( ".btnSeeAddReviewsSearch" ).click(function() {
+  $( ".btnReviewOperatorEtDestination" ).click(function() {
     let id = this.getAttribute('id')
-    $(`#accesUpdateOperator${id}`).toggle();
-    $(".accesUpdatePrice").hide();
-    $("#seeFormDestination").hide();
-    $("#seeFormTourOperator").hide();
-    $("#seeOperator").hide();
-    $("#seeReviews").hide();
-    $("#seeDestination").hide();
+    $(`#hideDestination1${id}`).toggle();
+
   });
+
+
 console.log('hola')
+
+
+

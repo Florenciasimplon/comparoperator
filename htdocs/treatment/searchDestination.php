@@ -50,8 +50,8 @@ foreach ($allDestinationsSearch as $destinationSearch) { ?>
             </div>
         </div>
     </div>
-        <form action='../operator.php' method="post">
-        <input type='hidden' name='id_tour_operator' value='<?= $operatorDestinationSearch->getId();?>'>
+        <form action='../destination.php' method="post">
+        <input type='hidden' name='id' value='<?= $destinationSearch->getId();?>'>
         <button type="submit" class="btn  cardbtn">more information</button>
     </form>
 

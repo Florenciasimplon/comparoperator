@@ -18,10 +18,6 @@ include 'forms/search.php';
 include 'data-recovery/gallery.php';?>
 
 
-
-<h1>test</h1>
-<i class='fa fa-star text-warning' ></i>
-<i class='far fa-star'></i>
 </body>
 <?php include 'partiels/footer.php'; 
 

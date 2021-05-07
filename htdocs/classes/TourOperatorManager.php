@@ -99,6 +99,7 @@ public function createTourOperator(TourOperator $tourOperator)
      }
      return $operators;
    }
+
    // select Operator BD
    public function getOneOperator($idOperator)
    {
@@ -111,6 +112,7 @@ public function createTourOperator(TourOperator $tourOperator)
      return new TourOperator ($donneesTourOperator); 
      
    }
+
   // List operator by destination // 
   public function getOperatorByDestination($location)
   {
@@ -124,7 +126,6 @@ public function createTourOperator(TourOperator $tourOperator)
     while ($donneesOperatorByDestination = $allOperatorByDestination->fetch(PDO::FETCH_ASSOC))
     {
       array_push($operatorsByDestination, new TourOperator ($donneesOperatorByDestination)); 
-  
     }
 
     return $operatorsByDestination;
@@ -168,9 +169,42 @@ public function createTourOperator(TourOperator $tourOperator)
     }
 
     return $operatorsBySearch;
-    
-
   }
+  public function getPeersDestinationOperator($location)
+  {
+    $AllPeers = [];
+    
+    $allOperatorByDestination = $this->pdo->prepare('SELECT destinations.*, tour_operators.name, tour_operators.is_premium, tour_operators.link, tour_operators.grade FROM  destinations 
+    JOIN tour_operators ON tour_operators.id = destinations.id_tour_operator WHERE location = :location');
+    $allOperatorByDestination->bindValue(':location', $location ,PDO::PARAM_STR);
+    $allOperatorByDestination->execute();
+    
+    while ($donneesAllPeers = $allOperatorByDestination->fetch(PDO::FETCH_ASSOC))
+    {
+      $peer = [
+      'destination'=>new Destination([
+        'id'=>$donneesAllPeers['id'],
+        'location'=>$donneesAllPeers['location'],
+        'price'=>$donneesAllPeers['price'],
+        
+        'id_tour_operator'=>$donneesAllPeers['id_tour_operator']
+      ]),
+      'operator'=>new TourOperator([
+        'id'=>$donneesAllPeers['id_tour_operator'],
+        'name'=>$donneesAllPeers['name'],
+        'is_premium'=>$donneesAllPeers['is_premium'],
+        'link'=>$donneesAllPeers['link'],
+        'grade'=>$donneesAllPeers['grade']
+      ])
+      ];
+      array_push($AllPeers, $peer); 
+    }
+
+    return $AllPeers;
+  }
+
+
+  
   
  
 }

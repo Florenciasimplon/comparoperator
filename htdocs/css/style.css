@@ -10987,10 +10987,6 @@ footer .lien:hover {
   position: relative;
 }
 
-input {
-  display: none;
-}
-
 .inner {
   width: 500%;
   line-height: 0;

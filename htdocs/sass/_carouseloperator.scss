@@ -7,9 +7,6 @@ $num-of-slide: 5;
     position: relative;
 }
 
-input {
-    display: none;
-}
 
 .inner {
     width: percentage($num-of-slide);

@@ -8,7 +8,6 @@ $ReviewManager = new ReviewManager($pdo);
 $DestinationManager = new DestinationManager($pdo);
 $ImageManager = new ImageManager($pdo);
 
-
 $operatorData = $OperatorManager->getListOperatorSearch($_POST['search']);
 foreach ($operatorData as $operatorSearch) { ?>
     <div class="search">

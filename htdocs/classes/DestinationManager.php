@@ -129,5 +129,20 @@ public function createDestination(Destination $destination)
     
 
   }
+  public function getDestinationById($id)
+  {
+    
+    $destion = $this->pdo->prepare('SELECT * FROM  destinations 
+    WHERE id = :id');
+    $destion->bindValue(':id', $id ,PDO::PARAM_INT);
+    $destion->execute();
+
+    $destinationOne=$destion->fetch(PDO::FETCH_ASSOC);
+    
+
+    return $destinationOne;
+    
+
+  }
   
 }
