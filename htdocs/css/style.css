@@ -11305,6 +11305,65 @@ article img {
   background: transparent;
 }
 
+.namecarousel {
+  font-family: "Lobster", "cursive";
+  padding: 5px;
+  background-color: #f0efeb;
+  box-shadow: 5px 5px 2px 1px #a6808c;
+}
+
+.carousel1 h6, .carousel1 .h6 {
+  color: #a6808c;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.carousel2 img {
+  width: 400px;
+  height: 310px;
+}
+
+.carousel3 img {
+  padding: 12px;
+}
+
+.btnSeeReviewsSearch {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 9px;
+  color: #565264;
+}
+
+.com2 {
+  color: #a6808c;
+}
+
+.com {
+  color: #a6808c;
+}
+
+option {
+  color: #565264;
+}
+
+.sendFormSearchTourOperator {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 9px;
+  color: #565264;
+}
+
+/**search destination**/
+.imagessearch img {
+  width: 470px;
+  height: 300px;
+  border-radius: 57px;
+}
+
+.imagessearch img {
+  padding: 20px;
+}
+
 .imageModification {
   width: 200px;
   height: 100px;
