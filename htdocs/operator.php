@@ -16,7 +16,7 @@ if(isset($_POST['id_tour_operator'])):
 $operatorData = $OperatorManager->getOperatorById($_POST['id_tour_operator']);
 ?>
 <h1 class='text-center namecarousel'><?= $operatorData['name'] ?></h1>
-<div class='border border-secondary m-xs-1 m-sm-3 m-md-5 p-xs-1 p-sm-2 p-md-5 rounded text-center'>
+<div class='border border-secondary m-xs-1 m-sm-3 m-md-5 p-xs-1 p-sm-2 p-md-5 rounded text-center card'>
 <div class='row text-center'>
 <div class="col-12 col-sm-3 ">
 <?php if ($operatorData['is_premium'] === '0') {
@@ -80,7 +80,7 @@ $allDestinations = $DestinationManager->getListDestinationByIdTO($_POST['id_tour
 foreach ($allDestinations as $destination) {?>
   <div class="d-flex justify-content-center text-center">
   
-  <div class='btnReviewOperatorEtDestination w-25 p-3"' id='<?=$destination->getId()?>'> <?=$destination->getLocation()?> ↕️ </div>
+  <div class='btnReviewOperatorEtDestination w-25 p-1 cardBtn "' id='<?=$destination->getId()?>'> <?=$destination->getLocation()?> ↕️ </div>
   
   </div>
     
@@ -94,15 +94,15 @@ foreach ($allDestinations as $destination) {?>
             <div class="col-xs-12 col-sm-4">
                         <div class="carousel2 owl-carousel">
                             <?php foreach ($imageDestination as $image) :?>
-                                    <img src="<?=$image->getPhoto_Link()?>" alt="" srcset="">                                                   
+                                    <img class='round mt-1 mb-1' src="<?=$image->getPhoto_Link()?>" alt="" srcset="">                                                   
                             <?php endforeach; ?>
                         </div>
             </div>
         
-                <div class="col-xs-12 col-sm-1"></div>
-                <div class="col-sm-12 col-sm-7">
-                            <h6><?= $destination->getLocation(); ?></h6>
-                            <h6> Price  <?= $destination->getPrice(); ?></h6>
+                
+                <div class="col-xs-12 col-sm-8">
+                            <h3 class='m-1'><?= $destination->getLocation(); ?></h3>
+                            <h3 class='m-1'> <?= $destination->getPrice(); ?> 💲</h3>
                         </div>
                         
 </div>

@@ -1,4 +1,31 @@
+.card{
+    background-color:$beige;
+    text-align: center;
+    color: $taupe;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 12px 12px 2px 1px #a6808c;
+   
 
+  }
+  .card:hover{
+    color: $darkblue;
+    
+  }
+
+  .cardBtn{
+    background-color:$beige;
+    text-align: center;
+    color: $taupe;
+    border-radius: 10px;
+    margin: 10px;
+   
+
+  }
+  .cardBtn:hover{
+    background-color: $darkblue;
+    color: white;
+  }
 
     .namecarousel{
         font-family: "Lobster", "cursive";
@@ -12,8 +39,8 @@
         padding: 10px;
     }
     .carousel2 img{
-        width: 400px;
-        height: 310px;
+        width: 380px;
+    height: 310px;
     }
     .carousel3 img{
        padding: 12px;
@@ -50,4 +77,8 @@ option{
 }
 .imagessearch img{
 padding: 20px;
+}
+.round{
+    border-radius: 30%;
+    
 }

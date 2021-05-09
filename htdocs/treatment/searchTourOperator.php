@@ -10,10 +10,10 @@ $ImageManager = new ImageManager($pdo);
 
 $operatorData = $OperatorManager->getListOperatorSearch($_POST['search']);
 foreach ($operatorData as $operatorSearch) { ?>
-    <div class="search border border-secondary m-xs-1 m-sm-3 m-md-5 p-1 rounded text-center">
+    <div class="search border border-secondary m-xs-1 m-sm-3 m-md-5 p-1 rounded text-center card fs-5">
         <div class="row">
             
-        <div class="col-xs-12 col-lg-4">
+        <div class="col-xs-12 col-lg-4 fs-4">
                 <?= $operatorSearch->getName(); ?>
             </div>
 
@@ -76,7 +76,7 @@ foreach ($operatorData as $operatorSearch) { ?>
 
     <form action='../operator.php' method="post">
         <input type='hidden' name='id_tour_operator' value='<?= $operatorSearch->getId();?>'>
-        <button type="submit" class="btn  cardbtn">more information</button>
+        <button type="submit" class="btn btn-outline-secondary ">more information</button>
     </form>
 </div>
     </div>

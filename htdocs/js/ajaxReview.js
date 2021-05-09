@@ -12,19 +12,6 @@ btns.forEach((btn)=>{
     })
 })
 
-// envoi form search Destination 
-/*let btnSearchDestinations = document.querySelectorAll('.sendFormSearchDestination')
-
-btnSearchDestinations.forEach((btnSearchDestination)=>{
-    btnSearchDestination.addEventListener('click',(e)=>{
-        e.preventDefault()
-        let idTo = e.target.getAttribute('data-id-to')
-        let classe = "reviewSearchDestination"
-        let page = '/treatment/getReviews.php' 
-        sendReview(idTo, classe, page)
-    })
-})*/
-
 // envoi form search Tour Operator 
 let btnSearchTourOperators = document.querySelector('.sendFormSearchTourOperator')
 

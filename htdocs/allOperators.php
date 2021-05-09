@@ -1,75 +1,94 @@
 <?php
-include '../config/db.php';
-include '../config/autoload.php';
+include 'config/db.php';
+include 'config/autoload.php';
+include 'partiels/header.php'; ?>
 
+<body>
+<?php
+include 'partiels/navBar.php';
+
+$OperatorManager = new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
-$OperatorManager= new TourOperatorManager($pdo);
-$operatorData= $OperatorManager->getOperatorById($_POST['id_tour_operator']);
-$allReviews = $ReviewManager->getReviewByOperator($_POST['id_tour_operator']);
-$operator = new TourOperator($operatorData);
+$DestinationManager = new DestinationManager($pdo);
+$ImageManager = new ImageManager($pdo);
+
+$allOperator = $OperatorManager->getAllOperator();
+
+foreach ($allOperator as $operator) : ?>
+  <div class='bg-light border border-secondary m-5 rounded card'>
+    <div class="container pt-5 text-center">
+      <div class="row">
+        <div class="col-lg-3">
+          <?php echo $operator->getName(); ?>
+        </div>
+        <div class="col-lg-4">
+        <?php if ($operator->getIs_premium() === false) {
+                                echo '<img src="https://img.icons8.com/ios/25/000000/fairytale.png" alt="" srcset="">';
+                            } else {
+                                echo '<img src="https://img.icons8.com/fluent/25/000000/fairytale.png" alt="" srcset=""> ';
+                            } ?>
 
 
-foreach ($allReviews as $review) :?>
-        
-        <div class='row text-start'>
-                    <div class='col-xs-12 col-sm-4'>
-                        <?= $review->getAuthor(); ?>
-                    </div>
-                    
-                    <div class='col-xs-12 col-sm-4'>
-                        <?= $review->getMessage(); ?>
-                    </div>
-                    
-                    <div class= 'col-xs-12 col-sm-4 text-end'>
-                        <?php switch ($review->getGrade_review()) {
-                            case null:
+                            <?php if ($operator->getIs_premium() === true) {
+                                echo $operator->getLink();
+                                
+                            } ?>
+</div>
+
+<div class="col-lg-3">
+<?php if ($operator->getGrade()< 1) {
                                 echo "<i class='far fa-star'></i>
                                     <i class='far fa-star'></i>
                                     <i class='far fa-star'></i>
                                     <i class='far fa-star'></i>
                                     <i class='far fa-star'></i>";
-                                break;
-                            case 1:
+                            }elseif($operator->getGrade() < 2){ 
                                 echo "  <i class='fa fa-star text-warning' ></i>
                                         <i class='far fa-star'></i>
                                         <i class='far fa-star'></i>
                                         <i class='far fa-star'></i>
                                         <i class='far fa-star'></i>";
-                                break;
-
-                            case 2:
+                            }elseif($operator->getGrade() < 3){ 
                                 echo "  <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='far fa-star'></i>
                                         <i class='far fa-star'></i>
                                         <i class='far fa-star'></i>";
-                                break;
-
-                            case 3:
+                            }elseif($operator->getGrade() < 4){ 
                                 echo "  <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='far fa-star'></i>
                                         <i class='far fa-star'></i>";
-                                break;
 
-                            case 4:
+                            }elseif($operator->getGrade() < 5){ 
                                 echo "  <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='far fa-star'></i>";
-                                break;
-
-                            case 5:
+                            }elseif($operator->getGrade() < 6){ 
                                 echo "  <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>
                                         <i class='fa fa-star text-warning' ></i>";
-                                break;
-                        } ?>
-                    </div>
-                </div>
-    
-<?php endforeach;
+                            } echo $operator->getGrade();
+                        ?>  
+        
+        
+        
+        
+        
+        </div>
+        <div class="col-lg-2">
+        <form action='operator.php' method="post">
+                            <input type='hidden' name='id_tour_operator' value='<?php echo $operator->getId();?> '>
+                            <button type="submit" class="btn btn-outline-secondary m-1" name="destinations">See operator</button>
+                        </form>
+                        </div>              
+    </div>
+  </div>
+                        </div>
+
+<?php endforeach; ?>

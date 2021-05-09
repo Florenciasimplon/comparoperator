@@ -19,11 +19,13 @@ $operatorData = $OperatorManager->getOperatorById($detinationData['id_tour_opera
 
 
     $imageDestination = $ImageManager->getImageByDestination($_POST['id']);?>
-<div class='border border-secondary m-xs-1 m-sm-3 m-md-5 p-1 rounded text-center'>
-      <div class="row">
-         <div class="col-12 namecarousel">
+    
+    <div class="col-12 namecarousel">
             <h1><?= $operatorData['name']; ?></h1>
         </div>
+<div class='border border-secondary m-xs-1 m-sm-3 m-md-5 p-1 rounded text-center card'>
+      <div class="row">
+         
                         
         </div>
 
@@ -31,7 +33,7 @@ $operatorData = $OperatorManager->getOperatorById($detinationData['id_tour_opera
             <div class="col-xs-12 col-sm-4">
                         <div class="carousel2 owl-carousel">
                             <?php foreach ($imageDestination as $image) :?>
-                                    <img src="<?=$image->getPhoto_Link()?>" alt="" srcset="">                                                   
+                                    <img class='round mt-1 mb-1' src="<?=$image->getPhoto_Link()?>" alt="" srcset="">                                                   
                             <?php endforeach; ?>
                         </div>
             </div>
@@ -42,16 +44,16 @@ $operatorData = $OperatorManager->getOperatorById($detinationData['id_tour_opera
 
                     <div class="row mt-xs-0 mt-sm-0 mt-lg-5">
                         <div class="col-xs-12 col-lg-4">
-                            <h6> <?= $detinationData['location']; ?> </h6>
+                            <h3> <?= $detinationData['location']; ?> </h3>
                             
                         </div>
                         <div class="col-xs-12 col-lg-3">
-                            <h6> Price  <?= $detinationData['price']; ?></h6>
+                            <h3> <?= $detinationData['price']; ?> 💲 </h3>
                            
                         </div>
                         <div class="col-xs-12 col-lg-5">
                             <?php if ($operatorData['is_premium'] === '0') {
-                                echo '<img src="https://img.icons8.com/ios/50/000000/fairytale.png" alt="" srcset="">';
+                                echo '<img src="https://img.icons8.com/ios/25/000000/fairytale.png" alt="" srcset="">';
                             } else {
                                 echo '<img src="https://img.icons8.com/fluent/25/000000/fairytale.png" alt="" srcset=""> ';
                             } ?>
@@ -65,7 +67,7 @@ $operatorData = $OperatorManager->getOperatorById($detinationData['id_tour_opera
                         
                         
                         <div class="col-xs-12 col-md-7">
-                            <?php if ($operatorData['grade']=== null) {
+                            <?php if ($operatorData['grade'] < 1) {
                                 echo "<i class='far fa-star'></i>
                                     <i class='far fa-star'></i>
                                     <i class='far fa-star'></i>

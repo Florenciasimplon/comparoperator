@@ -11,14 +11,14 @@ $ImageManager = new ImageManager($pdo);
 $allDestinationsSearch = $DestinationManager-> getListDestinationSearch($_POST['search']);
 //Destination
 foreach ($allDestinationsSearch as $destinationSearch) { ?>
-    <div class='border border-secondary m-xs-1 m-sm-3 m-md-5 p-1 rounded text-center'>
+    <div class='border border-secondary m-xs-1 m-sm-3 m-md-5 p-1 rounded text-center card fs-5'>
     
-                <div class="row mt-xs-0 mt-sm-0 mt-lg-5">
-                        <div class="col-xs-12 col-lg-6">
+                <div class="row">
+                        <div class="col-xs-12 col-lg-6 fs-3">
                 <?= $destinationSearch->getLocation(); ?>
             </div>
             <div class="col-xs-12 col-lg-6">
-                <?= $destinationSearch->getPrice(); ?>
+                <?= $destinationSearch->getPrice(); ?>💲
             </div>
                 </div>
                
@@ -26,9 +26,9 @@ foreach ($allDestinationsSearch as $destinationSearch) { ?>
                 //operator 
                 $destinationOperatorSearch = $OperatorManager->getOperatorByDestination($destinationSearch->getLocation()); 
                 ?>
- <div class="row mt-xs-0 mt-sm-0 mt-lg-5">
+ <div class="row">
 
-                <div class="col-xs-12 col-lg-4">
+                <div class="col-xs-12 col-lg-4 fs-4">
                 <?= $destinationOperatorSearch[0]->getname(); ?>
                 </div>
 
@@ -88,7 +88,7 @@ foreach ($allDestinationsSearch as $destinationSearch) { ?>
                         </div>
         <form action='../destination.php' method="post">
         <input type='hidden' name='id' value='<?= $destinationSearch->getId();?>'>
-        <button type="submit" class="btn  cardbtn">more information</button>
+        <button type="submit" class="btn btn-outline-secondary ">more information</button>
     </form>
 </div>
     <?php 

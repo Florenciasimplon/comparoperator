@@ -8,13 +8,10 @@
     <div class="collapse navbar-collapse flex-D" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="navstyle" aria-current="page" href="#">Tour Opérator</a>
+          <a class="navstyle" href="allOperators.php">Tour Opérator</a>
         </li>
         <li class="nav-item navstyle">
-          <a class="active navstyle" href="#">All Destination</a>
-        </li>
-        <li class="nav-item">
-          <a class="active navstyle" href="#">Promotions</a>
+          <a class="active navstyle" href="index.php#dest">All Destination</a>
         </li>
       </ul>
     </div>
