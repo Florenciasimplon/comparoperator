@@ -74,7 +74,7 @@ foreach ($operatorData as $operatorSearch) { ?>
 
       
 
-    <form action='../operator.php' method="post">
+    <form action='../pages/operator.php' method="post">
         <input type='hidden' name='id_tour_operator' value='<?= $operatorSearch->getId();?>'>
         <button type="submit" class="btn btn-outline-secondary ">more information</button>
     </form>

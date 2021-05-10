@@ -1,11 +1,11 @@
 <?php
-include 'config/db.php';
-include 'config/autoload.php';
-include 'partiels/header.php'; ?>
+include __DIR__.'/../config/db.php';
+include __DIR__.'/../config/autoload.php';
+include __DIR__.'/../partiels/header.php'; ?>
 
 <body>
 <?php
-include 'partiels/navBar.php';
+include __DIR__.'/../partiels/navBar.php';
 
 $OperatorManager = new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
@@ -82,7 +82,7 @@ foreach ($allOperator as $operator) : ?>
         
         </div>
         <div class="col-lg-2">
-        <form action='operator.php' method="post">
+        <form action='../pages/operator.php' method="post">
                             <input type='hidden' name='id_tour_operator' value='<?php echo $operator->getId();?> '>
                             <button type="submit" class="btn btn-outline-secondary m-1" name="destinations">See operator</button>
                         </form>

@@ -13,13 +13,13 @@ if(isset($_POST['idOperator'])){
 
 elseif(isset($_POST['idDestination'])){
     $DestinationManager->deleteDestination($_POST['idDestination']);
-    header("location: ../AdminModification.php?message= Destination deleted");
+    header("location: ../admin/AdminModification.php?message= Destination deleted");
 }
 elseif(isset($_POST['idImagen'])){
     $ImagenManager->deleteImage($_POST['idImagen']);
-    header("location: ../AdminModification.php?message= Imagen deleted");
+    header("location: ../admin/AdminModification.php?message= Imagen deleted");
 }
 elseif(isset($_POST['idReview'])){
     $ReviewManager->deleteReview($_POST['idReview']);
-    header("location: ../AdminModification.php?message= Review deleted");
+    header("location: ../admin/AdminModification.php?message= Review deleted");
 }

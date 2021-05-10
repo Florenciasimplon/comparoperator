@@ -11,7 +11,7 @@ $destinations= $DestinationManager->getOneDestination();?>
                 <div class="card">
                     <div class="text-zone">
                         <h5><?=ucfirst($destination->getLocation())?></h5>
-                         <form action='../TODestination.php' method="post">
+                         <form action='../pages/TODestination.php' method="post">
                             <input type='hidden' name='destination' value='<?php echo $destination->getLocation();?> '>
                             <button type="submit" class="btn  cardbtn" name="destinations">See operators</button>
                         </form>

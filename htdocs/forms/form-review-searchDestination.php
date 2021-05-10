@@ -9,12 +9,12 @@
   <textarea class="form-control" rows="3" id='message<?php echo $operatorDestinationSearch->getId()?>' name="message"></textarea>
 </div>
 <select class="form-select form-select-lg mb-3" aria-label="form-select-lg example" id='grade_review<?php echo $operatorDestinationSearch->getId()?>' name="grade_review">
-  <option selected value='null'>Grade</option>
-  <option value="1">1 sur 5</option>
-  <option value="2">2 sur 5</option>
-  <option value="3">3 sur 5</option>
-  <option value="4">4 sur 5</option>
-  <option value="5">5 sur 5</option>
+  <option selected value='null'><i class='far fa-star'></i></option>
+  <option value="1">⭐</option>
+  <option value="2">⭐⭐</option>
+  <option value="3">⭐⭐⭐</option>
+  <option value="4">⭐⭐⭐⭐</option>
+  <option value="5">⭐⭐⭐⭐⭐</option>
 </select>
 <button type="submit" class="btn btn-primary sendFormSearchDestination" data-id-to='<?php echo $operatorDestinationSearch->getId()?>' name="destinations">Submit</button>
 </form> 

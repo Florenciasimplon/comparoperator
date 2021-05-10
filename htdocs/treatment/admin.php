@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../config/db.php';
 include '../config/autoload.php';
 
@@ -8,15 +9,16 @@ if (isset($_POST['firstname'])&& isset($_POST['lastname']) && isset($_POST['pass
 $newAdmin = new Admin(['firstname'=>$_POST['firstname'], 'lastname'=>$_POST['lastname'], 'password'=>$_POST['password']]);
 $verificationNameAdmin =  $AdminManager->getAdmin($newAdmin); 
 if (!$verificationNameAdmin) {
-    header("location:../admin.php?error= Le nom d'utilisateur est incorrecte!");
+    header("location:../admin/admin.php?error= Le nom d'utilisateur est incorrecte!");
 } 
 else {
     $verificationPassword = $AdminManager->verificationPassword($newAdmin, $_POST['password']); 
   
     if ($verificationPassword) {
-        header('location:../AdminModification.php?message=Salut '.$_POST['firstname'].' You are connected !');
+        header('location:../admin/AdminModification.php?message=Salut '.$_POST['firstname'].' You are connected !');
+        $_SESSION['firstname'] = $_POST['firstname'];
     } else {
-        header("location:../admin.php?error=Le mot de passe ou le nom d'utilisateur est incorrecte!");
+        header("location:../admin/admin.php?error=Le mot de passe ou le nom d'utilisateur est incorrecte!");
     }
     }
    
@@ -27,12 +29,12 @@ else if(isset($_POST['firstname'])&& isset($_POST['lastname']) && isset($_POST['
     $password2 = $_POST['password2'];
 
     if ($password!= $password2) {
-        header("location:../admin.php?error=Les mots de passe ne correspondent pas, réessayez!");
+        header("location:../admin/admin.php?error=Les mots de passe ne correspondent pas, réessayez!");
     }else {
         $newAdmin = new Admin(['firstname'=>$_POST['firstname'], 'lastname'=>$_POST['lastname'], 'password'=>$_POST['password']]);
         $verificationNameAdmin =  $AdminManager->getAdmin($newAdmin); 
         if ( $verificationNameAdmin->rowCount() > 0) {
-            header("location:../admin.php?error=Le Nom et Prénom existe déjà");
+            header("location:../admin/admin.php?error=Le Nom et Prénom existe déjà");
         }
         else{
             $creationAdmin =  $AdminManager->createAdmin($newAdmin); 
@@ -40,10 +42,10 @@ else if(isset($_POST['firstname'])&& isset($_POST['lastname']) && isset($_POST['
            
 
             if ($creationAdmin) {
-                header("location:../AdminModification.php?message=Votre inscription a réussi!");
+                header("location:../admin/AdminModification.php?message=Votre inscription a réussi!");
 
             } else {
-                header("location:../admin.php.?error=Un problème est survenu!");
+                header("location:../admin/admin.php.?error=Un problème est survenu!");
         }
     }  
 }

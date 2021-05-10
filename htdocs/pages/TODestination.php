@@ -1,11 +1,12 @@
 <?php
-include 'config/db.php';
-include 'config/autoload.php';
-include 'partiels/header.php'; ?>
+include __DIR__.'/../config/db.php';
+include __DIR__.'/../config/autoload.php';
+include __DIR__.'/../partiels/header.php'; ?>
 
 <body>
 <?php
-include 'partiels/navBar.php';
+include __DIR__.'/../partiels/navBar.php';
+
 
 $OperatorManager = new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
@@ -116,7 +117,7 @@ foreach ($allOperators as $peers) {
     <?php endif; ?>
        
         
-        <?php 
-            include 'partiels/footer.php';
-            include 'partiels/footerScript.php';
+    <?php
+            include __DIR__.'/../partiels/footer.php';
+            include __DIR__.'/../partiels/footerScript.php';
         ?>

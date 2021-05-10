@@ -17,14 +17,14 @@ if(isset($_POST['location']) && isset($_POST['price']) && isset($_POST['id_tour_
     uploadImage();
     $image = new Image(["photo_link"=>"/images/" . $_FILES["photo_link"]["name"],"id_destination" =>$destination->getId()]);
     $ImageManager->createPhotoLink($image);
-    header("location: ../AdminModification.php?message= New Destination created");
+    header("location: ../admin/AdminModification.php?message= New Destination created");
 
 }
 //create Operator
 else if(isset($_POST['name']) && isset($_POST['link'])&& isset($_POST['is_premium'])){
     $tourOperator= new TourOperator(['name'=> $_POST['name'], 'link'=>$_POST['link'], 'is_premium'=>$_POST['is_premium'], 'grade'=> '0']);
     $OperatorManager->createTourOperator($tourOperator);
-    header("location: ../AdminModification.php?message= New Tour Operator created");
+    header("location: ../admin/AdminModification.php?message= New Tour Operator created");
 }
 //create Review
 else if(isset($_POST['message']) && isset($_POST['author'])){
@@ -41,5 +41,5 @@ else if(isset($_POST['idDestination']) && isset($_FILES['photo_link'])){
 uploadImage();
 $image = new Image(["photo_link"=>"/images/" . $_FILES["photo_link"]["name"],"id_destination" =>$_POST['idDestination']]);
 $ImageManager->createPhotoLink($image);
-header("location: ../AdminModification.php?message= Photo added");
+header("location: ../admin/AdminModification.php?message= Photo added");
 }

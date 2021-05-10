@@ -1,5 +1,7 @@
 <?php
-include 'partiels/header.php';
+session_start();
+
+include __DIR__.'/../partiels/header.php';
 
     if (!empty($_GET["error"])) : ?>
         <div style="padding: 10px;background:gray;color:#fff;">
@@ -9,16 +11,12 @@ include 'partiels/header.php';
 
 <div class='row align-items-center'>
 
-    <div class="col-md-6">
-    <?php include 'forms/form-adminAdd.php';?>
-</div>
-
-<div class="col-md-6">
-    <?php include 'forms/form-adminUp.php'; ?> 
+<div class="col-12">
+    <?php include __DIR__.'/../forms/form-adminUp.php'; ?> 
 </div>
 
 </div>
-     <?php include 'partiels/footer.php'; ?>
+     <?php include __DIR__.'/../partiels/footerScript.php'; ?>
 
 </body>
 </html>

@@ -1,13 +1,17 @@
 <?php
-include 'config/db.php';
-include 'config/autoload.php';
+session_start();
+if(!isset($_SESSION['firstname'])){ 
+  header("location:../admin/admin.php");
+}
+include __DIR__.'/../config/db.php';
+include __DIR__.'/../config/autoload.php';
 $DestinationManager = new DestinationManager($pdo);
 $OperatorManager = new TourOperatorManager($pdo);
 $ReviewManager = new ReviewManager($pdo);
 $ImageManager = new ImageManager($pdo);
 
 
-include 'partiels/header.php'; ?>
+include __DIR__.'/../partiels/header.php'; ?>
 
 <body>
   <?php
@@ -34,28 +38,30 @@ include 'partiels/header.php'; ?>
 </div>
 
 </div>
-
+<div class="text-center m-5">
+<a class='btn btn-outline-secondary w-50' href="deconection.php">Log Out</a>
+</div>
 
   <div id='seeFormDestination'>
   <?php
-  include 'forms/form-destination.php'; 
+  include __DIR__.'/../forms/form-destination.php'; 
   ?>
   </div>
   <div id='seeFormTourOperator'>
    <?php
-  include 'forms/form-tourOperator.php'; 
+  include __DIR__.'/../forms/form-tourOperator.php'; 
   ?>
   </div>
   <div id='seeOperator'>
-    <?php include 'data-recovery/allOperator.php';  ?>
+  <?php include __DIR__.'/../data-recovery/allOperator.php';  ?>
   </div>
   <div id='seeReviews'>
-    <?php include 'data-recovery/allReviews.php'; ?>
+    <?php include __DIR__.'/../data-recovery/allReviews.php'; ?>
   </div>
   <div id='seeDestination'>
-    <?php include 'data-recovery/allDestination.php'; ?>
+    <?php include __DIR__.'/../data-recovery/allDestination.php'; ?>
   </div>
-  <?php include 'partiels/footerScript.php'; ?>
+  <?php include __DIR__.'/../partiels/footerScript.php'; ?>
 </body>
 
 </html>

@@ -86,7 +86,7 @@ foreach ($allDestinationsSearch as $destinationSearch) { ?>
                         ?>
 </div>
                         </div>
-        <form action='../destination.php' method="post">
+        <form action='../pages/destination.php' method="post">
         <input type='hidden' name='id' value='<?= $destinationSearch->getId();?>'>
         <button type="submit" class="btn btn-outline-secondary ">more information</button>
     </form>
