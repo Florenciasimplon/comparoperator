@@ -25,11 +25,11 @@ foreach ($allDestination as $destination) : ?>
           </div>
         </div>
       </div>
-      
-        <div class="row">
+
+      <div class="row">
         <?php
-      $allImages = $ImageManager->getImageByDestination($destination->getId());
-      foreach ($allImages as $imagen) : ?>
+        $allImages = $ImageManager->getImageByDestination($destination->getId());
+        foreach ($allImages as $imagen) : ?>
           <div class="col-lg-3 m-2">
             <img src="<?php echo $imagen->getPhoto_Link(); ?>" alt="" srcset="" class="imageModification">
             <form action='../treatment/delete.php' method="post">
@@ -38,24 +38,24 @@ foreach ($allDestination as $destination) : ?>
             </form>
           </div>
         <?php endforeach; ?>
-        </div>
-        <div class='accesUpdatePrice' id='accesUpdatePrice<?=$destination->getId()?>'>
-          <form action='../treatment/update.php' method="post" >
-            <input type='hidden' name='idDestination' value='<?php echo $destination->getId(); ?> '>
-            <input type='text' name='price'>
-            <button type="submit" class="btn btn-primary" name="destinations">Update Price</button>
-          </form>
-        </div>
-        <button type="submit" class="btn btn-primary buttonAccesAddPhoto m-1 btn-sm" id="<?=$destination->getId()?>" name="destinations">Add Photo</button>
-        <div class='m-3 accesAddPhoto' id="accesAddPhoto<?=$destination->getId()?>">
-          <form class="form" action="../treatment/create.php" method="post" enctype="multipart/form-data">
-            <input type='hidden' name='idDestination' value='<?php echo $destination->getId(); ?>'>
-            <div class="custom-file">
-              <input type="file" name="photo_link" class="custom-file-input btn-sm" id="fileUpload">
-              <button type="submit" class="btn btn-primary" name="destinations">Submit</button>
-            </div>
-          </form>
-        </div>
+      </div>
+      <div class='accesUpdatePrice' id='accesUpdatePrice<?= $destination->getId() ?>'>
+        <form action='../treatment/update.php' method="post">
+          <input type='hidden' name='idDestination' value='<?php echo $destination->getId(); ?> '>
+          <input type='text' name='price'>
+          <button type="submit" class="btn btn-primary" name="destinations">Update Price</button>
+        </form>
+      </div>
+      <button type="submit" class="btn btn-primary buttonAccesAddPhoto m-1 btn-sm" id="<?= $destination->getId() ?>" name="destinations">Add Photo</button>
+      <div class='m-3 accesAddPhoto' id="accesAddPhoto<?= $destination->getId() ?>">
+        <form class="form" action="../treatment/create.php" method="post" enctype="multipart/form-data">
+          <input type='hidden' name='idDestination' value='<?php echo $destination->getId(); ?>'>
+          <div class="custom-file">
+            <input type="file" name="photo_link" class="custom-file-input btn-sm" id="fileUpload">
+            <button type="submit" class="btn btn-primary" name="destinations">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 <?php endforeach; ?>
